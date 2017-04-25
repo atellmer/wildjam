@@ -1,0 +1,36 @@
+{
+  "name": "standard-app",
+  "version": "0.0.1",
+  "description": "Standard App",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run build:dev\"",
+		"build": "npm run bower:inject && npm run inject && gulp",
+    "build:dev": "set NODE_ENV=development&& npm run build",
+    "build:prod": "set NODE_ENV=production&& npm run build",
+		"inject": "gulp inject",
+    "bower:inject": "gulp inject-bower",
+    "server": "lite-server -c server.config.json",
+    "img:compress": "gulp img-compress"
+  },
+  "author": "AlexPlex",
+  "license": "ISC",
+  "devDependencies": {
+    "cli-color": "1.1.0",
+    "concurrently": "3.1.0",
+    "gulp": "3.9.0",
+    "gulp-concat": "2.6.1",
+    "gulp-connect": "2.3.1",
+    "gulp-hash": "4.0.1",
+    "gulp-inject": "4.2.0",
+    "gulp-stylus": "2.2.0",
+    "gulp-tinypng": "1.0.2",
+    "gulp.spritesmith": "6.2.1",
+    "lite-server": "2.2.2",
+    "main-bower-files": "2.13.1",
+    "nib": "1.1.0",
+    "pixel-glass": "1.0.11",
+    "require-dir": "0.3.1"
+  },
+  "dependencies": {}
+}

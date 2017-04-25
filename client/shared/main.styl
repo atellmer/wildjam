@@ -1,0 +1,55 @@
+@import 'nib'
+
+//colors
+$color-primary = #3ebcff
+$color-bg = #fff
+$color-text = #272757
+$color-text-hint = #5c5c85
+
+//resolutions
+$phone = 640px
+$tablet = 768px
+$notebook = 1024px
+$desktop = 1600px
+
+//params
+$container-width = 1140px
+$base-font = 16
+
+*,
+*::before,
+*::after
+	box-sizing border-box
+
+html, body
+	width 100%
+	height auto
+	min-height 100%
+	// overflow-x hidden
+	-webkit-font-smoothing antialiased
+	-webkit-overflow-scrolling touch
+
+.likearts-content
+	font-family 'GothamPro', sans-serif
+	font-weight 400
+	background-color $color-bg
+	color $color-text
+	font-size '%spx' %($base-font)
+
+.likearts-content a
+	&:hover,
+	&:active,
+	&:focus
+		text-decoration none
+
+.likearts-content .icon
+	display inline-block
+
+.likearts-content .main-layout
+	position relative
+	max-width $container-width
+	margin 0 auto
+	@media (max-width: 1140px)
+		max-width 970px
+
+
