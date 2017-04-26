@@ -1,0 +1,16 @@
+.likearts-content .logo {
+  width: 185px;
+  height: 45px;
+  background-image: url("../../images/logo/logo.png");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@media (max-width: 1140px) {
+  .likearts-content .logo {
+    width: calc(185 / 1.5 * 1px);
+    height: calc(45 / 1.5 * 1px);
+  }
+}

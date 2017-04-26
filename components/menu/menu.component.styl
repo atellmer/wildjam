@@ -1,0 +1,66 @@
+@import 'nib'
+
+//colors
+$color-primary = #3ebcff
+$color-bg = #fff
+$color-text = #272757
+$color-text-hint = #5c5c85
+
+//resolutions
+$phone = 640px
+$tablet = 768px
+$notebook = 1024px
+$desktop = 1600px
+
+//params
+$container-width = 1140px
+$base-font = 16
+
+.likearts-content .menu-desktop
+	position relative
+	@media (max-width $tablet)
+		width 100%
+
+	&__list
+		width 100%
+		height auto
+		list-style none
+		display flex
+		flex-flow row wrap
+		justify-content flex-start
+		align-items center
+		padding 0
+		margin 0
+		@media (max-width 1140px)
+			justify-content center
+		@media (max-width $tablet)
+			border-top 1px solid #E0E0E0
+
+	&__list-item
+		color #181818
+		font-size 'calc(13 / %s * 1rem)' %($base-font)
+		font-weight 500
+		line-height 2.15
+		text-transform uppercase
+		padding 0 27px
+		letter-spacing 1px
+		@media (max-width $tablet)
+			width 50%
+			text-align center
+			border-bottom 1px solid #E0E0E0
+			padding 0 15px
+			font-size 'calc(11 / %s * 1rem)' %($base-font)
+
+	&__list-link
+		color #181818
+		display inline-block
+		padding 15px 0
+		text-decoration none
+		@media (max-width $tablet)
+			padding 10px 0
+
+		&:hover
+			text-decoration underline
+
+		&.is-active
+			color $color-primary

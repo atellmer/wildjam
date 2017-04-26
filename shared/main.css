@@ -1,0 +1,47 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+}
+.likearts-content {
+  font-family: 'GothamPro', sans-serif;
+  font-weight: 400;
+  background-color: #fff;
+  color: #272757;
+  font-size: 16px;
+}
+.likearts-content a {
+  -webkit-transition: color 0.2s ease-in-out;
+  -moz-transition: color 0.2s ease-in-out;
+  -o-transition: color 0.2s ease-in-out;
+  -ms-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+}
+.likearts-content a:hover,
+.likearts-content a:active,
+.likearts-content a:focus {
+  text-decoration: none;
+}
+.likearts-content .icon {
+  display: inline-block;
+}
+.likearts-content .main-layout {
+  position: relative;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+@media (max-width: 1140px) {
+  .likearts-content .main-layout {
+    max-width: 970px;
+  }
+}
