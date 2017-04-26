@@ -1,0 +1,28 @@
+@import 'nib'
+
+//colors
+$color-primary = #3ebcff
+$color-bg = #fff
+$color-text = #272757
+$color-text-hint = #5c5c85
+
+//resolutions
+$phone = 640px
+$tablet = 768px
+$notebook = 1024px
+$desktop = 1600px
+
+//params
+$container-width = 1140px
+$base-font = 16
+
+.likearts-content .logo
+	width 185px
+	height 45px
+	background-image url('../../images/logo/logo.png')
+	background-size cover
+	background-position center
+	background-repeat no-repeat
+	@media (max-width 1140px)
+		width calc(185 / 1.5 * 1px)
+		height calc(45 / 1.5 * 1px)

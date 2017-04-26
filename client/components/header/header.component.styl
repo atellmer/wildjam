@@ -1,1 +1,92 @@
 @import 'nib'
+
+//colors
+$color-primary = #3ebcff
+$color-bg = #fff
+$color-text = #272757
+$color-text-hint = #5c5c85
+
+//resolutions
+$phone = 640px
+$tablet = 768px
+$notebook = 1024px
+$desktop = 1600px
+
+//params
+$container-width = 1140px
+$base-font = 16
+
+.likearts-content .header
+	position absolute
+	top 0
+	left 0
+	z-index 1000
+	width 100%
+	height auto
+	min-height 100px
+	display flex
+	flex-flow row wrap
+	justify-content space-between
+	align-items center
+	padding 15px 62px
+	background-color transparent
+	@media (max-width 1140px)
+		flex-flow column wrap
+		padding 25px 62px
+	@media (max-width $tablet)
+		padding 15px
+
+
+	&--white
+		background-color #fff
+		box-shadow 0 3px 13px rgba(204, 215, 220, 0.24)
+
+	&__logo
+		@media (max-width $tablet)
+			margin-bottom 15px
+
+	&__menu
+		position relative
+		top 0
+		left 4px
+		@media (max-width 1140px)
+			left 0
+
+	&__contacts
+		@media (max-width 1140px)
+			margin-top 15px
+
+.likearts-content .header .contacts
+		position relative
+		display flex
+		flex-flow column wrap
+		justify-content flex-start
+		align-items flex-start
+		@media (max-width 1140px)
+			justify-content center
+			align-items center
+
+		&__phone
+			color $color-text
+			font-size 'calc(20 / %s * 1rem)' %($base-font)
+			font-weight 500
+			line-height 0.65
+			text-decoration none
+			margin-bottom 5px
+			@media (max-width $tablet)
+				font-size 'calc(16 / %s * 1rem)' %($base-font)
+				margin-bottom 10px
+
+		&__link
+			color $color-primary
+			font-size 'calc(16 / %s * 1rem)' %($base-font)
+			font-weight 500
+			line-height 1.75
+			text-decoration underline
+			@media (max-width $tablet)
+				font-size 'calc(14 / %s * 1rem)' %($base-font)
+
+			&:hover
+				color #BDBDBD
+
+	
