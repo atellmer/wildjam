@@ -38,6 +38,7 @@
 }
 @media (max-width: 1140px) {
   .likearts-content .header {
+    position: relative;
     -webkit-box-orient: vertical;
     -moz-box-orient: vertical;
     -o-box-orient: vertical;
@@ -48,11 +49,14 @@
     -ms-flex-flow: column wrap;
     flex-flow: column wrap;
     padding: 25px 62px;
+    background-color: #f6f9fc;
   }
 }
 @media (max-width: 768px) {
   .likearts-content .header {
     padding: 15px;
+    -webkit-box-shadow: 0 1px 6px rgba(0,0,0,0.06), 0 1px 4px rgba(0,0,0,0.06);
+    box-shadow: 0 1px 6px rgba(0,0,0,0.06), 0 1px 4px rgba(0,0,0,0.06);
   }
 }
 .likearts-content .header--white {

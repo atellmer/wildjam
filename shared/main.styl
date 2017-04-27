@@ -53,4 +53,26 @@ html, body
 	@media (max-width: 1140px)
 		max-width 970px
 
+.likearts-content .title
+		color $color-text
+		text-align center
+		margin 0
+		transition all .2s ease-in-out
+
+		&--h1
+			font-size 'calc(40 / %s * 1rem)' %($base-font)
+			font-weight 700
+			@media (max-width 1140px)
+				font-size 'calc(30 / %s * 1rem)' %($base-font)
+			@media (max-width $phone)
+				font-size 'calc(24 / %s * 1rem)' %($base-font)
+
+		&--h2
+			font-size 'calc(36 / %s * 1rem)' %($base-font)
+			font-weight 900
+			@media (max-width 1140px)
+				font-size 'calc(26 / %s * 1rem)' %($base-font)
+			@media (max-width $phone)
+				font-size 'calc(18 / %s * 1rem)' %($base-font)
+
 

@@ -1,0 +1,46 @@
+@import 'nib'
+
+//colors
+$color-primary = #3ebcff
+$color-bg = #fff
+$color-text = #272757
+$color-text-hint = #5c5c85
+
+//resolutions
+$phone = 640px
+$tablet = 768px
+$notebook = 1024px
+$desktop = 1600px
+
+//params
+$container-width = 1140px
+$base-font = 16
+
+.likearts-content .wj-btn
+	font-family 'GothamPro', sans-serif
+	background-color $color-primary
+	color #fff
+	border none
+	border-radius 42px
+	font-weight 700
+	font-size 'calc(18 / %s * 1rem)' %($base-font)
+	line-height 1.56
+	letter-spacing 1px
+	padding 27px 107px
+	cursor pointer
+	transition all .2s ease-in-out
+	box-shadow 0 17px 32px rgba(62, 188, 255, 0.55)
+	@media (max-width $tablet)
+		padding 20px 60px
+		font-size 'calc(16 / %s * 1rem)' %($base-font)
+	@media (max-width $phone)
+		padding 12px
+		width 100%
+		font-size 'calc(16 / %s * 1rem)' %($base-font)
+	&:hover
+		background-color #42A5F5
+	&:focus
+		outline none
+	&:active
+		transform scale(0.9)
+	
