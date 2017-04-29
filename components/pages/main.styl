@@ -26,10 +26,14 @@ $base-font = 16
 	background-size cover
 	background-position center
 	background-repeat no-repeat
+	padding 15px
 	@media (max-width $tablet)
 		padding 30px 15px
 	@media (max-width $phone)
 		padding 15px
+	@media (max-height 650px)
+		padding 30px 15px
+
 
 	&__container
 		width 100%
@@ -127,3 +131,138 @@ $base-font = 16
 			@media (max-width $phone)
 				margin-top 10px
 
+
+.likearts-content .section-2
+	position relative
+	z-index 1
+	width 100%
+	height auto
+	min-height 750px
+	background-color #fff
+	padding 15px
+
+	&__container
+		position relative
+		margin-top 140px
+		@media (max-width $tablet)
+			margin-top 100px
+		@media (max-width $phone)
+			margin-top 50px
+
+	&__bullets
+		position relative
+		display flex
+		flex-flow row wrap
+		justify-content space-between
+		align-items stretch
+		margin-top 60px
+
+	&__pointer
+		position absolute
+		top -90px
+		left 50%
+		transform translate(-50%, 0)
+		@media (max-width $tablet)
+			top -40px
+		@media (max-width $phone)
+			top 15px
+		@media (max-height 830px)
+			top -50px
+		@media (max-height 750px)
+			top 0
+
+.likearts-content .pointer
+	position relative
+	transition all .2s ease-in-out
+
+	&__separator
+		position relative
+		width 1px
+		height 155px
+		background-color #cacaca
+		transition all .2s ease-in-out
+		@media (max-width $tablet)
+			height 80px
+		@media (max-width $phone)
+			display none
+		@media (max-height 830px)
+			height 100px
+		@media (max-height 750px)
+			display none
+		&:before
+			content ''
+			position absolute
+			transform translate(-50%, 0)
+			width 14px
+			height 14px
+			background-color $color-primary
+			border-radius 50%
+
+	&__number
+		position absolute
+		color $color-primary
+		font-size 'calc(30 / %s * 1rem)' %($base-font)
+		font-weight 900
+		line-height 2.67
+		transform translate(-50%, 0)
+		@media (max-width $phone)
+			font-size 'calc(20 / %s * 1rem)' %($base-font)
+			line-height 2
+
+.likearts-content .bullet
+	width 33.3333%
+	height auto
+	min-height 280px
+	background-color #fff
+	display flex
+	flex-flow column wrap
+	justify-content center
+	align-items center
+	padding 20px
+	transition all .2s ease-in-out
+	@media (max-width 900px)
+		width 50%
+	@media (max-width $phone)
+		width 100%
+		min-height 0
+
+	&__desc
+		color $color-text
+		font-size 'calc(20 / %s * 1rem)' %($base-font)
+		line-height 1.3
+		font-weight 300
+		margin 40px 0 0 0
+		@media (max-width $notebook)
+			font-size 'calc(18 / %s * 1rem)' %($base-font)
+		@media (max-width $phone)
+			font-size 'calc(16 / %s * 1rem)' %($base-font)
+
+	&__icon
+		@media (max-width $phone)
+			transform scale(0.8)
+
+
+.likearts-content .triangle
+	position relative
+	width 100%
+	height auto
+	min-height 230px
+	@media (max-width $notebook)
+		min-height 180px
+	@media (max-width $tablet)
+		min-height 120px
+	@media (max-width $phone)
+		min-height 100px
+
+	&--gray
+		background-image linear-gradient(to right bottom, #fff 0%, #fff 49%, #fff 50%, #f4f6f8 50%)
+	&--white
+		background-image linear-gradient(to right bottom, #f4f6f8 0%, #f4f6f8 49%, #f4f6f8 50%, #fff 50%)
+		
+
+.likearts-content .section-3
+	position relative
+	z-index 1
+	width 100%
+	height auto
+	background-color $color-bg
