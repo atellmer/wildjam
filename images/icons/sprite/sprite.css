@@ -52,3 +52,15 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   width: 44px;
   height: 78px;
 }
+.icon-insta {
+  background-image: url(sprite.png);
+  background-position: -230px -78px;
+  width: 42px;
+  height: 42px;
+}
+.icon-vk {
+  background-image: url(sprite.png);
+  background-position: -230px -120px;
+  width: 42px;
+  height: 42px;
+}
