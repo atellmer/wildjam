@@ -255,9 +255,9 @@ $base-font = 16
 		min-height 100px
 
 	&--gray
-		background-image linear-gradient(to right bottom, #fff 0%, #fff 49%, #fff 50%, #f4f6f8 50%)
+		background-image linear-gradient(to right bottom, transparent 0%, transparent 49%, transparent 50%, #f4f6f8 50%)
 	&--white
-		background-image linear-gradient(to right bottom, #f4f6f8 0%, #f4f6f8 49%, #f4f6f8 50%, #fff 50%)
+		background-image linear-gradient(to right bottom, transparent 0%, transparent 49%, transparent 50%, #fff 50%)
 		
 
 .likearts-content .section-3
@@ -266,3 +266,82 @@ $base-font = 16
 	width 100%
 	height auto
 	background-color $color-bg
+
+	&__cover
+		background-color #f4f6f8
+		padding 1px 0 0 0
+
+	&__container
+		position relative
+		margin-top 40px
+		@media (max-width $tablet)
+			margin-top 60px
+		@media (max-width $phone)
+			margin-top 30px
+
+	&__content
+		overflow-x hidden
+		padding 15px
+
+	&__pointer
+		position absolute
+		top 35px
+		left 50%
+		transform translate(-50%, 0)
+		@media (max-width $notebook)
+			top -5px
+		@media (max-width $tablet)
+			top 20px
+		@media (max-width $phone)
+			top 70px
+		@media (max-height 830px)
+			top 60px
+		@media (max-height 750px)
+			top 120px
+		@media (max-height 750px) and (max-width $phone)
+			top 70px
+
+	&__cards
+		position relative
+		display flex
+		flex-flow row wrap
+		justify-content space-between
+		align-items stretch
+		margin 52px -15px 0 -15px
+
+	&__card
+		width calc(33.3333% - 30px)
+		height auto
+		margin 15px
+		@media (max-width $notebook)
+			width calc(50% - 30px)
+		@media (max-width $phone)
+			width calc(100% - 30px)
+
+	&__shield
+		position absolute
+		top 72%
+		left -300px
+		transform rotate(-90deg)
+		text-transform uppercase
+		line-height 0.74
+		font-weight 900
+		font-size 'calc(180 / %s * 1rem)' %($base-font)
+		letter-spacing 10px
+		color #fff
+		@media (max-width 1470px)
+			display none
+
+	&__c-btn
+		width 100%
+		display flex
+		justify-content center
+		align-items center
+		padding 86px 0 30px 0
+		@media (max-width $phone)
+			padding 30px 0
+
+	&__btn-link
+		display block
+		@media (max-width $phone)
+			width 100%
