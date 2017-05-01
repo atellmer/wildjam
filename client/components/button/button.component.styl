@@ -43,4 +43,20 @@ $base-font = 16
 		outline none
 	&:active
 		transform scale(0.9)
+
+	&--transparent
+		background-color transparent
+		box-shadow none
+		border 2px solid #3ebcff
+		color $color-primary
+		padding 24px 77px
+		@media (max-width $tablet)
+			padding 20px 60px
+		@media (max-width $phone)
+			padding 12px
+		&:hover
+			border 2px solid #42A5F5
+			color #42A5F5
+			background-color transparent
+			box-shadow 0 3px 10px rgba(0,0,0,0.16), 0 3px 10px rgba(0,0,0,0.23)
 	

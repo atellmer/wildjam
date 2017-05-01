@@ -256,9 +256,12 @@ $base-font = 16
 
 	&--gray
 		background-image linear-gradient(to right bottom, transparent 0%, transparent 49%, transparent 50%, #f4f6f8 50%)
+
 	&--white
 		background-image linear-gradient(to right bottom, transparent 0%, transparent 49%, transparent 50%, #fff 50%)
-		
+
+	&--reverse-white
+		background-image linear-gradient(to right bottom, #fff 0%, #fff 49%, #fff 50%, transparent 50%)
 
 .likearts-content .section-3
 	position relative
@@ -313,6 +316,7 @@ $base-font = 16
 		width calc(33.3333% - 30px)
 		height auto
 		margin 15px
+		transition all .2s ease-in-out
 		@media (max-width $notebook)
 			width calc(50% - 30px)
 		@media (max-width $phone)
@@ -337,11 +341,193 @@ $base-font = 16
 		display flex
 		justify-content center
 		align-items center
-		padding 86px 0 30px 0
+		margin 86px 0 30px 0
 		@media (max-width $phone)
-			padding 30px 0
+			margin 30px 0
 
 	&__btn-link
 		display block
 		@media (max-width $phone)
 			width 100%
+
+
+.likearts-content .section-4
+	position relative
+	z-index 1
+	width 100%
+	height auto
+	background-color $color-bg
+	padding 1px 0 0 0
+
+	&__container
+		margin-top 20px
+		@media (max-width $notebook)
+			margin-top 48px
+
+	&__content
+		padding 15px
+		overflow hidden
+
+	&__pointer
+		position absolute
+		top -200px
+		left 50%
+		transform translate(-50%, 0)
+		@media (max-width $notebook)
+			top -170px
+		@media (max-width $tablet)
+			top -105px
+		@media (max-width $phone)
+			top -25px
+		@media (max-height 830px)
+			top -170px
+		@media (max-height 750px)
+			top -60px
+		@media (max-height 750px) and (max-width $phone)
+			top 0
+
+	&__c-cases
+		width 100%
+		height auto
+
+	&__cases
+		position relative
+		display flex
+		flex-flow row wrap
+		justify-content space-between
+		align-items stretch
+		margin 30px -25px 0 -25px
+
+	&__c-btn
+		width 100%
+		display flex
+		justify-content center
+		align-items center
+		margin 50px 0 30px 0
+		@media (max-width $phone)
+			margin 30px 0
+
+	&__btn-link
+		display block
+		@media (max-width $phone)
+			width 100%
+
+.likearts-content .section-4 .case
+	position relative
+	width calc(50% - 50px)
+	height auto
+	background-color transparent
+	margin 25px
+	@media (max-width $phone)
+		width 100%
+		margin 15px 25px
+
+	&__link
+		display block
+		text-decoration none
+
+	&__title
+		font-size 'calc(23 / %s * 1rem)' %($base-font)
+		line-height 2.04
+		text-transform uppercase
+		margin-bottom 18px
+		text-decoration none
+		max-width 535px
+		white-space nowrap
+		overflow hidden
+		text-overflow ellipsis
+		@media (max-width $tablet)
+			font-size 'calc(20 / %s * 1rem)' %($base-font)
+		@media (max-width $phone)
+			max-width none
+			white-space normal
+		&:hover
+			.case__title-number,
+			.case__title-separator,
+			.case__title-name
+				color $color-primary
+
+	&__title-number
+		color $color-primary
+		font-weight 900
+		transition color .2s ease-in-out
+	
+	&__title-separator
+		color #e0e0e0
+		font-weight 300
+		transition color .2s ease-in-out
+		
+	&__title-name
+		color $color-text
+		font-weight 900
+		transition color .2s ease-in-out
+
+	&__pic
+		width 100%
+		height 100%
+		max-width 100%
+		max-height 347px
+		object-fit cover
+		transition all .2s ease-in-out
+		&:hover
+			box-shadow 0 3px 10px rgba(0,0,0,0.16), 0 3px 10px rgba(0,0,0,0.23)
+
+	&__desc
+		padding 60px 0 0 0
+		@media (max-width $tablet)
+			padding 20px 0 0 0
+
+	&__desc-item
+		margin-bottom 24px
+
+	&__desc-title
+		color $color-text
+		font-size 'calc(16 / %s * 1rem)' %($base-font)
+		font-weight 900
+		line-height 2.94
+		text-transform uppercase
+
+	&__desc-list
+		margin 0
+		padding 0 0 0 18px
+		list-style none
+
+	&__desc-list-item
+		position relative
+		color $color-text
+		font-size 'calc(16 / %s * 1rem)' %($base-font)
+		font-weight 300
+		line-height 1.2
+		margin-bottom 20px
+		padding-left 18px
+		@media (max-width $tablet)
+			font-size 'calc(14 / %s * 1rem)' %($base-font)
+		&:before
+			content ''
+			position absolute
+			top 0
+			left -18px
+			display inline-block
+			width 18px
+			height 18px
+			background-image url('../../images/icons/confirm@2x.png')
+			background-size cover
+			background-position center
+			background-repeat no-repeat
+
+	&__desc-text
+		color $color-text
+		font-size 'calc(16 / %s * 1rem)' %($base-font)
+		font-weight 300
+		line-height 1.38
+		margin 0
+		@media (max-width $tablet)
+			font-size 'calc(14 / %s * 1rem)' %($base-font)
+
+.likearts-content .section-5
+	position relative
+	z-index 1
+	width 100%
+	height auto
+	min-height 500px
+	background-color #f4f6f8
