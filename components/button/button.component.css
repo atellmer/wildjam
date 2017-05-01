@@ -45,3 +45,28 @@
   -ms-transform: scale(0.9);
   transform: scale(0.9);
 }
+.likearts-content .wj-btn--transparent {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 2px solid #3ebcff;
+  color: #3ebcff;
+  padding: 24px 77px;
+}
+@media (max-width: 768px) {
+  .likearts-content .wj-btn--transparent {
+    padding: 20px 60px;
+  }
+}
+@media (max-width: 640px) {
+  .likearts-content .wj-btn--transparent {
+    padding: 12px;
+  }
+}
+.likearts-content .wj-btn--transparent:hover {
+  border: 2px solid #42a5f5;
+  color: #42a5f5;
+  background-color: transparent;
+  -webkit-box-shadow: 0 3px 10px rgba(0,0,0,0.16), 0 3px 10px rgba(0,0,0,0.23);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.16), 0 3px 10px rgba(0,0,0,0.23);
+}
