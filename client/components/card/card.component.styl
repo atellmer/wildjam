@@ -33,6 +33,15 @@ $base-font = 16
 			filter grayscale(0)
 			opacity 1
 
+	&--no-effects
+		&:hover
+			box-shadow none
+			.card__pic
+				transform scale(1)
+				filter none
+		.card__pic
+			filter none
+
 	&__title
 		font-size 'calc(18 / %s * 1rem)' %($base-font)
 		font-weight 700
@@ -142,4 +151,25 @@ $base-font = 16
 		text-overflow ellipsis
 		@media (max-width $tablet)
 			max-width 300px
+
+	&__badge
+		width 100%
+		height auto
+		display flex
+		flex-flow row nowrap
+		justify-content space-between
+		align-items center
+		min-height 100px
+
+	&__detail-position
+		color $color-text
+		font-size 'calc(18 / %s * 1rem)' %($base-font)
+		font-weight 500
+		margin-bottom 15px
+
+	&__detail-extra
+		color $color-text-hint
+		font-size 'calc(16 / %s * 1rem)' %($base-font)
+		font-weight 300
+		line-height 1.3
 
