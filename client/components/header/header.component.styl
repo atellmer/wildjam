@@ -37,16 +37,23 @@ $base-font = 16
 		background-color #f6f9fc
 	@media (max-width $tablet)
 		padding 15px
-		box-shadow 0 1px 6px rgba(0,0,0,0.06), 0 1px 4px rgba(0,0,0,0.06)
-
+		border-bottom 1px solid #eee
+		margin-top 32px
 
 	&--white
 		background-color #fff
 		box-shadow 0 3px 13px rgba(204, 215, 220, 0.24)
 
 	&__logo
-		@media (max-width $tablet)
-			margin-bottom 15px
+
+		&--desktop
+			@media (max-width $tablet)
+				margin-bottom 15px
+				display none
+
+		&--mobile
+			@media (min-width 769px)
+				display none
 
 	&__menu
 		position relative
@@ -54,6 +61,14 @@ $base-font = 16
 		left 4px
 		@media (max-width 1140px)
 			left 0
+
+		&--desktop
+			@media (max-width $tablet)
+				display none
+
+		&--mobile
+			@media (min-width 769px)
+				display none
 
 	&__contacts
 		@media (max-width 1140px)
