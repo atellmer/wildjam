@@ -14,3 +14,9 @@
     height: calc(45 / 1.5 * 1px);
   }
 }
+@media (max-width: 768px) {
+  .likearts-content .logo {
+    width: calc(185 / 1.8 * 1px);
+    height: calc(45 / 1.8 * 1px);
+  }
+}

@@ -34,7 +34,6 @@ $base-font = 16
 	@media (max-height 650px)
 		padding 30px 15px
 
-
 	&__container
 		width 100%
 		height 100%
@@ -475,7 +474,7 @@ $base-font = 16
 		object-fit cover
 		transition all .2s ease-in-out
 		&:hover
-			box-shadow 0 3px 10px rgba(0,0,0,0.16), 0 3px 10px rgba(0,0,0,0.23)
+			box-shadow 0 15px 29px rgba(75, 125, 156, 0.17)
 
 	&__desc
 		padding 60px 0 0 0
@@ -534,9 +533,7 @@ $base-font = 16
 	z-index 1
 	width 100%
 	height auto
-	min-height 500px
 	background-color #f4f6f8
-	background-image url('../')
 	padding 0 0 1px 0
 	overflow hidden
 
@@ -578,6 +575,8 @@ $base-font = 16
 		justify-content space-between
 		align-items stretch
 		margin 52px -15px 0 -15px
+		@media (max-width $notebook)
+			justify-content center
 
 	&__card
 		width calc(33.3333% - 30px)
@@ -631,3 +630,66 @@ $base-font = 16
 			right -395px
 		@media (max-width 1470px)
 			display none
+
+.likearts-content .section-6
+	display block
+	position relative
+	z-index 2
+	width 100%
+	height auto
+	background-color #fff
+	padding 1px 0 0 0
+
+	&__container
+		margin-top 130px
+		@media (max-width $tablet)
+			margin-top 100px
+		@media (max-width $phone)
+			margin-top 70px
+
+	&__content
+		padding 15px
+		overflow hidden
+
+	&__pointer
+		position absolute
+		top -85px
+		left 50%
+		transform translate(-50%, 0)
+		z-index 2
+		@media (max-width $tablet)
+			top -45px
+		@media (max-width $phone)
+			top 30px
+		@media (max-height 830px)
+			top -55px
+		@media (max-height 750px)
+			top 10px
+		@media (max-height 750px) and (max-width $phone)
+			top 10px
+
+	&__brands
+		position relative
+		display flex
+		flex-flow row wrap
+		justify-content center
+		align-items center
+		margin 160px -30px 80px -30px
+		@media (max-width $notebook)
+			margin 100px -30px 80px -30px
+
+	&__brands-block
+		width calc(20% - 60px)
+		height auto
+		display flex
+		flex-flow row wrap
+		justify-content center
+		align-items center
+		margin 30px
+		transition all .2s ease-in-out
+		@media (max-width $notebook)
+			width calc(50% - 60px)
+		@media (max-width $phone)
+			width calc(100% - 60px)
+		
+
