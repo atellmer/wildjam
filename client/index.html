@@ -89,7 +89,9 @@
 			<a href="#" class="contacts__link">Обратный звонок</a>
 		</div>
 	</header>
-	<section class="section-1">
+	<section
+		data-scroll-target="1"
+		class="section-1">
 		<div class="main-layout section-1__container">
 			<div class="section-1__content">
 				<div class="section-1__logo-container">
@@ -108,7 +110,11 @@
 					<br>
 					Наши проекты повышают лояльность к бренду и увеличивают продажи.
 				</p>
-				<button class="wj-btn">Подробнее</button>		
+				<button
+					data-scroll-btn
+					class="wj-btn">
+					Подробнее
+				</button>		
 			</div>
 		</div>
 		<div class="section-1__mail">
@@ -116,7 +122,9 @@
 			<a href="mailto:reklama@wildjam.ru" class="section-1__mail-link hidden-tablet">reklama@wildjam.ru</a>
 		</div>
 	</section>
-	<section class="section-2">
+	<section
+		data-scroll-target="2"
+		class="section-2">
 		<div class="section-2__pointer">
 			<div class="pointer">
 				<div class="pointer__separator"></div>
@@ -185,7 +193,9 @@
 			</div>
 		</div>
 	</section>
-	<section class="section-3">
+	<section
+		data-scroll-target="3"
+		class="section-3">
 		<div class="triangle triangle--gray"></div>
 		<div class="section-3__shield">
 			Блогеры
@@ -467,10 +477,13 @@
 					</div>
 				</div>
 			</div>
-			<div class="triangle triangle--white"></div>
+			<!--<div class="triangle triangle--white"></div>-->
 		</div>
 	</section>
-	<section class="section-4">
+	<section
+		data-scroll-target="4"
+		class="section-4">
+		<div class="triangle triangle--reverse-gray"></div>
 		<div class="section-4__pointer">
 			<div class="pointer">
 				<div class="pointer__separator"></div>
@@ -584,7 +597,9 @@
 			</div>
 		</div>
 	</section>
-	<section class="section-5">
+	<section
+		data-scroll-target="5"
+		class="section-5">
 		<div class="triangle triangle--reverse-white"></div>
 		<div class="section-5__shield">
 			Наша
@@ -678,7 +693,9 @@
 			</div>
 		</div>
 	</section>
-	<section class="section-6">
+	<section
+		data-scroll-target="6"
+		class="section-6">
 		<div class="section-6__pointer">
 			<div class="pointer">
 				<div class="pointer__separator"></div>
@@ -764,6 +781,32 @@
 			<a href="#" class="contacts__link">Обратный звонок</a>
 		</div>
 	</footer>
+	<div data-dots-component class="dots">
+		<div
+			data-dots-component-btn="1"
+			class="dots__item js-is-active">
+		</div>
+		<div
+		 data-dots-component-btn="2"
+		 class="dots__item">
+		</div>
+		<div
+			data-dots-component-btn="3"
+			class="dots__item">
+		</div>
+		<div
+			data-dots-component-btn="4"
+			class="dots__item">
+		</div>
+		<div
+			data-dots-component-btn="5"
+			class="dots__item">
+		</div>
+		<div
+			data-dots-component-btn="6"
+			class="dots__item">
+		</div>
+	</div>
 
 
 	<!-- bower:js -->
@@ -773,6 +816,7 @@
 	<!-- endinject -->
 	<!-- inject:js -->
 	<script src="shared/polyfills.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
+	<script src="components/button/button.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
 	<script src="components/dots/dots.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
 	<script src="components/menu/menu.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
 	<!-- endinject -->
