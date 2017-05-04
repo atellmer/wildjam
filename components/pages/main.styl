@@ -166,9 +166,11 @@ $base-font = 16
 		@media (max-width $phone)
 			top 15px
 		@media (max-height 830px)
-			top 10px
+			top -60px
 		@media (max-height 750px)
-			top 0
+			top 30px
+		@media (max-height 750px) and (max-width $phone)
+			top 16px
 
 .likearts-content .pointer
 	position relative
@@ -257,6 +259,10 @@ $base-font = 16
 		position relative
 		background-image linear-gradient(to right bottom, transparent 0%, transparent 49%, transparent 50%, #f4f6f8 50%)
 
+	&--reverse-gray
+		position relative
+		background-image linear-gradient(to right bottom, #f4f6f8 0%, #f4f6f8 49%, #f4f6f8 50%, transparent 50%)
+
 	&--white
 		position relative
 		background-image linear-gradient(to right bottom, transparent 0%, transparent 49%, transparent 50%, #fff 50%)
@@ -268,7 +274,7 @@ $base-font = 16
 
 .likearts-content .section-3
 	position relative
-	z-index 1
+	z-index 3
 	width 100%
 	height auto
 	background-color $color-bg
@@ -327,7 +333,7 @@ $base-font = 16
 
 	&__shield
 		position absolute
-		top 72%
+		top 82%
 		left -300px
 		transform rotate(-90deg)
 		text-transform uppercase
@@ -361,7 +367,7 @@ $base-font = 16
 	width 100%
 	height auto
 	background-color $color-bg
-	padding 1px 0 0 0
+	padding 0 0 1px 0
 
 	&__container
 		margin-top 20px
@@ -374,21 +380,19 @@ $base-font = 16
 
 	&__pointer
 		position absolute
-		top -200px
+		top 20px
 		left 50%
 		transform translate(-50%, 0)
 		@media (max-width $notebook)
-			top -170px
-		@media (max-width $tablet)
-			top -105px
+			top 20px
 		@media (max-width $phone)
-			top -25px
+			top 95px
 		@media (max-height 830px)
-			top -170px
+			top 60px
 		@media (max-height 750px)
-			top -60px
+			top 140px
 		@media (max-height 750px) and (max-width $phone)
-			top 0
+			top 75px
 
 	&__c-cases
 		width 100%
@@ -674,7 +678,9 @@ $base-font = 16
 		flex-flow row wrap
 		justify-content center
 		align-items center
-		margin 160px -30px 80px -30px
+		margin 180px -30px
+		@media (max-width 1650px)
+			margin 160px -30px 80px -30px
 		@media (max-width $notebook)
 			margin 100px -30px 80px -30px
 
