@@ -52,6 +52,11 @@
   text-align: center;
   padding: 35px 15px;
 }
+@media (max-width: 640px) {
+  .likearts-content .card__title {
+    font-size: calc(16 / 16 * 1rem);
+  }
+}
 .likearts-content .card__cover {
   overflow: hidden;
   width: 100%;
@@ -69,6 +74,11 @@
   -o-transition: all 0.2s ease-in-out;
   -ms-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+}
+@media (max-width: 768px) {
+  .likearts-content .card__pic {
+    filter: grayscale(0);
+  }
 }
 .likearts-content .card__link {
   text-decoration: none;
@@ -212,6 +222,14 @@
     opacity: 0.5;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
     filter: alpha(opacity=50);
+  }
+}
+@media (max-width: 768px) {
+  .likearts-content .card__social-icon {
+    filter: grayscale(0);
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
   }
 }
 .likearts-content .card__social-link {

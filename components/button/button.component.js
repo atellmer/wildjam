@@ -3,7 +3,11 @@
 	document.addEventListener('DOMContentLoaded', ready);
 
 	function ready() {
-		scrollBtnInit();
+		var btn = document.querySelector('[data-scroll-btn]');
+
+		if (btn) {
+			scrollBtnInit();
+		}
 	}
 
 	function scrollBtnInit() {

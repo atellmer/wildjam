@@ -3,7 +3,11 @@
 	document.addEventListener('DOMContentLoaded', ready);
 
 	function ready() {
-		dotsComponentInit();
+		var btns = document.querySelectorAll('[data-dots-component-btn]');
+
+		if (btns.length > 0) {
+			dotsComponentInit();
+		}
 	}
 
 	function dotsComponentInit() {

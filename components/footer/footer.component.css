@@ -47,6 +47,9 @@
     padding: 60px 15px;
   }
 }
+.likearts-content .footer--white {
+  background-color: #fff;
+}
 .likearts-content .footer__contacts {
   display: -webkit-box;
   display: -moz-box;

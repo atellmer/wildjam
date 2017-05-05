@@ -48,6 +48,8 @@ $base-font = 16
 		text-transform uppercase
 		text-align center
 		padding 35px 15px
+		@media (max-width $phone)
+			font-size 'calc(16 / %s * 1rem)' %($base-font)
 
 	&__cover
 		overflow hidden
@@ -62,6 +64,8 @@ $base-font = 16
 		object-fit cover
 		filter grayscale(100%)
 		transition all .2s ease-in-out
+		@media (max-width $tablet)
+			filter grayscale(0)
 
 	&__link
 		text-decoration none
@@ -115,12 +119,14 @@ $base-font = 16
 			flex-flow column wrap
 			align-items flex-start
 
-
 	&__social-icon
 		filter grayscale(100%)
 		transition all .2s ease-in-out
 		@supports (filter grayscale(100%))
 			opacity 0.5
+		@media (max-width $tablet)
+			filter grayscale(0)
+			opacity 1
 
 	&__social-link
 		display flex
