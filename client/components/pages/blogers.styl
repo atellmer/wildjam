@@ -1,0 +1,66 @@
+@import 'nib'
+
+//colors
+$color-primary = #3ebcff
+$color-bg = #fff
+$color-text = #272757
+$color-text-hint = #5c5c85
+
+//resolutions
+$phone = 640px
+$tablet = 768px
+$notebook = 1024px
+$desktop = 1600px
+
+//params
+$container-width = 1140px
+$base-font = 16
+
+.likearts-content .blogers
+	position relative
+	width 100%
+	height auto
+	min-height 100vh
+	background-color #f4f6f8
+	padding 0 0 100px 0
+
+	&__container
+		overflow hidden
+		@media (max-width 1140px)
+			padding 0 15px
+
+	&__breadcrumbs
+		position relative
+		padding 61px 0 48px 0
+		@media (max-width $tablet)
+			padding 30px 0
+
+	&__title
+		text-align left
+		margin-bottom 37px
+		@media (max-width $phone)
+			font-size 'calc(20 / %s * 1rem)' %($base-font)
+			margin-bottom 15px
+
+	&__cards
+		position relative
+		display flex
+		flex-flow row wrap
+		justify-content flex-start
+		align-items stretch
+		margin 0 -15px 40px -15px
+		padding 20px 0
+
+	&__card
+		width calc(33.3333% - 30px)
+		height auto
+		margin 15px
+		transition all .2s ease-in-out
+		@media (max-width $notebook)
+			width calc(50% - 30px)
+		@media (max-width $phone)
+			width calc(100% - 30px)
+
+	&__pagination
+		position relative
+		padding 15px 0
