@@ -66,6 +66,12 @@
   box-shadow: 0 3px 13px rgba(204,215,220,0.24);
 }
 @media (max-width: 768px) {
+  .likearts-content .header--white {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+}
+@media (max-width: 768px) {
   .likearts-content .header__logo--desktop {
     margin-bottom: 15px;
     display: none;

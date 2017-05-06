@@ -1,0 +1,21 @@
+.likearts-content .slider {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.likearts-content .slider__item {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  min-height: 780px;
+  object-fit: cover;
+}
+@media (max-width: 640px) {
+  .likearts-content .slider__item {
+    min-height: 0;
+  }
+}
+.likearts-content .slider .slick-slide,
+.likearts-content .slider .slick-slide * {
+  outline: none !important;
+}

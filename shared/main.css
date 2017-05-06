@@ -83,3 +83,17 @@ body {
     font-size: calc(18 / 16 * 1rem);
   }
 }
+.likearts-content .title--h3 {
+  font-size: calc(33 / 16 * 1rem);
+  font-weight: 900;
+}
+@media (max-width: 1140px) {
+  .likearts-content .title--h3 {
+    font-size: calc(25 / 16 * 1rem);
+  }
+}
+@media (max-width: 640px) {
+  .likearts-content .title--h3 {
+    font-size: calc(17 / 16 * 1rem);
+  }
+}
