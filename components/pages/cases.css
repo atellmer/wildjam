@@ -1,4 +1,4 @@
-.likearts-content .blogers {
+.likearts-content .cases {
   position: relative;
   width: 100%;
   height: auto;
@@ -6,30 +6,30 @@
   background-color: #f4f6f8;
   padding: 0 0 100px 0;
 }
-.likearts-content .blogers__container {
+.likearts-content .cases__container {
   overflow: hidden;
   padding: 0 15px;
 }
-.likearts-content .blogers__breadcrumbs {
+.likearts-content .cases__breadcrumbs {
   position: relative;
   padding: 61px 0 48px 0;
 }
 @media (max-width: 768px) {
-  .likearts-content .blogers__breadcrumbs {
+  .likearts-content .cases__breadcrumbs {
     padding: 30px 0;
   }
 }
-.likearts-content .blogers__title {
+.likearts-content .cases__title {
   text-align: left;
-  margin-bottom: 37px;
+  margin-bottom: 20px;
 }
 @media (max-width: 640px) {
-  .likearts-content .blogers__title {
+  .likearts-content .cases__title {
     font-size: calc(20 / 16 * 1rem);
     margin-bottom: 15px;
   }
 }
-.likearts-content .blogers__cards {
+.likearts-content .cases__cards {
   position: relative;
   display: -webkit-box;
   display: -moz-box;
@@ -58,30 +58,49 @@
   -ms-flex-align: stretch;
   -webkit-align-items: stretch;
   align-items: stretch;
-  margin: 0 -15px 40px -15px;
-  padding: 20px 0;
+  margin: 0 -25px 80px -25px;
 }
-.likearts-content .blogers__card {
-  width: calc(33.3333% - 30px);
+@media (max-width: 1650px) {
+  .likearts-content .cases__cards {
+    margin: 0 -15px 80px -15px;
+  }
+}
+.likearts-content .cases__card {
+  position: relative;
+  width: calc(50% - 50px);
   height: auto;
-  margin: 15px;
+  margin: 25px;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   -ms-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-@media (max-width: 1024px) {
-  .likearts-content .blogers__card {
+@media (max-width: 1650px) {
+  .likearts-content .cases__card {
     width: calc(50% - 30px);
+    margin: 15px;
   }
 }
 @media (max-width: 640px) {
-  .likearts-content .blogers__card {
+  .likearts-content .cases__card {
     width: calc(100% - 30px);
   }
 }
-.likearts-content .blogers__pagination {
-  position: relative;
-  padding: 15px 0;
+.likearts-content .cases .card__cover {
+  max-height: 310px;
+}
+@media (max-width: 1140px) {
+  .likearts-content .cases .card__cover {
+    max-height: 270px;
+  }
+}
+.likearts-content .cases .card__pic {
+  max-height: 310px;
+  filter: none;
+}
+@media (max-width: 1140px) {
+  .likearts-content .cases .card__pic {
+    max-height: 270px;
+  }
 }

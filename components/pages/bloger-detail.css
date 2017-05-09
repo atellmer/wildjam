@@ -8,11 +8,7 @@
 }
 .likearts-content .bloger-detail__container {
   overflow: hidden;
-}
-@media (max-width: 1140px) {
-  .likearts-content .bloger-detail__container {
-    padding: 0 15px;
-  }
+  padding: 0 15px;
 }
 .likearts-content .bloger-detail__breadcrumbs {
   position: relative;

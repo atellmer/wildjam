@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta
+		name="viewport" 
+		content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
+	<title>Wildjam</title>
+	<!-- bower:css -->
+	<link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
+	<link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css">
+	<link rel="stylesheet" href="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
+	<!-- endinject -->
+	<!-- inject:css -->
+	<link rel="stylesheet" href="fonts/fonts.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
+	<link rel="stylesheet" href="images/icons/sprite/sprite.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
+	<link rel="stylesheet" href="shared/helpers.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
+	<link rel="stylesheet" href="shared/main.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
+	<link rel="stylesheet" href="shared/variables.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
+	<link rel="stylesheet" href="components/breadcrumbs/breadcrumbs.components.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
+	<link rel="stylesheet" href="components/button/button.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
+	<link rel="stylesheet" href="components/card/card.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
+	<link rel="stylesheet" href="components/dots/dots.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
+	<link rel="stylesheet" href="components/footer/footer.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
+	<link rel="stylesheet" href="components/header/header.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
+	<link rel="stylesheet" href="components/logo/logo.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
+	<link rel="stylesheet" href="components/menu/menu.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
+	<link rel="stylesheet" href="components/pages/bloger-detail.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
+	<link rel="stylesheet" href="components/pages/blogers.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
+	<link rel="stylesheet" href="components/pages/cases.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
+	<link rel="stylesheet" href="components/pages/main.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
+	<link rel="stylesheet" href="components/pagination/pagination.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
+	<link rel="stylesheet" href="components/slider/slider.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
+	<!-- endinject -->
+</head>
+
+<body class="likearts-content">
+	<header class="header header--white">
+		<div class="logo header__logo header__logo--desktop"></div>
+		<nav class="menu-desktop header__menu header__menu--desktop">
+			<ul class="menu-desktop__list">
+				<li class="menu-desktop__list-item">
+					<a href="#" class="menu-desktop__list-link">Новости</a>
+				</li>
+				<li class="menu-desktop__list-item">
+					<a href="#" class="menu-desktop__list-link">Для клиентов</a>
+				</li>
+				<li class="menu-desktop__list-item">
+					<a href="#" class="menu-desktop__list-link">Блогеры</a>
+				</li>
+				<li class="menu-desktop__list-item">
+					<a href="#" class="menu-desktop__list-link">Контакты</a>
+				</li>
+			</ul>
+		</nav>
+		<div class="header__menu header__menu--mobile">
+			<nav class="menu-mobile">
+				<div id="menuBtn" class="menu-mobile__btn">
+					<span id="menuBtnIcon" class="hamburger-icon menu-mobile__icon"></span>
+				</div>
+				<div class="l-mobile-logo">
+					<a href="#">
+						<div class="logo header__logo header__logo--mobile"></div>
+					</a>
+				</div>
+				<ul id="menuContent" class="menu-mobile__list">
+					<li aria-haspopup="true" class="menu-mobile__list-item">
+						<a href="#" class="menu-mobile__list-link">Новости</a>
+					</li>
+					<li aria-haspopup="true" class="menu-mobile__list-item is-active">
+						<a href="#" class="menu-mobile__list-link">Для клиентов</a>
+					</li>
+					<li aria-haspopup="true" class="menu-mobile__list-item">
+						<a href="#" class="menu-mobile__list-link">Блогеры</a>
+					</li>
+					<li aria-haspopup="true" class="menu-mobile__list-item">
+						<a href="#" class="menu-mobile__list-link">Контакты</a>
+					</li>
+				</ul>
+				<div id="menuOverlay" class="menu-mobile__overlay"></div>
+			</nav>
+		</div>
+
+		<div class="header__contacts contacts">
+			<a href="+74951234567" class="contacts__phone">+7 (495) 123-45-67</a>
+			<a href="#" class="contacts__link">Обратный звонок</a>
+		</div>
+	</header>
+	
+	<main class="cases">
+		<div class="main-layout cases__container">
+			<div class="cases__breadcrumbs">
+				<div class="wj-breadcrumbs">
+					<a href="#" class="wj-breadcrumbs__link">Главная</a>
+					<span class="wj-breadcrumbs__separator"></span>
+					<a href="#" class="wj-breadcrumbs__link">Блогеры</a>
+					<span class="wj-breadcrumbs__separator"></span>
+					<a href="#" class="wj-breadcrumbs__link is-active">Кейсы</a>
+				</div>
+			</div>
+			<h2 class="title title--h2 cases__title">Наши кейсы</h2>
+			<div class="cases__cards">
+				<div aria-haspopup="true" class="card cases__card">
+					<div class="card__title">
+						<a href="#" class="card__link">Axe</a>
+					</div>
+					<a href="#" class="card__link">
+						<div class="card__cover">
+							<img
+								src="./images/pages/cases/1.jpg"
+								class="card__pic"
+								alt="text">
+						</div>
+					</a>
+				</div>
+				<div aria-haspopup="true" class="card cases__card">
+					<div class="card__title">
+						<a href="#" class="card__link">Aviasales</a>
+					</div>
+					<a href="#" class="card__link">
+						<div class="card__cover">
+							<img
+								src="./images/pages/cases/2.jpg"
+								class="card__pic"
+								alt="text">
+						</div>
+					</a>
+				</div>
+				<div aria-haspopup="true" class="card cases__card">
+					<div class="card__title">
+						<a href="#" class="card__link">Скидка.ру</a>
+					</div>
+					<a href="#" class="card__link">
+						<div class="card__cover">
+							<img
+								src="./images/pages/cases/3.jpg"
+								class="card__pic"
+								alt="text">
+						</div>
+					</a>
+				</div>
+				<div aria-haspopup="true" class="card cases__card">
+					<div class="card__title">
+						<a href="#" class="card__link">Eristika</a>
+					</div>
+					<a href="#" class="card__link">
+						<div class="card__cover">
+							<img
+								src="./images/pages/cases/4.jpg"
+								class="card__pic"
+								alt="text">
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="cases__pagination">
+				<div class="wj-pagination">
+					<div class="wj-pagination__line"></div>
+					<div class="wj-pagination__cover">
+						<a href="#" class="wj-pagination__btn wj-pagination__btn--prev">
+							<i class="wj-pagination__icon"></i>
+						</a>
+						<a href="#" class="wj-pagination__link is-active">1</a>
+						<a href="#" class="wj-pagination__link">2</a>
+						<a href="#" class="wj-pagination__link">3</a>
+						<a href="#" class="wj-pagination__link">4</a>
+						<a href="#" class="wj-pagination__btn wj-pagination__btn--next">
+							<i class="wj-pagination__icon"></i>
+						</a>
+					</div>
+					<div class="wj-pagination__line"></div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer class="footer footer--white">
+		<div class="logo footer__logo footer__logo--desktop"></div>
+		<div class="footer__contacts footer__contacts--mrg-r">
+			<div class="footer__contacts-item">reklama@wildjam.ru</div>
+			<div class="footer__contacts-item">Нижний сусальный пер., д.5, стр.10</div>
+		</div>
+		<div class="footer__contacts contacts">
+			<a href="+74951234567" class="contacts__phone">+7 (495) 123-45-67</a>
+			<a href="#" class="contacts__link">Обратный звонок</a>
+		</div>
+	</footer>
+
+
+
+	<!-- bower:js -->
+	<script src="bower_components/hammerjs/hammer.js"></script>
+	<script src="bower_components/gmaps/gmaps.js"></script>
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="bower_components/slick-carousel/slick/slick.js"></script>
+	<script src="bower_components/jquery-mousewheel/jquery.mousewheel.js"></script>
+	<script src="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js"></script>
+	<!-- endinject -->
+	<!-- inject:js -->
+	<script src="shared/polyfills.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
+	<script src="components/button/button.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
+	<script src="components/dots/dots.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
+	<script src="components/menu/menu.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
+	<script src="components/scrollbar/scrollbar.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
+	<script src="components/slider/slider.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
+	<!-- endinject -->
+</body>
+
+</html>
