@@ -1,0 +1,250 @@
+@import 'nib'
+
+//colors
+$color-primary = #3ebcff
+$color-bg = #fff
+$color-text = #272757
+$color-text-hint = #5c5c85
+
+//resolutions
+$phone = 640px
+$tablet = 768px
+$notebook = 1024px
+$desktop = 1600px
+
+//params
+$container-width = 1140px
+$base-font = 16
+
+.likearts-content .cases-detail
+	position relative
+	width 100%
+	height auto
+	min-height 100vh
+	background-color #f4f6f8
+	padding 0 0 100px 0
+
+	&__container
+		overflow hidden
+		padding 0 15px
+
+	&__breadcrumbs
+		position relative
+		padding 61px 0 48px 0
+		@media (max-width $tablet)
+			padding 30px 0
+
+	&__title
+		text-align left
+		margin-bottom 37px
+		@media (max-width $phone)
+			font-size 'calc(20 / %s * 1rem)' %($base-font)
+			margin-bottom 15px
+
+		&--h3
+			text-align center
+			margin-bottom 40px
+			@media (max-width $phone)
+				margin-bottom 15px
+
+	&__cases-card
+		margin-bottom 78px
+
+	&__cards
+		position relative
+		display flex
+		flex-flow row wrap
+		justify-content flex-start
+		align-items stretch
+		margin 0 -15px 40px -15px
+		padding 20px 0
+
+	&__card
+		width calc(33.3333% - 30px)
+		height auto
+		margin 15px
+		transition all .2s ease-in-out
+		@media (max-width $notebook)
+			width calc(50% - 30px)
+		@media (max-width $phone)
+			width calc(100% - 30px)
+
+	&__pagination
+		position relative
+		padding 15px 0
+
+	&__videos
+		display flex
+		flex-flow row wrap
+		justify-content flex-start
+		align-items stretch
+		margin 0 -15px 77px -15px
+
+	&__videos-item
+		width calc(33.3333% - 30px)
+		height 243px
+		margin 15px
+		transition all .2s ease-in-out
+		@media (max-width $notebook)
+			width calc(50% - 30px)
+		@media (max-width $phone)
+			width calc(100% - 30px)
+
+.likearts-content .cases-detail .cases-card
+	position relative
+	width 100%
+	height auto
+	background-color #fff
+
+	&__cover
+		width 100%
+		height 255px
+		background-size cover
+		background-position center
+		background-repeat no-repeat
+		@media (max-width $tablet)
+			height 200px
+		@media (max-width $phone)
+			height 150px
+
+	&__content
+		overflow hidden
+		padding 50px 60px
+		@media (max-width $tablet)
+			padding 30px
+
+	&__counts
+		display flex
+		flex-flow row wrap
+		justify-content space-between
+		align-items stretch
+		@media (max-width $phone)
+			flex-flow column wrap
+
+	&__counts-item
+		width 50%
+		height auto
+		display flex
+		flex-flow row nowrap
+		justify-content flex-start
+		align-items center
+		@media (max-width 1140px)
+			justify-content space-between
+		@media (max-width $phone)
+			width 100%
+			flex-flow column wrap
+
+	&__counts-group
+		display flex
+		flex-flow row nowrap
+		justify-content space-between
+		align-items center
+		margin-right 44px
+		@media (max-width 1140px)
+			margin-right 0
+			flex-flow column wrap
+			justify-content center
+			align-items center
+			text-align center
+		@media (max-width $phone)
+			margin-bottom 20px
+
+	&__counts-number
+		flex-shrink 0
+		margin-right 24px
+		color $color-text
+		font-size 'calc(40 / %s * 1rem)' %($base-font)
+		font-weight 900
+		@media (max-width 1140px)
+			margin-right 0
+			margin-bottom 4px
+			font-size 'calc(30 / %s * 1rem)' %($base-font)
+		@media (max-width $phone)
+			font-size 'calc(26 / %s * 1rem)' %($base-font)
+
+	&__counts-sign
+		flex-shrink 1
+		color $color-text
+		font-size 'calc(16 / %s * 1rem)' %($base-font)
+		font-weight 400
+		@media (max-width $phone)
+			font-size 'calc(14 / %s * 1rem)' %($base-font)
+
+	&__separator
+		width 100%
+		height 1px
+		background-color #e6e6e6
+		margin 50px 0
+		@media (max-width $tablet)
+			margin 30px 0 20px 0
+
+	&__detail
+		display flex
+		flex-flow row wrap
+		justify-content flex-start
+		align-items stretch
+		margin 0 -15px
+
+	&__detail-item
+		width calc(50% - 30px)
+		margin 0 15px
+		@media (max-width $tablet)
+			width calc(100% - 30px)
+
+	&__desc-item
+		margin-bottom 24px
+
+	&__desc-title
+		color $color-text
+		font-size 'calc(18 / %s * 1rem)' %($base-font)
+		font-weight 700
+		line-height 2.61
+
+	&__desc-list
+		margin 0
+		padding 0 0 0 18px
+		list-style none
+
+	&__desc-list-item
+		position relative
+		color $color-text
+		font-size 'calc(16 / %s * 1rem)' %($base-font)
+		font-weight 300
+		line-height 1.2
+		margin-bottom 20px
+		padding-left 10px
+		@media (max-width $tablet)
+			font-size 'calc(14 / %s * 1rem)' %($base-font)
+		&:before
+			content ''
+			position absolute
+			top 0
+			left -18px
+			display inline-block
+			width 18px
+			height 18px
+			background-image url('../../images/icons/confirm@2x.png')
+			background-size cover
+			background-position center
+			background-repeat no-repeat
+
+	&__desc-text
+		color $color-text
+		font-size 'calc(16 / %s * 1rem)' %($base-font)
+		font-weight 300
+		line-height 1.38
+		margin 0
+		@media (max-width $tablet)
+			font-size 'calc(14 / %s * 1rem)' %($base-font)
+
+	&__c-btn
+		margin-top 20px
+
+	&__btn
+		padding 24px 46px
+		font-size 'calc(16 / %s * 1rem)' %($base-font)
+		@media (max-width $phone)
+			padding 12px
+	
+
+
