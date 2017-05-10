@@ -4,3 +4,4 @@
 2. [Блогеры](https://atellmer.github.io/wildjam/blogers.html)
 3. [Карточка блогера](https://atellmer.github.io/wildjam/bloger-detail.html)
 4. [Кейсы](https://atellmer.github.io/wildjam/cases.html)
+5. [Карточка кейса](https://atellmer.github.io/wildjam/case-detail.html)
