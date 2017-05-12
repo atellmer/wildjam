@@ -1,0 +1,93 @@
+@import 'nib'
+
+//colors
+$color-primary = #3ebcff
+$color-bg = #fff
+$color-text = #272757
+$color-text-hint = #5c5c85
+
+//resolutions
+$phone = 640px
+$tablet = 768px
+$notebook = 1024px
+$desktop = 1600px
+
+//params
+$container-width = 1140px
+$base-font = 16
+
+.likearts-content .wj-form
+	width 100%
+	height auto
+	margin 0
+
+	&__c-btn
+		margin-bottom 30px
+
+	&__btn
+		width 100%
+		font-size 'calc(20 / %s * 1rem)' %($base-font)
+		@media all and (max-width $phone)
+			padding 10px
+			font-size 'calc(18 / %s * 1rem)' %($base-font)
+
+	&__group
+		position relative
+		margin-bottom 20px
+
+	&__input
+		display block
+		width 100%
+		background-color transparent
+		border 1px solid #c3c5c6
+		padding 20px 60px 20px 35px
+		font-size 1.44rem
+		font-weight 300
+		margin 0 auto
+		transition all .2s ease-in-out
+		font-size 'calc(18 / %s * 1rem)' %($base-font)
+		border-radius 30px
+		@media all and (max-width 1140px)
+			padding 16px
+			font-size 'calc(16 / %s * 1rem)' %($base-font)
+
+		&:focus
+			outline none
+			background-color #fff
+			border 1px solid $color-primary
+
+		&::-webkit-input-placeholder
+			font-weight 300
+			color #c3c5c6
+
+		&::-moz-placeholder
+			font-weight 200
+			color #c3c5c6
+
+		&:-moz-placeholder
+			font-weight 200
+			color #c3c5c6
+
+		&:-ms-input-placeholder
+			font-weight 200
+			color #c3c5c6
+
+	&__textarea
+		resize none
+		min-height 200px
+		text-align left
+
+	&__icon
+		position absolute
+		top 50%
+		right 20px
+		transform translate(0, -50%)
+		color #c3c5c6
+
+		&--txt
+			top 18px
+			transform translate(0, 0)
+		
+	.wj-form__input:focus + .wj-form__icon
+		color $color-primary
+
