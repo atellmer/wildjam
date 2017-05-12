@@ -1,0 +1,149 @@
+@import 'nib'
+
+//colors
+$color-primary = #3ebcff
+$color-bg = #fff
+$color-text = #272757
+$color-text-hint = #5c5c85
+
+//resolutions
+$phone = 640px
+$tablet = 768px
+$notebook = 1024px
+$desktop = 1600px
+
+//params
+$container-width = 1140px
+$base-font = 16
+
+.likearts-content .contacts-page
+	position relative
+	width 100%
+	height auto
+	min-height 800px
+	background-color #f4f6f8
+
+	&__container
+		overflow hidden
+		display flex
+		flex-flow row wrap
+		justify-content space-between
+		align-items stretch
+
+	&__column
+		width 50%
+		height auto
+		@media (max-width 900px)
+			width 100%
+
+		&--left
+			position relative
+		
+		&--right
+			position relative
+
+	&__content
+		width 100%
+		max-width 570px
+		height auto
+		min-height 800px
+		margin-left auto
+		padding 15px 60px 80px 15px
+		@media (max-width 1140px)
+			padding 15px
+		@media (max-width 900px)
+			max-width none
+			margin-left 0
+
+	&__breadcrumbs
+		position relative
+		padding 61px 0 48px 0
+		@media (max-width $tablet)
+			padding 30px 0
+
+	&__title
+		text-align left
+		margin-bottom 37px
+		@media (max-width $phone)
+			font-size 'calc(20 / %s * 1rem)' %($base-font)
+			margin-bottom 15px
+
+	&__pagination
+		position relative
+		padding 15px 0
+
+	&__info
+		border-top 1px solid #dcdee0
+		border-bottom 1px solid #dcdee0
+		padding 47px 0
+
+	&__info-item
+		display flex
+		flex-flow row nowrap
+		justify-content flex-start
+		align-items center
+		margin-bottom 38px
+		@media (max-width $notebook)
+			margin-bottom 18px
+
+		&:last-child
+			margin-bottom 0
+
+	&__info-icon
+		flex-shrink 0
+		background-size cover
+		background-position center
+		background-repeat no-repeat
+		margin-right 19px
+		@media (max-width $phone)
+			margin-right 10px
+
+		&--phone
+			width 23px
+			height 23px
+			background-image url('../../images/icons/phone@2x.png')
+
+		&--map
+			width 25px
+			height 32px
+			background-image url('../../images/icons/map@2x.png')
+
+		&--email
+			width 26px
+			height 26px
+			background-image url('../../images/icons/email@2x.png')
+
+	&__info-sign
+		flex-shrink 1
+		color $color-text
+		font-size 'calc(18 / %s * 1rem)' %($base-font)
+		font-weight 300
+		line-height 1.11
+		text-decoration none
+		@media (max-width $notebook)
+			font-size 'calc(16 / %s * 1rem)' %($base-font)
+
+		&--bold
+			font-weight 500
+			font-size 'calc(22 / %s * 1rem)' %($base-font)
+			@media (max-width $notebook)
+				font-size 'calc(18 / %s * 1rem)' %($base-font)
+
+	&__form
+		padding-right 90px
+		@media (max-width 1140px)
+			padding-right 0
+
+	&__form-title
+		color $color-text
+		font-size 'calc(28 / %s * 1rem)' %($base-font)
+		font-weight 900
+		margin 47px 0
+		@media (max-width 1140px)
+			font-size 'calc(20 / %s * 1rem)' %($base-font)
+		@media (max-width 900px)
+			margin 30px 0
+
+	&__map
+		@media (max-width $phone)
+			display none
