@@ -1638,7 +1638,6 @@ body {
   animation-fill-mode: forwards;
 }
 .likearts-content .modals .modals__overlay.js-is-close {
-  display: block;
   -webkit-animation: modal-motion-overlay-close 0.3s 1 ease-in-out;
   -moz-animation: modal-motion-overlay-close 0.3s 1 ease-in-out;
   -o-animation: modal-motion-overlay-close 0.3s 1 ease-in-out;
@@ -1664,7 +1663,6 @@ body {
   animation-fill-mode: forwards;
 }
 .likearts-content .modals .modal.js-is-close {
-  display: block;
   -webkit-animation: modal-motion-window-close 0.3s 1 ease-in-out;
   -moz-animation: modal-motion-window-close 0.3s 1 ease-in-out;
   -o-animation: modal-motion-window-close 0.3s 1 ease-in-out;
