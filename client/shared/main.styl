@@ -21,11 +21,13 @@ $base-font = 16
 *::after
 	box-sizing border-box
 
+html
+	background-color #E0E0E0
+
 html, body
 	width 100%
 	height auto
 	min-height 100%
-	// overflow-x hidden
 	-webkit-font-smoothing antialiased
 	-webkit-overflow-scrolling touch
 
@@ -35,6 +37,7 @@ html, body
 	background-color $color-bg
 	color $color-text
 	font-size '%spx' %($base-font)
+	overflow-x hidden
 
 .likearts-content a
 	transition color .2s ease-in-out
