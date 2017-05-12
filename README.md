@@ -7,3 +7,4 @@
 5. [Карточка кейса](https://atellmer.github.io/wildjam/case-detail.html)
 6. [Новости](https://atellmer.github.io/wildjam/news.html)
 7. [Карточка новости](https://atellmer.github.io/wildjam/news-detail.html)
+8. [Контакты](https://atellmer.github.io/wildjam/contacts.html)
