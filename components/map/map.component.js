@@ -3,7 +3,11 @@
 	document.addEventListener('DOMContentLoaded', ready);
 
 	function ready() {
-		googleMapsInit();
+		var map = document.querySelector('#googleMap');
+
+		if (map) {
+			googleMapsInit();
+		}
 	}
 
 	function googleMapsInit() {

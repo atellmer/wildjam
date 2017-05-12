@@ -284,6 +284,14 @@
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
   filter: alpha(opacity=40);
 }
+@media (max-width: 768px) {
+  .likearts-content .news-card__social-link {
+    filter: none;
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+  }
+}
 .likearts-content .news-card__social-link:hover {
   filter: grayscale(0);
   opacity: 1;

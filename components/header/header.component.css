@@ -172,7 +172,13 @@
   font-size: calc(16 / 16 * 1rem);
   font-weight: 500;
   line-height: 1.75;
+  -webkit-transition: color 0.2s ease-in-out;
+  -moz-transition: color 0.2s ease-in-out;
+  -o-transition: color 0.2s ease-in-out;
+  -ms-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
   text-decoration: underline;
+  cursor: pointer;
 }
 @media (max-width: 768px) {
   .likearts-content .header .contacts__link {
