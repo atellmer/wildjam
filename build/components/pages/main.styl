@@ -1,0 +1,701 @@
+@import 'nib'
+
+//colors
+$color-primary = #3ebcff
+$color-bg = #fff
+$color-text = #272757
+$color-text-hint = #5c5c85
+
+//resolutions
+$phone = 640px
+$tablet = 768px
+$notebook = 1024px
+$desktop = 1600px
+
+//params
+$container-width = 1140px
+$base-font = 16
+
+.likearts-content .section-1
+	position relative
+	z-index 1
+	width 100%
+	height auto
+	background-color #f6f9fc
+	background-image url('../../images/pages/main/bg.jpg')
+	background-size cover
+	background-position center
+	background-repeat no-repeat
+	padding 15px
+	@media (max-width $tablet)
+		padding 30px 15px
+	@media (max-width $phone)
+		padding 15px
+	@media (max-height 650px)
+		padding 30px 15px
+
+	&__container
+		width 100%
+		height 100%
+		display flex
+		flex-flow row wrap
+		justify-content center
+		align-items center
+		min-height 100vh
+		@media (max-width 1140px)
+			min-height calc(100vh - 200px)
+		@media (max-width $tablet)
+			min-height 0
+
+	&__content
+		margin-top -25px
+		display flex
+		flex-flow column wrap
+		justify-content center
+		align-items center
+		@media (max-width $tablet)
+			margin-top 0
+
+	&__logo-container
+		position relative
+		top 11px
+		width auto
+		height auto
+
+	&__logo
+		width 100%
+		height 100%
+		max-width 373px
+		max-height 296px
+		object-fit cover
+		transition all .2s ease-in-out
+		@media (max-width $tablet)
+			max-width calc(373 / 1.5 * 1px)
+			max-height calc(296 / 1.5 * 1px)
+		@media (max-width $phone)
+			max-width calc(373 / 2 * 1px)
+			max-height calc(296 / 2 * 1px)
+
+	&__title
+		margin 80px 0 64px 0
+		@media (max-width 1650px)
+			margin 40px 0
+		@media (max-width 1140px)
+			margin 30px 0
+
+	&__desc
+		color $color-text
+		font-size 'calc(20 / %s * 1rem)' %($base-font)
+		font-weight 400
+		line-height 1.5
+		text-align center
+		margin 0 0 48px 0
+		@media (max-width 940px)
+			font-size 'calc(16 / %s * 1rem)' %($base-font)
+
+	&__mail
+		width 100%
+		height auto
+		display flex
+		flex-flow row wrap
+		justify-content space-between
+		align-items center
+		padding 49px 62px
+		margin-top -110px
+		@media (max-width 1140px)
+			margin-top 0
+		@media (max-width $tablet)
+			justify-content center
+			padding 30px 15px
+		@media (max-width $phone)
+			justify-content center
+			padding 30px 15px 15px 15px
+
+	&__mail-link
+		color #000
+		font-size 'calc(18 / %s * 1rem)' %($base-font)
+		font-weight 500
+		line-height 0.72
+		text-decoration none
+		@media (max-width $tablet)
+			font-size 'calc(16 / %s * 1rem)' %($base-font)
+		&:hover
+			text-decoration underline
+
+		&--tablet
+			margin-top 55px
+			display none
+			@media (max-width $tablet)
+				display block
+			@media (max-width $phone)
+				margin-top 10px
+
+
+.likearts-content .section-2
+	position relative
+	z-index 1
+	width 100%
+	height auto
+	min-height 750px
+	background-color #fff
+	padding 15px
+
+	&__container
+		position relative
+		margin-top 140px
+		@media (max-width $tablet)
+			margin-top 100px
+		@media (max-width $phone)
+			margin-top 50px
+
+	&__bullets
+		position relative
+		display flex
+		flex-flow row wrap
+		justify-content space-between
+		align-items stretch
+		margin-top 60px
+
+	&__pointer
+		position absolute
+		top -90px
+		left 50%
+		transform translate(-50%, 0)
+		@media (max-width $tablet)
+			top -40px
+		@media (max-width $phone)
+			top 15px
+		@media (max-height 830px)
+			top -60px
+		@media (max-height 750px)
+			top 30px
+		@media (max-height 750px) and (max-width $phone)
+			top 16px
+
+.likearts-content .pointer
+	position relative
+	transition all .2s ease-in-out
+
+	&__separator
+		position relative
+		width 1px
+		height 155px
+		background-color #cacaca
+		transition all .2s ease-in-out
+		@media (max-width $tablet)
+			height 80px
+		@media (max-width $phone)
+			display none
+		@media (max-height 830px)
+			height 100px
+		@media (max-height 750px)
+			display none
+		&:before
+			content ''
+			position absolute
+			transform translate(-50%, 0)
+			width 14px
+			height 14px
+			background-color $color-primary
+			border-radius 50%
+
+	&__number
+		position absolute
+		color $color-primary
+		font-size 'calc(30 / %s * 1rem)' %($base-font)
+		font-weight 900
+		line-height 2.67
+		transform translate(-50%, 0)
+		@media (max-width $phone)
+			font-size 'calc(20 / %s * 1rem)' %($base-font)
+			line-height 2
+
+.likearts-content .bullet
+	width 33.3333%
+	height auto
+	min-height 280px
+	background-color #fff
+	display flex
+	flex-flow column wrap
+	justify-content center
+	align-items center
+	padding 20px
+	transition all .2s ease-in-out
+	@media (max-width 900px)
+		width 50%
+	@media (max-width $phone)
+		width 100%
+		min-height 0
+
+	&__desc
+		color $color-text
+		font-size 'calc(20 / %s * 1rem)' %($base-font)
+		line-height 1.3
+		font-weight 300
+		margin 40px 0 0 0
+		@media (max-width $notebook)
+			font-size 'calc(18 / %s * 1rem)' %($base-font)
+		@media (max-width $phone)
+			font-size 'calc(16 / %s * 1rem)' %($base-font)
+
+	&__icon
+		@media (max-width $phone)
+			transform scale(0.8)
+
+
+.likearts-content .triangle
+	position relative
+	width 100%
+	height auto
+	min-height 230px
+	@media (max-width $notebook)
+		min-height 180px
+	@media (max-width $tablet)
+		min-height 120px
+	@media (max-width $phone)
+		min-height 100px
+
+	&--gray
+		position relative
+		background-image linear-gradient(to right bottom, transparent 0%, transparent 49%, transparent 50%, #f4f6f8 50%)
+
+	&--reverse-gray
+		position relative
+		background-image linear-gradient(to right bottom, #f4f6f8 0%, #f4f6f8 49%, #f4f6f8 50%, transparent 50%)
+
+	&--white
+		position relative
+		background-image linear-gradient(to right bottom, transparent 0%, transparent 49%, transparent 50%, #fff 50%)
+
+	&--reverse-white
+		position relative
+		z-index 2
+		background-image linear-gradient(to right bottom, #fff 0%, #fff 49%, #fff 50%, transparent 50%)
+
+.likearts-content .section-3
+	position relative
+	z-index 3
+	width 100%
+	height auto
+	background-color $color-bg
+
+	&__cover
+		background-color #f4f6f8
+		padding 1px 0 0 0
+
+	&__container
+		position relative
+		margin-top 40px
+		@media (max-width $tablet)
+			margin-top 60px
+		@media (max-width $phone)
+			margin-top 30px
+
+	&__content
+		overflow-x hidden
+		padding 15px
+
+	&__pointer
+		position absolute
+		top 35px
+		left 50%
+		transform translate(-50%, 0)
+		@media (max-width $notebook)
+			top -5px
+		@media (max-width $tablet)
+			top 20px
+		@media (max-width $phone)
+			top 70px
+		@media (max-height 830px)
+			top 60px
+		@media (max-height 750px)
+			top 120px
+		@media (max-height 750px) and (max-width $phone)
+			top 70px
+
+	&__cards
+		position relative
+		display flex
+		flex-flow row wrap
+		justify-content flex-start
+		align-items stretch
+		margin 52px -15px 0 -15px
+
+	&__card
+		width calc(33.3333% - 30px)
+		height auto
+		margin 15px
+		transition all .2s ease-in-out
+		@media (max-width $notebook)
+			width calc(50% - 30px)
+		@media (max-width $phone)
+			width calc(100% - 30px)
+
+	&__shield
+		position absolute
+		top 82%
+		left -300px
+		transform rotate(-90deg)
+		text-transform uppercase
+		line-height 0.74
+		font-weight 900
+		font-size 'calc(180 / %s * 1rem)' %($base-font)
+		letter-spacing 10px
+		user-select none
+		color #fff
+		@media (max-width 1470px)
+			display none
+
+	&__c-btn
+		width 100%
+		display flex
+		justify-content center
+		align-items center
+		margin 86px 0 30px 0
+		@media (max-width $phone)
+			margin 30px 0
+
+	&__btn-link
+		display block
+		@media (max-width $phone)
+			width 100%
+
+
+.likearts-content .section-4
+	position relative
+	z-index 2
+	width 100%
+	height auto
+	background-color $color-bg
+	padding 0 0 1px 0
+
+	&__container
+		margin-top 20px
+		@media (max-width $notebook)
+			margin-top 48px
+
+	&__content
+		padding 15px
+		overflow hidden
+
+	&__pointer
+		position absolute
+		top 20px
+		left 50%
+		transform translate(-50%, 0)
+		@media (max-width $notebook)
+			top 20px
+		@media (max-width $phone)
+			top 95px
+		@media (max-height 830px)
+			top 60px
+		@media (max-height 750px)
+			top 140px
+		@media (max-height 750px) and (max-width $phone)
+			top 75px
+
+	&__c-cases
+		width 100%
+		height auto
+
+	&__cases
+		position relative
+		display flex
+		flex-flow row wrap
+		justify-content space-between
+		align-items stretch
+		margin 30px -25px 0 -25px
+
+	&__c-btn
+		width 100%
+		display flex
+		justify-content center
+		align-items center
+		margin 50px 0 30px 0
+		@media (max-width $phone)
+			margin 30px 0
+
+	&__btn-link
+		display block
+		@media (max-width $phone)
+			width 100%
+
+.likearts-content .section-4 .case
+	position relative
+	width calc(50% - 50px)
+	height auto
+	background-color transparent
+	margin 25px
+	@media (max-width $phone)
+		width 100%
+		margin 15px 25px
+
+	&__link
+		display block
+		text-decoration none
+
+	&__title
+		font-size 'calc(23 / %s * 1rem)' %($base-font)
+		line-height 2.04
+		text-transform uppercase
+		margin-bottom 18px
+		text-decoration none
+		max-width 535px
+		white-space nowrap
+		overflow hidden
+		text-overflow ellipsis
+		@media (max-width $tablet)
+			font-size 'calc(20 / %s * 1rem)' %($base-font)
+		@media (max-width $phone)
+			max-width none
+			white-space normal
+		&:hover
+			.case__title-number,
+			.case__title-separator,
+			.case__title-name
+				color $color-primary
+
+	&__title-number
+		color $color-primary
+		font-weight 900
+		transition color .2s ease-in-out
+	
+	&__title-separator
+		color #e0e0e0
+		font-weight 300
+		transition color .2s ease-in-out
+		
+	&__title-name
+		color $color-text
+		font-weight 900
+		transition color .2s ease-in-out
+
+	&__pic
+		width 100%
+		height 100%
+		max-width 100%
+		max-height 347px
+		object-fit cover
+		transition all .2s ease-in-out
+		&:hover
+			box-shadow 0 15px 29px rgba(75, 125, 156, 0.17)
+
+	&__desc
+		padding 60px 0 0 0
+		@media (max-width $tablet)
+			padding 20px 0 0 0
+
+	&__desc-item
+		margin-bottom 24px
+
+	&__desc-title
+		color $color-text
+		font-size 'calc(16 / %s * 1rem)' %($base-font)
+		font-weight 900
+		line-height 2.94
+		text-transform uppercase
+
+	&__desc-list
+		margin 0
+		padding 0 0 0 18px
+		list-style none
+
+	&__desc-list-item
+		position relative
+		color $color-text
+		font-size 'calc(16 / %s * 1rem)' %($base-font)
+		font-weight 300
+		line-height 1.2
+		margin-bottom 20px
+		padding-left 18px
+		@media (max-width $tablet)
+			font-size 'calc(14 / %s * 1rem)' %($base-font)
+		&:before
+			content ''
+			position absolute
+			top 0
+			left -18px
+			display inline-block
+			width 18px
+			height 18px
+			background-image url('../../images/icons/confirm@2x.png')
+			background-size cover
+			background-position center
+			background-repeat no-repeat
+
+	&__desc-text
+		color $color-text
+		font-size 'calc(16 / %s * 1rem)' %($base-font)
+		font-weight 300
+		line-height 1.38
+		margin 0
+		@media (max-width $tablet)
+			font-size 'calc(14 / %s * 1rem)' %($base-font)
+
+.likearts-content .section-5
+	position relative
+	z-index 1
+	width 100%
+	height auto
+	background-color #f4f6f8
+	padding 0 0 1px 0
+	overflow hidden
+
+	&__container
+		margin-top 20px
+		margin-bottom 100px
+		@media (max-width $notebook)
+			margin-top 48px
+		@media (max-width $phone)
+			margin-top 24px
+
+	&__content
+		padding 15px
+		overflow hidden
+
+	&__pointer
+		position absolute
+		top 30px
+		left 50%
+		transform translate(-50%, 0)
+		z-index 2
+		@media (max-width $notebook)
+			top 10px
+		@media (max-width $tablet)
+			top 16px
+		@media (max-width $phone)
+			top 80px
+		@media (max-height 830px)
+			top 34px
+		@media (max-height 750px)
+			top 105px
+		@media (max-height 750px) and (max-width $phone)
+			top 70px
+
+	&__cards
+		position relative
+		display flex
+		flex-flow row wrap
+		justify-content space-between
+		align-items stretch
+		margin 52px -15px 0 -15px
+		@media (max-width $notebook)
+			justify-content center
+
+	&__card
+		width calc(33.3333% - 30px)
+		height auto
+		margin 15px
+		transition all .2s ease-in-out
+		@media (max-width $notebook)
+			width calc(50% - 30px)
+		@media (max-width $phone)
+			width calc(100% - 30px)
+
+	&__shield
+		position absolute
+		top 64%
+		left -50px
+		transform rotate(-90deg)
+		text-transform uppercase
+		line-height 0.74
+		font-weight 900
+		font-size 'calc(170 / %s * 1rem)' %($base-font)
+		letter-spacing 10px
+		color #fff
+		user-select none
+		@media (max-width 1650px)
+			left -200px
+		@media (max-width 1470px)
+			display none
+
+
+	&__shield-img
+		@supports(-webkit-background-clip text)
+			background-image url('../../images/pages/main/shield-bg.jpg')
+			background-size cover
+			background-position center
+			background-repeat no-repeat
+			-webkit-text-fill-color transparent
+			-webkit-background-clip text
+		position absolute
+		top 38%
+		right -237px
+		z-index 0
+		transform rotate(-90deg)
+		text-transform uppercase
+		line-height 1
+		font-weight 900
+		font-size 'calc(170 / %s * 1rem)' %($base-font)
+		letter-spacing 10px
+		color #BBDEFB
+		user-select none
+		@media (max-width 1650px)
+			right -395px
+		@media (max-width 1470px)
+			display none
+
+.likearts-content .section-6
+	display block
+	position relative
+	z-index 2
+	width 100%
+	height auto
+	background-color #fff
+	padding 1px 0 0 0
+
+	&__container
+		margin-top 130px
+		@media (max-width $tablet)
+			margin-top 100px
+		@media (max-width $phone)
+			margin-top 70px
+
+	&__content
+		padding 15px
+		overflow hidden
+
+	&__pointer
+		position absolute
+		top -85px
+		left 50%
+		transform translate(-50%, 0)
+		z-index 2
+		@media (max-width $tablet)
+			top -45px
+		@media (max-width $phone)
+			top 30px
+		@media (max-height 830px)
+			top -55px
+		@media (max-height 750px)
+			top 10px
+		@media (max-height 750px) and (max-width $phone)
+			top 10px
+
+	&__brands
+		position relative
+		display flex
+		flex-flow row wrap
+		justify-content center
+		align-items center
+		margin 180px -30px
+		@media (max-width 1650px)
+			margin 160px -30px 80px -30px
+		@media (max-width $notebook)
+			margin 100px -30px 80px -30px
+
+	&__brands-block
+		width calc(20% - 60px)
+		height auto
+		display flex
+		flex-flow row wrap
+		justify-content center
+		align-items center
+		margin 30px
+		transition all .2s ease-in-out
+		@media (max-width $notebook)
+			width calc(50% - 60px)
+		@media (max-width $phone)
+			width calc(100% - 60px)
+		
+

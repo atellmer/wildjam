@@ -1,0 +1,105 @@
+@import 'nib'
+
+//colors
+$color-primary = #3ebcff
+$color-bg = #fff
+$color-text = #272757
+$color-text-hint = #5c5c85
+
+//resolutions
+$phone = 640px
+$tablet = 768px
+$notebook = 1024px
+$desktop = 1600px
+
+//params
+$container-width = 1140px
+$base-font = 16
+
+.likearts-content .wj-pagination
+	position relative
+	width 100%
+	display flex
+	flex-flow row wrap
+	justify-content space-between
+	align-items center
+	
+	&__line
+		flex-grow 1
+		height 1px
+		background-color #dcdddf
+		margin 16px 0
+
+	&__cover
+		display flex
+		flex-flow row wrap
+		justify-content center
+		align-items center
+		padding 0 25px
+		@media (max-width $phone)
+			justify-content center
+			padding 0 6px
+
+	&__btn
+		position relative
+		z-index 2
+		width 46px
+		height 46px
+		background-color #fff
+		letter-spacing 0
+		text-decoration none
+		border-radius 50%
+		transition all .2s ease-in-out
+		@media (max-width $phone)
+			width 100%
+			border-radius 15px
+			margin 16px 0
+
+		&:hover
+			box-shadow 0 1px 6px rgba(0,0,0,0.06), 0 1px 4px rgba(0,0,0,0.06)
+
+		&--prev
+			.wj-pagination__icon
+				background-image url('../../images/icons/prev@2x.png')
+			
+		&--next
+			.wj-pagination__icon
+				background-image url('../../images/icons/next@2x.png')
+
+	&__icon
+		position absolute
+		top 50%
+		left 50%
+		transform translate(-50%, -50%)
+		display inline-block
+		width 9px
+		height 13px
+		background-size cover
+		background-position center
+		background-repeat no-repeat
+
+	&__link
+		position relative
+		z-index 2
+		padding 10px
+		min-width 46px
+		min-height 46px
+		line-height 0.94
+		font-weight 400
+		font-size 'calc(17 / %s * 1rem)' %($base-font)
+		background-color #fff
+		border-radius 50%
+		color $color-text
+		letter-spacing 0
+		text-decoration none
+		display flex
+		justify-content center
+		align-items center
+		margin 3px
+
+		&:hover
+			box-shadow 0 1px 6px rgba(0,0,0,0.06), 0 1px 4px rgba(0,0,0,0.06)
+
+		&.is-active
+			background-color $color-primary
+			color #fff

@@ -1,0 +1,10 @@
+.likearts-content .map {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 900px) {
+  .likearts-content .map {
+    height: 300px;
+  }
+}

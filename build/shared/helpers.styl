@@ -1,0 +1,77 @@
+@import 'nib'
+
+//colors
+$color-primary = #3ebcff
+$color-bg = #fff
+$color-text = #272757
+$color-text-hint = #5c5c85
+
+//resolutions
+$phone = 640px
+$tablet = 768px
+$notebook = 1024px
+$desktop = 1600px
+
+//params
+$container-width = 1140px
+$base-font = 16
+
+.no-padding 
+  padding 0 !important
+
+
+.no-margin 
+  margin 0 !important
+
+
+.no-gutter 
+  padding 0 !important
+  margin 0 !important
+
+
+.paper-shadow-z1 
+  box-shadow 0 1px 6px rgba(0,0,0,0.06), 0 1px 4px rgba(0,0,0,0.06)
+
+
+.paper-shadow-z2 
+  box-shadow 0 3px 10px rgba(0,0,0,0.16), 0 3px 10px rgba(0,0,0,0.23)
+
+
+.paper-shadow-z3 
+  box-shadow 0 10px 30px rgba(0,0,0,0.19), 0 6px 10px rgba(0,0,0,0.23)
+
+
+.paper-shadow-z4 
+  box-shadow 0 14px 45px rgba(0,0,0,0.25), 0 10px 18px rgba(0,0,0,0.22)
+
+
+.paper-shadow-z5 
+  box-shadow 0 19px 60px rgba(0,0,0,0.3), 0 15px 20px rgba(0,0,0,0.22)
+
+
+.divider 
+  height 1px
+  width 100%
+  border-top 1px solid #e0e0e0
+
+
+.cover 
+  background-position center
+  background-repeat no-repeat
+  background-size cover
+
+.flex 
+  display flex
+  flex-flow row wrap
+  justify-content center
+  align-items center
+
+.transition 
+  transition all 0.2s ease-in-out
+
+.text-bold
+  font-weight 500
+
+.hidden-tablet
+  @media (max-width $tablet)
+    display none

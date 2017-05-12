@@ -1,0 +1,103 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  background-color: #e0e0e0;
+}
+html,
+body {
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+}
+.likearts-content {
+  font-family: 'GothamPro', sans-serif;
+  font-weight: 400;
+  background-color: #fff;
+  color: #272757;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+.likearts-content a {
+  -webkit-transition: color 0.2s ease-in-out;
+  -moz-transition: color 0.2s ease-in-out;
+  -o-transition: color 0.2s ease-in-out;
+  -ms-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+}
+.likearts-content a:hover,
+.likearts-content a:active,
+.likearts-content a:focus {
+  text-decoration: none;
+}
+.likearts-content .icon {
+  display: inline-block;
+}
+.likearts-content .main-layout {
+  position: relative;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+@media (max-width: 1140px) {
+  .likearts-content .main-layout {
+    max-width: 970px;
+  }
+}
+.likearts-content .title {
+  color: #272757;
+  text-align: center;
+  margin: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.likearts-content .title--h1 {
+  font-size: calc(40 / 16 * 1rem);
+  font-weight: 700;
+}
+@media (max-width: 1140px) {
+  .likearts-content .title--h1 {
+    font-size: calc(30 / 16 * 1rem);
+  }
+}
+@media (max-width: 640px) {
+  .likearts-content .title--h1 {
+    font-size: calc(24 / 16 * 1rem);
+  }
+}
+.likearts-content .title--h2 {
+  font-size: calc(36 / 16 * 1rem);
+  font-weight: 900;
+}
+@media (max-width: 1140px) {
+  .likearts-content .title--h2 {
+    font-size: calc(26 / 16 * 1rem);
+  }
+}
+@media (max-width: 640px) {
+  .likearts-content .title--h2 {
+    font-size: calc(18 / 16 * 1rem);
+  }
+}
+.likearts-content .title--h3 {
+  font-size: calc(33 / 16 * 1rem);
+  font-weight: 900;
+}
+@media (max-width: 1140px) {
+  .likearts-content .title--h3 {
+    font-size: calc(25 / 16 * 1rem);
+  }
+}
+@media (max-width: 640px) {
+  .likearts-content .title--h3 {
+    font-size: calc(17 / 16 * 1rem);
+  }
+}

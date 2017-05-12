@@ -1,0 +1,72 @@
+.likearts-content .wj-btn {
+  font-family: 'GothamPro', sans-serif;
+  background-color: #3ebcff;
+  color: #fff;
+  border: none;
+  -webkit-border-radius: 42px;
+  border-radius: 42px;
+  font-weight: 700;
+  font-size: calc(18 / 16 * 1rem);
+  line-height: 1.56;
+  letter-spacing: 1px;
+  padding: 27px 107px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-box-shadow: 0 17px 32px rgba(62,188,255,0.55);
+  box-shadow: 0 17px 32px rgba(62,188,255,0.55);
+}
+@media (max-width: 768px) {
+  .likearts-content .wj-btn {
+    padding: 20px 60px;
+    font-size: calc(16 / 16 * 1rem);
+  }
+}
+@media (max-width: 640px) {
+  .likearts-content .wj-btn {
+    padding: 12px;
+    width: 100%;
+    font-size: calc(16 / 16 * 1rem);
+  }
+}
+.likearts-content .wj-btn:hover {
+  background-color: #42a5f5;
+}
+.likearts-content .wj-btn:focus {
+  outline: none;
+}
+.likearts-content .wj-btn:active {
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -o-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
+}
+.likearts-content .wj-btn--transparent {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 2px solid #3ebcff;
+  color: #3ebcff;
+  padding: 24px 77px;
+}
+@media (max-width: 768px) {
+  .likearts-content .wj-btn--transparent {
+    padding: 20px 60px;
+  }
+}
+@media (max-width: 640px) {
+  .likearts-content .wj-btn--transparent {
+    padding: 12px;
+  }
+}
+.likearts-content .wj-btn--transparent:hover {
+  border: 2px solid #42a5f5;
+  background-color: #42a5f5;
+  -webkit-box-shadow: 0 17px 32px rgba(62,188,255,0.55);
+  box-shadow: 0 17px 32px rgba(62,188,255,0.55);
+  color: #fff;
+}

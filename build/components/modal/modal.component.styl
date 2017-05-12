@@ -1,0 +1,157 @@
+@import 'nib'
+
+//colors
+$color-primary = #3ebcff
+$color-bg = #fff
+$color-text = #272757
+$color-text-hint = #5c5c85
+
+//resolutions
+$phone = 640px
+$tablet = 768px
+$notebook = 1024px
+$desktop = 1600px
+
+//params
+$container-width = 1140px
+$base-font = 16
+
+
+.likearts-content .modals
+	&__overlay
+		display none
+		position fixed
+		top 0
+		left 0
+		right 0
+		bottom 0
+		width 100%
+		height 100%
+		background-color rgba(0, 0, 0, 0.8)
+		z-index 1000
+
+	.modals__overlay.js-is-open
+		display block
+		animation modal-motion-overlay-open .3s 1 ease-in-out
+		animation-fill-mode forwards
+
+	.modals__overlay.js-is-close
+		display block
+		animation modal-motion-overlay-close .3s 1 ease-in-out
+		animation-fill-mode forwards
+
+	.modal.js-is-open
+		display block
+		animation modal-motion-window-open .3s 1 ease-in-out
+		animation-fill-mode forwards
+
+	.modal.js-is-close
+		display block
+		animation modal-motion-window-close .3s 1 ease-in-out
+		animation-fill-mode forwards
+
+.likearts-content .modal
+	display none
+	position fixed
+	top 50%
+	left 50%
+	transform translate(-50%, -50%)
+	z-index 2000
+	@media (max-width 900px)
+		width calc(100% - 40px)
+
+	&__close-btn
+		display inline-block
+		position absolute
+		top 0
+		right 0
+		z-index 3000
+		@media (max-width $tablet)
+			right 0
+
+	&__btn
+		padding 16px
+		font-size 'calc(16 / %s * 1rem)' % ($base-font)
+
+	&__textarea
+		min-height 150px
+		@media (max-width 900px)
+			min-height 100px
+
+.likearts-content .modal-body
+	width 100%
+	max-width 800px
+	height auto
+	max-height calc(100vh - 40px)
+	overflow auto
+	background-color #fff
+	padding 60px
+	@media (max-width 900px)
+		padding 40px 30px
+	@media (max-width $tablet)
+		width 100%
+		margin 0
+
+	&__header
+		font-size 'calc(18 / %s * 1rem)' % ($base-font)
+		line-height 1.27
+		text-transform uppercase
+		font-weight 800
+		@media (max-width $tablet)
+			font-size 'calc(16 / %s * 1rem)' % ($base-font)
+
+	&__content
+		display flex
+		flex-flow row nowrap
+		justify-content center
+		align-items center
+		min-width 500px
+		@media (max-width 900px)
+			min-width 0
+		@media (max-width $tablet)
+			flex-flow column wrap
+
+@keyframes modal-motion-window-open
+	0%
+		transform translate(-50%, -50%) scale(0.5)
+		opacity 0
+	100%
+		transform translate(-50%, -50%) scale(1)
+		opacity 1
+
+@keyframes modal-motion-window-close
+	0%
+		transform translate(-50%, -50%) scale(1)
+		opacity 1
+	100%
+		transform translate(-50%, -50%) scale(0.5)
+		opacity 0
+
+
+@keyframes modal-motion-overlay-open
+	0%
+		opacity 0
+	100%
+		opacity 1
+
+@keyframes modal-motion-overlay-close
+	0%
+		opacity 1
+	100%
+		opacity 0
+
+.likearts-content .modals .close-btn
+	position relative
+	display inline-block
+	width 40px
+	height 40px
+	user-select none
+	cursor pointer
+
+	&__icon
+		position absolute
+		top 50%
+		left 50%
+		transform translate(-50%, -50%)
+		color $color-text
+		font-size 'calc(28 / %s * 1rem)' % ($base-font)

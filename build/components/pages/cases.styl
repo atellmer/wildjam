@@ -1,0 +1,75 @@
+@import 'nib'
+
+//colors
+$color-primary = #3ebcff
+$color-bg = #fff
+$color-text = #272757
+$color-text-hint = #5c5c85
+
+//resolutions
+$phone = 640px
+$tablet = 768px
+$notebook = 1024px
+$desktop = 1600px
+
+//params
+$container-width = 1140px
+$base-font = 16
+
+.likearts-content .cases
+	position relative
+	width 100%
+	height auto
+	min-height 800px
+	background-color #f4f6f8
+	padding 0 0 100px 0
+
+	&__container
+		overflow hidden
+		padding 0 15px
+
+	&__breadcrumbs
+		position relative
+		padding 61px 0 48px 0
+		@media (max-width $tablet)
+			padding 30px 0
+
+	&__title
+		text-align left
+		margin-bottom 20px
+		@media (max-width $phone)
+			font-size 'calc(20 / %s * 1rem)' %($base-font)
+			margin-bottom 15px
+
+	&__cards
+		position relative
+		display flex
+		flex-flow row wrap
+		justify-content flex-start
+		align-items stretch
+		margin 0 -25px 80px -25px
+		@media (max-width 1650px)
+			margin 0 -15px 80px -15px
+
+	&__card
+		position relative
+		width calc(50% - 50px)
+		height auto
+		margin 25px
+		transition all .2s ease-in-out
+		@media (max-width 1650px)
+			width calc(50% - 30px)
+			margin 15px
+		@media (max-width $phone)
+			width calc(100% - 30px)
+
+	.card__cover
+		max-height 310px
+		@media (max-width 1140px)
+			max-height 270px
+
+	.card__pic
+		max-height 310px
+		filter none
+		@media (max-width 1140px)
+			max-height 270px

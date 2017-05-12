@@ -1,0 +1,183 @@
+@import 'nib'
+
+//colors
+$color-primary = #3ebcff
+$color-bg = #fff
+$color-text = #272757
+$color-text-hint = #5c5c85
+
+//resolutions
+$phone = 640px
+$tablet = 768px
+$notebook = 1024px
+$desktop = 1600px
+
+//params
+$container-width = 1140px
+$base-font = 16
+
+.likearts-content .card
+	position relative
+	width 100%
+	height auto
+	background-color #fff
+	transition all .2s ease-in-out
+	&:hover
+		box-shadow 0 15px 29px rgba(75, 125, 156, 0.17)
+		.card__pic
+			transform scale(1.1)
+			filter grayscale(0)
+		.card__info-count
+			color $color-primary
+		.card__social-icon
+			filter grayscale(0)
+			opacity 1
+
+	&--no-effects
+		&:hover
+			box-shadow none
+			.card__pic
+				transform scale(1)
+				filter none
+		.card__pic
+			filter none
+
+	&__title
+		font-size 'calc(18 / %s * 1rem)' %($base-font)
+		font-weight 700
+		text-transform uppercase
+		text-align center
+		padding 35px 15px
+		@media (max-width $phone)
+			font-size 'calc(16 / %s * 1rem)' %($base-font)
+
+	&__cover
+		overflow hidden
+		width 100%
+		height 100%
+		max-height 270px
+
+	&__pic
+		width 100%
+		height 100%
+		max-width 100%
+		max-height 270px
+		object-fit cover
+		filter grayscale(100%)
+		transition all .2s ease-in-out
+		@media (max-width $tablet)
+			filter grayscale(0)
+
+	&__link
+		display block
+		text-decoration none
+		transition color .2s ease-in-out
+		color $color-text
+		&:hover
+			color $color-primary
+
+	&__desc
+		padding 30px
+		@media (max-width $phone)
+			padding 15px
+
+	&__info
+		width 100%
+		height auto
+		display flex
+		flex-flow row nowrap
+		justify-content space-between
+		align-items center
+
+	&__info-count
+		color $color-text
+		font-size 'calc(20 / %s * 1rem)' %($base-font)
+		font-weight 500
+		margin-bottom 6px
+		transition all .2s ease-in-out
+		max-width 150px
+		white-space nowrap
+		overflow hidden
+		text-overflow ellipsis
+		@media (max-width 1140px)
+			font-size 'calc(18 / %s * 1rem)' %($base-font)
+
+	&__info-stats
+		&:nth-child(1)
+			margin-right 10px
+
+	&__info-sign
+		color $color-text
+		font-size 'calc(14 / %s * 1rem)' %($base-font)
+		font-weight 400
+
+	&__social
+		margin-top 28px
+		display flex
+		flex-flow row wrap
+		justify-content space-between
+		align-items center
+		@media (max-width $tablet)
+			flex-flow column wrap
+			align-items flex-start
+
+	&__social-icon
+		filter grayscale(100%)
+		transition all .2s ease-in-out
+		@supports (filter grayscale(100%))
+			opacity 0.5
+		@media (max-width $tablet)
+			filter grayscale(0)
+			opacity 1
+
+	&__social-link
+		display flex
+		flex-flow row nowrap
+		justify-content flex-start
+		align-items center
+		text-decoration none
+		margin-bottom 10px
+		&:hover
+			text-decoration underline
+
+	&__social-detail
+		color $color-text
+		font-size 'calc(14 / %s * 1rem)' %($base-font)
+		font-weight 400
+		margin-left 10px
+
+	&__social-address
+		max-width 100px
+		white-space nowrap
+		overflow hidden
+		text-overflow ellipsis
+
+	&__social-subs
+		max-width 100px
+		white-space nowrap
+		overflow hidden
+		text-overflow ellipsis
+		@media (max-width $tablet)
+			max-width 300px
+
+	&__badge
+		width 100%
+		height auto
+		display flex
+		flex-flow row nowrap
+		justify-content space-between
+		align-items center
+		min-height 100px
+
+	&__detail-position
+		color $color-text
+		font-size 'calc(18 / %s * 1rem)' %($base-font)
+		font-weight 500
+		margin-bottom 15px
+
+	&__detail-extra
+		color $color-text-hint
+		font-size 'calc(16 / %s * 1rem)' %($base-font)
+		font-weight 300
+		line-height 1.3
+

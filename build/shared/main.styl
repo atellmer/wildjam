@@ -1,0 +1,89 @@
+@import 'nib'
+
+//colors
+$color-primary = #3ebcff
+$color-bg = #fff
+$color-text = #272757
+$color-text-hint = #5c5c85
+
+//resolutions
+$phone = 640px
+$tablet = 768px
+$notebook = 1024px
+$desktop = 1600px
+
+//params
+$container-width = 1140px
+$base-font = 16
+
+*,
+*::before,
+*::after
+	box-sizing border-box
+
+html
+	background-color #E0E0E0
+
+html, body
+	width 100%
+	height auto
+	min-height 100%
+	-webkit-font-smoothing antialiased
+	-webkit-overflow-scrolling touch
+
+.likearts-content
+	font-family 'GothamPro', sans-serif
+	font-weight 400
+	background-color $color-bg
+	color $color-text
+	font-size '%spx' %($base-font)
+	overflow-x hidden
+
+.likearts-content a
+	transition color .2s ease-in-out
+	&:hover,
+	&:active,
+	&:focus
+		text-decoration none
+
+.likearts-content .icon
+	display inline-block
+
+.likearts-content .main-layout
+	position relative
+	max-width $container-width
+	margin 0 auto
+	@media (max-width: 1140px)
+		max-width 970px
+
+.likearts-content .title
+		color $color-text
+		text-align center
+		margin 0
+		transition all .2s ease-in-out
+
+		&--h1
+			font-size 'calc(40 / %s * 1rem)' %($base-font)
+			font-weight 700
+			@media (max-width 1140px)
+				font-size 'calc(30 / %s * 1rem)' %($base-font)
+			@media (max-width $phone)
+				font-size 'calc(24 / %s * 1rem)' %($base-font)
+
+		&--h2
+			font-size 'calc(36 / %s * 1rem)' %($base-font)
+			font-weight 900
+			@media (max-width 1140px)
+				font-size 'calc(26 / %s * 1rem)' %($base-font)
+			@media (max-width $phone)
+				font-size 'calc(18 / %s * 1rem)' %($base-font)
+
+		&--h3
+			font-size 'calc(33 / %s * 1rem)' %($base-font)
+			font-weight 900
+			@media (max-width 1140px)
+				font-size 'calc(25 / %s * 1rem)' %($base-font)
+			@media (max-width $phone)
+				font-size 'calc(17 / %s * 1rem)' %($base-font)
+
+
