@@ -20,8 +20,6 @@
 		function clickModalBtnsHandler(ev) {
 			var id, target, closeBtn, i;
 
-			ev.preventDefault();
-
 			if (ev.target.hasAttribute('data-modal-trigger')) {
 				id = ev.target.getAttribute('data-modal-trigger');
 			} else {
@@ -31,16 +29,18 @@
 			target = document.querySelector('[data-modal-target="' + id + '"]');
 			closeBtn = document.querySelector('[data-modal-target="' + id + '"] [data-modal-close]');
 
-			if (!hammerOverlay) {
-				hammerOverlay = new Hammer(overlay).on('tap', clickCloseBtnHandler);
-			}
+			hammerOverlay = new Hammer(overlay).on('tap', clickCloseBtnHandler);
+			hammerCloseBtn = new Hammer(closeBtn).on('tap', clickCloseBtnHandler);
 
-			if (!hammerCloseBtn) {
-				hammerCloseBtn = new Hammer(closeBtn).on('tap', clickCloseBtnHandler);
-			}
+			target.style.display = 'block';
+			overlay.style.display = 'block';
 
 			if (target.classList.contains('js-is-close')) {
 				target.classList.remove('js-is-close');
+			}
+
+			if (overlay.classList.contains('js-is-close')) {
+				overlay.classList.remove('js-is-close');
 			}
 
 			if (!target.classList.contains('js-is-open')) {
@@ -50,11 +50,16 @@
 			if (!overlay.classList.contains('js-is-open')) {
 				overlay.classList.add('js-is-open');
 			}
+
 			blockScroll();
 
 			function clickCloseBtnHandler() {
 				if (!target.classList.contains('js-is-close')) {
 					target.classList.add('js-is-close');
+				}
+
+				if (!overlay.classList.contains('js-is-close')) {
+					overlay.classList.add('js-is-close');
 				}
 
 				if (target.classList.contains('js-is-open')) {
@@ -64,6 +69,11 @@
 				if (overlay.classList.contains('js-is-open')) {
 					overlay.classList.remove('js-is-open');
 				}
+
+				setTimeout(function() {
+					target.style.display = 'none';
+					overlay.style.display = 'none';
+				}, 500);
 
 				unblockScroll();
 			}

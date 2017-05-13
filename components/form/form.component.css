@@ -44,6 +44,12 @@
     font-size: calc(16 / 16 * 1rem);
   }
 }
+@media (max-width: 640px) {
+  .likearts-content .wj-form__input {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+  }
+}
 .likearts-content .wj-form__input:focus {
   outline: none;
   background-color: #fff;
@@ -90,5 +96,105 @@
   transform: translate(0, 0);
 }
 .likearts-content .wj-form .wj-form__input:focus + .wj-form__icon {
+  color: #3ebcff;
+}
+.likearts-content .wj-custom-form {
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+.likearts-content .wj-custom-form__c-btn {
+  margin-bottom: 30px;
+}
+.likearts-content .wj-custom-form__btn {
+  width: 100%;
+  font-size: calc(20 / 16 * 1rem);
+}
+@media all and (max-width: 640px) {
+  .likearts-content .wj-custom-form__btn {
+    padding: 10px;
+    font-size: calc(18 / 16 * 1rem);
+  }
+}
+.likearts-content .wj-custom-form__group {
+  position: relative;
+  margin-bottom: 20px;
+}
+.likearts-content .wj-custom-form__input {
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid #c3c5c6;
+  padding: 20px 60px 20px 35px;
+  font-size: 1.44rem;
+  font-weight: 300;
+  margin: 0 auto;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  font-size: calc(18 / 16 * 1rem);
+  -webkit-border-radius: 30px;
+  border-radius: 30px;
+}
+@media all and (max-width: 1140px) {
+  .likearts-content .wj-custom-form__input {
+    padding: 16px;
+    font-size: calc(16 / 16 * 1rem);
+  }
+}
+@media (max-width: 640px) {
+  .likearts-content .wj-custom-form__input {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+  }
+}
+.likearts-content .wj-custom-form__input:focus {
+  outline: none;
+  background-color: #fff;
+  border: 1px solid #3ebcff;
+}
+.likearts-content .wj-custom-form__input::-webkit-input-placeholder {
+  font-weight: 300;
+  color: #c3c5c6;
+}
+.likearts-content .wj-custom-form__input::-moz-placeholder {
+  font-weight: 200;
+  color: #c3c5c6;
+}
+.likearts-content .wj-custom-form__input:-moz-placeholder {
+  font-weight: 200;
+  color: #c3c5c6;
+}
+.likearts-content .wj-custom-form__input:-ms-input-placeholder {
+  font-weight: 200;
+  color: #c3c5c6;
+}
+.likearts-content .wj-custom-form__textarea {
+  resize: none;
+  min-height: 200px;
+  text-align: left;
+}
+.likearts-content .wj-custom-form__icon {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  color: #c3c5c6;
+}
+.likearts-content .wj-custom-form__icon--txt {
+  top: 18px;
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+.likearts-content .wj-custom-form .wj-custom-form__input:focus + .wj-custom-form__icon {
   color: #3ebcff;
 }

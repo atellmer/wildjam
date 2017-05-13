@@ -398,9 +398,10 @@
 	</footer>
 
 	<div class="modals">
-		<div class="modals__overlay"></div>
+		<div class="modals__overlay js-is-close"></div>
+
 		<div class="modals__item">
-			<div data-modal-target="0" class="modal">
+			<div data-modal-target="0" class="modal js-is-close">
 				<span class="modal__close-btn">
 					<span data-modal-close class="close-btn">
 						<i class="material-icons close-btn__icon">close</i>
@@ -412,6 +413,9 @@
 					role="document"
 					aria-labelledby="Обратный звонок"
 					aria-hidden="true">
+					<div class="modal-body__header">
+						<h3 class="modal-body__title">Заказать звонок</h3>
+					</div>
 					<div class="modal-body__content">
 						<form class="wj-form">
 							<div class="wj-form__group">
@@ -453,6 +457,74 @@
 				</div>
 			</div>
 		</div>
+
+		<div class="modals__item">
+			<div data-modal-target="1" class="modal js-is-close">
+				<span class="modal__close-btn">
+					<span data-modal-close class="close-btn">
+						<i class="material-icons close-btn__icon">close</i>
+					</span>
+				</span>
+				<div
+					class="modal-body"
+					tabindex="-1"
+					role="document"
+					aria-labelledby="Обратный звонок"
+					aria-hidden="true">
+					<div class="modal-body__header">
+						<h3 class="modal-body__title">Заказать рекламу</h3>
+					</div>
+					<div class="modal-body__content">
+						<form class="wj-custom-form">
+							<div class="wj-custom-form__group">
+								<input
+									type="text"
+									name="name"
+									class="wj-custom-form__input"
+									placeholder="Введите Ваше имя">
+								<i class="material-icons wj-custom-form__icon">account_circle</i>
+							</div>
+							<div class="wj-custom-form__group">
+								<input
+									type="email"
+									name="email"
+									class="wj-custom-form__input"
+									placeholder="Ваш e-mail">
+								<i class="material-icons wj-custom-form__icon">email</i>
+							</div>
+							<div class="wj-custom-form__group">
+								<input
+									type="text"
+									name="phone"
+									class="wj-custom-form__input"
+									placeholder="Ваш телефон">
+								<i class="material-icons wj-custom-form__icon">phone</i>
+							</div>
+							<div class="wj-custom-form__group">
+								<textarea
+									name="message"
+									class="
+										wj-custom-form__input 
+										wj-custom-form__textarea 
+										custom-modal__textarea"
+									placeholder="Ваше сообщение"></textarea>
+								<i class="
+									material-icons 
+									wj-custom-form__icon 
+									wj-custom-form__icon--txt">subject</i>
+							</div>
+							<div class="custom-modal__c-btn">
+								<button class="
+									wj-btn 
+									wj-custom-form__btn 
+									custom-modal__btn">Отправить</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
 	</div>
 
 
