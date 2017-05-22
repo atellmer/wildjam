@@ -18,7 +18,8 @@ gulp.task('inject', () => {
 		`${config.path.root}/fonts/**/*.css`,
 		`${config.path.root}/images/**/*.css`,
 		`${config.path.dist}/**/*.css`,
-		`${config.path.shared}/**/*.js`,
+		`${config.path.shared}/polyfills/**/*.js`,
+		`${config.path.shared}/libs/**/*.js`,
 		`${config.path.components}/**/*.js`
 		], {read: false}).pipe(hash(opts));
 	} else {
@@ -27,7 +28,8 @@ gulp.task('inject', () => {
 			`${config.path.root}/images/**/*.css`,
 			`${config.path.shared}/**/*.css`,
 			`${config.path.components}/**/*.css`,
-			`${config.path.shared}/**/*.js`,
+			`${config.path.shared}/polyfills/**/*.js`,
+			`${config.path.shared}/libs/**/*.js`,
 			`${config.path.components}/**/*.js`
 		], {read: false}).pipe(hash(opts));
 	}

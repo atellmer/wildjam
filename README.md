@@ -8,3 +8,4 @@
 6. [Новости](https://atellmer.github.io/wildjam/news.html)
 7. [Карточка новости](https://atellmer.github.io/wildjam/news-detail.html)
 8. [Контакты](https://atellmer.github.io/wildjam/contacts.html)
+9. [Клиенты](https://atellmer.github.io/wildjam/clients.html)

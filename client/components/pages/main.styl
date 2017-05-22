@@ -678,11 +678,13 @@ $base-font = 16
 		flex-flow row wrap
 		justify-content center
 		align-items center
-		margin 180px -30px
+		margin 160px -30px 100px -30px
 		@media (max-width 1650px)
 			margin 160px -30px 80px -30px
 		@media (max-width $notebook)
 			margin 100px -30px 80px -30px
+		@media (max-width $phone)
+			margin 50px -30px 20px -30px
 
 	&__brands-block
 		width calc(20% - 60px)
@@ -697,5 +699,19 @@ $base-font = 16
 			width calc(50% - 60px)
 		@media (max-width $phone)
 			width calc(100% - 60px)
-		
 
+	&__c-btn
+		width 100%
+		display flex
+		justify-content center
+		align-items center
+		margin 20px 0 120px 0
+		@media (max-width 1650px)
+			margin 20px 0 80px 0
+		@media (max-width $phone)
+			margin 30px 0
+
+	&__btn-link
+		display block
+		@media (max-width $phone)
+			width 100%

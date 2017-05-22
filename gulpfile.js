@@ -20,6 +20,7 @@ gulp.task('watch', () => {
 	gulp.watch([
 		`${config.path.shared}/**/*.styl`,
 		`${config.path.components}/**/*.styl`], ['styles']);
+	gulp.watch([`${config.path.shared}/**/*.js`], ['scripts']);
 	gulp.watch([`${config.path.components}/**/*.js`], ['scripts']);
 	gulp.watch([`${config.path.images}/icons/source/**/*.*`], ['sprite']);
 });
