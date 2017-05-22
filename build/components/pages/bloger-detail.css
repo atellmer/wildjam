@@ -205,7 +205,7 @@
 .likearts-content .bloger-detail .bloger-card__detail {
   width: 50%;
   height: auto;
-  padding: 54px 47px 54px 80px;
+  padding: 47px;
 }
 @media (max-width: 1140px) {
   .likearts-content .bloger-detail .bloger-card__detail {
@@ -333,7 +333,7 @@
 }
 .likearts-content .bloger-detail .bloger-card__social-subs {
   color: #272757;
-  font-size: calc(22 / 16 * 1rem);
+  font-size: calc(20 / 16 * 1rem);
   font-weight: 900;
   -webkit-transition: color 0.2s ease-in-out;
   -moz-transition: color 0.2s ease-in-out;

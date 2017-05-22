@@ -1,0 +1,115 @@
+.likearts-content .clients {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 800px;
+  background-color: #f4f6f8;
+  padding: 0 0 100px 0;
+}
+.likearts-content .clients__container {
+  overflow: hidden;
+  padding: 0 15px;
+}
+.likearts-content .clients__breadcrumbs {
+  position: relative;
+  padding: 61px 0 48px 0;
+}
+@media (max-width: 768px) {
+  .likearts-content .clients__breadcrumbs {
+    padding: 30px 0;
+  }
+}
+.likearts-content .clients__title {
+  text-align: left;
+  margin-bottom: 37px;
+}
+@media (max-width: 640px) {
+  .likearts-content .clients__title {
+    font-size: calc(20 / 16 * 1rem);
+    margin-bottom: 15px;
+  }
+}
+.likearts-content .clients__brands {
+  position: relative;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -o-box-orient: horizontal;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 60px;
+}
+@media (max-width: 1024px) {
+  .likearts-content .clients__brands {
+    padding: 30px;
+  }
+}
+.likearts-content .clients__brands-block {
+  width: calc(33.3333% - 60px);
+  height: auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -o-box-orient: horizontal;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  margin: 30px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+@media (max-width: 1024px) {
+  .likearts-content .clients__brands-block {
+    width: calc(50% - 60px);
+  }
+}
+@media (max-width: 640px) {
+  .likearts-content .clients__brands-block {
+    width: calc(100% - 60px);
+  }
+}

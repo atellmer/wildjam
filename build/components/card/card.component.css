@@ -149,11 +149,6 @@
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
 }
-@media (max-width: 1140px) {
-  .likearts-content .card__info-count {
-    font-size: calc(18 / 16 * 1rem);
-  }
-}
 .likearts-content .card__info-stats:nth-child(1) {
   margin-right: 10px;
 }
