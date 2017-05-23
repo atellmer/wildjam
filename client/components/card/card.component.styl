@@ -82,18 +82,23 @@ $base-font = 16
 			padding 15px
 
 	&__info
+		display table
 		width 100%
 		height auto
 		display flex
 		flex-flow row nowrap
-		justify-content space-between
+		justify-content flex-start
 		align-items center
+		text-decoration none
+		margin-bottom 28px
+		@media (max-width $tablet)
+			margin-bottom 10px
 
 	&__info-count
 		color $color-text
 		font-size 'calc(20 / %s * 1rem)' %($base-font)
 		font-weight 500
-		margin-bottom 6px
+		margin-bottom 2px
 		transition all .2s ease-in-out
 		max-width 150px
 		white-space nowrap
@@ -101,8 +106,7 @@ $base-font = 16
 		text-overflow ellipsis
 
 	&__info-stats
-		&:nth-child(1)
-			margin-right 10px
+		margin-left 10px
 
 	&__info-sign
 		color $color-text
@@ -110,7 +114,6 @@ $base-font = 16
 		font-weight 400
 
 	&__social
-		margin-top 28px
 		display flex
 		flex-flow row wrap
 		justify-content space-between
@@ -135,20 +138,27 @@ $base-font = 16
 		align-items center
 		text-decoration none
 		margin-bottom 10px
+		@media (max-width $phone)
+			&:last-child
+				margin-bottom 0
 		&:hover
 			text-decoration underline
 
+
 	&__social-detail
+		flex-grow 1
 		color $color-text
 		font-size 'calc(14 / %s * 1rem)' %($base-font)
 		font-weight 400
 		margin-left 10px
 
 	&__social-address
-		max-width 100px
+		max-width 80px
 		white-space nowrap
 		overflow hidden
 		text-overflow ellipsis
+		@media (max-width $tablet)
+			max-width 200px
 
 	&__social-subs
 		max-width 100px
