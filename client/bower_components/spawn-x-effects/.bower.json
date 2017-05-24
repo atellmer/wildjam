@@ -1,0 +1,50 @@
+{
+  "name": "spawn-x-effects",
+  "version": "1.0.2",
+  "description": "effects for spawn-x. (Reactive management for javaScript applications)",
+  "authors": [
+    "AlexPlex"
+  ],
+  "license": "MIT",
+  "main": "./lib/spawn-x-effects.umd.min.js",
+  "homepage": "https://github.com/atellmer/spawn-x-effects",
+  "keywords": [
+    "state",
+    "store",
+    "app",
+    "effects",
+    "redux-saga",
+    "management",
+    "control",
+    "predictable",
+    "live",
+    "observer",
+    "reactive",
+    "redux",
+    "flux",
+    "mobx",
+    "observable",
+    "rxjs",
+    "react",
+    "reactjs",
+    "angular",
+    "angularjs",
+    "@angular"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test"
+  ],
+  "_release": "1.0.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.0.2",
+    "commit": "5752b780fd0e644006f2b5ca476b47ecdd13997c"
+  },
+  "_source": "https://github.com/atellmer/spawn-x-effects.git",
+  "_target": "^1.0.2",
+  "_originalSource": "spawn-x-effects",
+  "_direct": true
+}

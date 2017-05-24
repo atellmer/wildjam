@@ -1,0 +1,38 @@
+{
+  "name": "spawn-x",
+  "version": "2.3.10",
+  "description": "Reactive management for javaScript applications",
+  "authors": [
+    "AlexPlex"
+  ],
+  "license": "MIT",
+  "main": "./lib/spawn-x.umd.min.js",
+  "homepage": "https://github.com/atellmer/spawn-x",
+  "keywords": [
+    "state",
+    "store",
+    "app",
+    "management",
+    "control",
+    "predictable",
+    "live",
+    "observer",
+    "reactive",
+    "redux",
+    "flux",
+    "mobx",
+    "observable",
+    "rxjs",
+    "react",
+    "reactjs",
+    "angular",
+    "angularjs",
+    "@angular"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test"
+  ]
+}
