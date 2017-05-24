@@ -58,6 +58,18 @@ $base-font = 16
 	@media (max-width 900px)
 		width calc(100% - 40px)
 
+	&--success
+		.modal-body
+			background-color $color-primary
+		
+		.modal-body__content
+			min-height 432px
+			@media (max-width $phone)
+				min-height 0
+
+		.close-btn__icon
+			color #fff!important
+
 	&__close-btn
 		display inline-block
 		position absolute
@@ -85,7 +97,7 @@ $base-font = 16
 	max-height calc(100vh - 40px)
 	overflow auto
 	background-color #fff
-	padding 60px
+	padding 60px 120px
 	@media (max-width 900px)
 		padding 40px 30px
 	@media (max-width $tablet)
@@ -93,7 +105,8 @@ $base-font = 16
 		margin 0
 
 	&__title
-		font-size 'calc(20 / %s * 1rem)' % ($base-font)
+		font-size 'calc(28 / %s * 1rem)' % ($base-font)
+		font-weight 900
 		line-height 1.27
 		margin 0 0 20px 0
 		@media (max-width $tablet)
@@ -104,7 +117,7 @@ $base-font = 16
 		flex-flow row nowrap
 		justify-content center
 		align-items center
-		min-width 500px
+		min-width 300px
 		@media (max-width 900px)
 			min-width 0
 		@media (max-width $tablet)
@@ -150,15 +163,21 @@ $base-font = 16
 .likearts-content .modals .close-btn
 	position relative
 	display inline-block
-	width 40px
-	height 40px
+	width 60px
+	height 60px
 	user-select none
 	cursor pointer
+
+	&:hover
+		.close-btn__icon
+			color $color-primary
 
 	&__icon
 		position absolute
 		top 50%
 		left 50%
 		transform translate(-50%, -50%)
-		color $color-text
-		font-size 'calc(28 / %s * 1rem)' % ($base-font)
+		color #b2b2b2
+		font-size 'calc(26 / %s * 1rem)' % ($base-font)
+		transition color .2s ease-in-out
+
