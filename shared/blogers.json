@@ -8,7 +8,7 @@
 		"youtube_subscribers": 2915818,
 		"instagram_subscribers_formatted": 966000,
 		"youtube_subscribers_formatted": 2915000,
-		"catalog_image": "/images/api/blogers/1.jpg",
+		"catalog_image": "images/api/blogers/1.jpg",
 		"instagram_subscribers": 966000,
 		"name": "Николай Соболев"
 	}, {
@@ -20,7 +20,7 @@
 		"youtube_subscribers": 2417139,
 		"instagram_subscribers_formatted": 0,
 		"youtube_subscribers_formatted": 2417000,
-		"catalog_image": "/images/api/blogers/2.jpg",
+		"catalog_image": "images/api/blogers/2.jpg",
 		"instagram_subscribers": 0,
 		"name": "LizzzTV"
 	}, {
@@ -32,7 +32,7 @@
 		"youtube_subscribers": 2847284,
 		"instagram_subscribers_formatted": 0,
 		"youtube_subscribers_formatted": 2847000,
-		"catalog_image": "/images/api/blogers/3.jpg",
+		"catalog_image": "images/api/blogers/3.jpg",
 		"instagram_subscribers": 0,
 		"name": "Rakamakafo"
 	}, {
@@ -44,7 +44,7 @@
 		"youtube_subscribers": 2114264,
 		"instagram_subscribers_formatted": 0,
 		"youtube_subscribers_formatted": 2114000,
-		"catalog_image": "/images/api/blogers/4.jpg",
+		"catalog_image": "images/api/blogers/4.jpg",
 		"instagram_subscribers": 0,
 		"name": "DIPT"
 	}, {
@@ -56,7 +56,7 @@
 		"youtube_subscribers": 1895922,
 		"instagram_subscribers_formatted": 120000,
 		"youtube_subscribers_formatted": 1895000,
-		"catalog_image": "/images/api/blogers/5.jpg",
+		"catalog_image": "images/api/blogers/5.jpg",
 		"instagram_subscribers": 120000,
 		"name": "Дмитрий Масленников"
 	}, {
@@ -68,7 +68,7 @@
 		"youtube_subscribers": 1882716,
 		"instagram_subscribers_formatted": 0,
 		"youtube_subscribers_formatted": 1882000,
-		"catalog_image": "/images/api/blogers/6.jpg",
+		"catalog_image": "images/api/blogers/6.jpg",
 		"instagram_subscribers": 0,
 		"name": "RED21"
 	}, {
@@ -80,7 +80,7 @@
 		"youtube_subscribers": 1882716,
 		"instagram_subscribers_formatted": 0,
 		"youtube_subscribers_formatted": 1882000,
-		"catalog_image": "/images/api/blogers/6.jpg",
+		"catalog_image": "images/api/blogers/6.jpg",
 		"instagram_subscribers": 0,
 		"name": "Тест 1"
 	}, {
@@ -92,7 +92,7 @@
 		"youtube_subscribers": 1882716,
 		"instagram_subscribers_formatted": 0,
 		"youtube_subscribers_formatted": 1882000,
-		"catalog_image": "/images/api/blogers/6.jpg",
+		"catalog_image": "images/api/blogers/6.jpg",
 		"instagram_subscribers": 0,
 		"name": "Тест 2"
 	}],
