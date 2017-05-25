@@ -3,9 +3,9 @@ var $actions = (function ($, $store, $constants) {
 	'use strict';
 
 	var actions = {
-		fetchBloggersRequest: fetchBloggersRequest,
-		fetchBloggers: fetchBloggers,
-		renderBlogerCard: renderBlogerCard,
+		fetchLazyItemsRequest: fetchLazyItemsRequest,
+		fetchLazyItems: fetchLazyItems,
+		renderCard: renderCard,
 		renderPagination: renderPagination,
 		setPaginationMetadata: setPaginationMetadata,
 		setCurrentPage: setCurrentPage,
@@ -14,14 +14,14 @@ var $actions = (function ($, $store, $constants) {
 
 	return actions;
 
-	function fetchBloggersRequest(url) {
+	function fetchLazyItemsRequest(url) {
 		$store.update('', {
-			type: $constants['FETCH_BLOGERS_REQUESTED'],
+			type: $constants['FETCH_LAZY_ITEMS_REQUESTED'],
 			data: url
 		});
 	}
 
-	function fetchBloggers(url) {
+	function fetchLazyItems(url) {
 		$.ajax({
 			url: url,
 			type: 'GET',
@@ -29,28 +29,28 @@ var $actions = (function ($, $store, $constants) {
 			dataType: 'json',
 			success: function(data) {
 				$store.update('', {
-					type: $constants['FETCH_BLOGERS_SUCCEEDED'],
+					type: $constants['FETCH_LAZY_ITEMS_SUCCEEDED'],
 					data: data.bloggers
 				});
 			},
 			error: function() {
 				$store.update('', {
-					type: $constants['FETCH_BLOGERS_FAILED'],
+					type: $constants['FETCH_LAZY_ITEMS_FAILED'],
 					data: null
 				});
 			}
 		});
 	}
 
-	function renderBlogerCard() {
-		var source = $store.select('shared.blogers'), 
+	function renderCard() {
+		var source = $store.select('shared.lazy.items'), 
 				data = [],
-				cardsOnPage = $store.select('blogerDetailPage.pagination.metadata.cardsOnPage'),
-				currentPage = $store.select('blogerDetailPage.pagination.currentPage'),
+				cardsOnPage = $store.select('shared.lazy.pagination.metadata.cardsOnPage'),
+				currentPage = $store.select('shared.lazy.pagination.currentPage'),
 				i = 0, j = 0;
 
 		$store.update('', {
-			type: $constants['RENDER_BLOGER_CARD_START'],
+			type: $constants['RENDER_CARD_START'],
 			data: null
 		});
 
@@ -64,7 +64,7 @@ var $actions = (function ($, $store, $constants) {
 		render(data);
 
 		$store.update('', {
-			type: $constants['RENDER_BLOGER_CARD_END'],
+			type: $constants['RENDER_CARD_END'],
 			data: null
 		});
 
@@ -91,10 +91,10 @@ var $actions = (function ($, $store, $constants) {
 			box.innerHTML = template.replace('undefined', '');
 
 			function getTemplate(data) {
-				var template;
+				var template, blogerCard;
 
-				template = [
-					'<div data-lazy-card aria-haspopup="true" class="bloger-detail__card card js-is-hide">',
+				blogerCard = [
+					'<div data-lazy-card aria-haspopup="true" class="card">',
 						'<div class="card__title">',
 							'<a href="' + data.link + '" class="card__link">'+ data.name + '</a>',
 						'</div>',
@@ -131,6 +131,10 @@ var $actions = (function ($, $store, $constants) {
 					'</div>'
 				].join('');
 
+				if (document.querySelector('[data-lazy-template-blogers]')) {
+					template = blogerCard;
+				}
+
 				return template;
 			}
 		}
@@ -149,7 +153,7 @@ var $actions = (function ($, $store, $constants) {
 			var str = source + '';
 
 			if (str.length === 1) {
-				str += ' + тыс.';
+				str += ' тыс.+';
 				return str;
 			}
 
@@ -178,7 +182,7 @@ var $actions = (function ($, $store, $constants) {
 			data: null
 		});
 
-		render($store.select('blogerDetailPage.pagination.metadata.allPages'));
+		render($store.select('shared.lazy.pagination.metadata.allPages'));
 		addListeners();
 
 		$store.update('', {
@@ -240,7 +244,7 @@ var $actions = (function ($, $store, $constants) {
 
 			function prevBtnHandler(ev) {
 				ev.preventDefault();
-				var pageNumber = $store.select('blogerDetailPage.pagination.currentPage');
+				var pageNumber = $store.select('shared.lazy.pagination.currentPage');
 
 				if (pageNumber > 1) {
 					pageNumber--;
@@ -251,8 +255,8 @@ var $actions = (function ($, $store, $constants) {
 
 			function nextBtnHandler(ev) {
 				ev.preventDefault();
-				var pageNumber = $store.select('blogerDetailPage.pagination.currentPage'),
-						allPages = $store.select('blogerDetailPage.pagination.metadata.allPages');
+				var pageNumber = $store.select('shared.lazy.pagination.currentPage'),
+						allPages = $store.select('shared.lazy.pagination.metadata.allPages');
 
 				if (pageNumber < allPages) {
 					pageNumber++;
@@ -315,10 +319,6 @@ var $actions = (function ($, $store, $constants) {
 		});
 
 		for (i = 0; i < cards.length; i++) {
-			if (cards[i].classList.contains('js-is-hide')) {
-				cards[i].classList.remove('js-is-hide');
-			}
-
 			if (!cards[i].classList.contains('js-is-show')) {
 				cards[i].classList.add('js-is-show');
 			}

@@ -3,17 +3,17 @@ var $store = (function (Spawn, SpawnEffects) {
 	'use strict';
 
 	var initialState = {
-		blogerDetailPage: {
-			pagination: {
-				currentPage: null,
-				metadata: {
-					cardsOnPage: null,
-					allPages: null
-				}
-			}
-		},
 		shared: {
-			blogers: []
+			lazy: {
+				items: [],
+				pagination: {
+					currentPage: null,
+					metadata: {
+						cardsOnPage: null,
+						allPages: null
+					}
+				}
+			},
 		}
 	};
 
@@ -25,7 +25,7 @@ var $store = (function (Spawn, SpawnEffects) {
 	return store;
 
 	function logger(store) {
-		return function(next) {
+		return function (next) {
 			return function (action) {
 				console.log('action: ', action.type + ' -> ', JSON.parse(JSON.stringify(action.data)));
 				next(action);

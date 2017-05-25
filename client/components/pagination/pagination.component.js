@@ -5,17 +5,17 @@
 	document.addEventListener('DOMContentLoaded', ready);
 
 	function ready() {
-		fetchBlogers();
+		fetchLazyItems();
 	}
 
-	function fetchBlogers() {
+	function fetchLazyItems() {
 		var lazyBox = document.querySelector('[data-lazy-box]'),
 				url;
 
 		if (lazyBox) {
 			url = lazyBox.getAttribute('data-lazy-endpoint');
 
-			$actions.fetchBloggersRequest(url);
+			$actions.fetchLazyItemsRequest(url);
 		}
 	}
 

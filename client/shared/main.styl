@@ -86,4 +86,33 @@ html, body
 			@media (max-width $phone)
 				font-size 'calc(17 / %s * 1rem)' %($base-font)
 
+.likearts-content [data-lazy-box]
+	min-height 540px !important
+
+.likearts-content [data-lazy-dump]
+	width 100%
+	display flex
+	justify-content center
+	align-items center
+	font-size 'calc(20 / %s * 1rem)' %($base-font)
+	color #ccc
+
+.likearts-content [data-lazy-card]
+	width calc(33.3333% - 30px) !important
+	height auto !important
+	margin 15px !important
+	transition all .2s ease-in-out !important
+	@media (max-width $notebook)
+		width calc(50% - 30px) !important
+	@media (max-width $phone)
+		width calc(100% - 30px) !important
+
+	&.js-is-show
+		animation card-show .7s 1 ease-in-out forwards
+
+@keyframes card-show
+	0%
+		opacity 0
+	100%
+		opacity 1
 

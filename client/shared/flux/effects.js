@@ -3,30 +3,30 @@
 	'use strict';
 
 	var effects = {
-		blogersEffect: blogersEffect,
+		lazyItemsEffect: lazyItemsEffect,
 		renderEffect: renderEffect,
 		paginationEffect: paginationEffect
 	};
 
-	SpawnEffects.effects.run(effects.blogersEffect);
+	SpawnEffects.effects.run(effects.lazyItemsEffect);
 	SpawnEffects.effects.run(effects.renderEffect);
 	SpawnEffects.effects.run(effects.paginationEffect);
 
-	function blogersEffect(store, action) {
+	function lazyItemsEffect(store, action) {
 		switch (action.type) {
-			case $constants['FETCH_BLOGERS_REQUESTED']:
+			case $constants['FETCH_LAZY_ITEMS_REQUESTED']:
 				{
-					$actions.fetchBloggers(action.data);
+					$actions.fetchLazyItems(action.data);
 					break;
 				}
-			case $constants['FETCH_BLOGERS_SUCCEEDED']:
+			case $constants['FETCH_LAZY_ITEMS_SUCCEEDED']:
 				{
-					$store.update('shared.blogers', {
-						type: $constants['FETCH_BLOGERS_UPDATE_START'],
+					$store.update('shared.lazy.items', {
+						type: $constants['FETCH_LAZY_ITEMS_UPDATE_START'],
 						data: action.data
 					});
 					$store.update('', {
-						type: $constants['FETCH_BLOGERS_UPDATE_END'],
+						type: $constants['FETCH_LAZY_ITEMS_UPDATE_END'],
 						data: null
 					});
 					break;
@@ -38,15 +38,15 @@
 
 	function renderEffect(store, action) {
 		switch (action.type) {
-			case $constants['FETCH_BLOGERS_UPDATE_END']:
+			case $constants['FETCH_LAZY_ITEMS_UPDATE_END']:
 				{
-					$actions.setPaginationMetadata($store.select('shared.blogers'));
-					$actions.renderBlogerCard();
+					$actions.setPaginationMetadata($store.select('shared.lazy.items'));
+					$actions.renderCard();
 					break;
 				}
 			case $constants['SET_PAGINATION_METADATA_REQUESTED']:
 				{
-					$store.update('blogerDetailPage.pagination.metadata', {
+					$store.update('shared.lazy.pagination.metadata', {
 						type: $constants['SET_PAGINATION_METADATA_START'],
 						data: action.data
 					});
@@ -63,11 +63,11 @@
 				}
 			case $constants['SET_CURRENT_PAGE_END']:
 				{
-					$actions.renderBlogerCard();
+					$actions.renderCard();
 					break;
 				}
 
-			case $constants['RENDER_BLOGER_CARD_END']:
+			case $constants['RENDER_CARD_END']:
 				{
 					$actions.setCardAnimation();
 					break;
@@ -86,7 +86,7 @@
 				}
 			case $constants['SET_CURRENT_PAGE_REQUESTED']:
 				{
-					$store.update('blogerDetailPage.pagination.currentPage', {
+					$store.update('shared.lazy.pagination.currentPage', {
 						type: $constants['SET_CURRENT_PAGE_START'],
 						data: action.data
 					});
