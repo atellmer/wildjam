@@ -373,7 +373,7 @@
 					class="modal-body"
 					tabindex="-1"
 					role="document"
-					aria-labelledby="Обратный звонок"
+					aria-labelledby="Заказать звонок"
 					aria-hidden="true">
 					<div class="modal-body__header">
 						<h3 class="modal-body__title">Заказать звонок</h3>
@@ -431,7 +431,7 @@
 					class="modal-body"
 					tabindex="-1"
 					role="document"
-					aria-labelledby="Обратный звонок"
+					aria-labelledby="Заказать рекламу"
 					aria-hidden="true">
 					<div class="modal-body__header">
 						<h3 class="modal-body__title">Заказать рекламу</h3>
@@ -487,6 +487,31 @@
 			</div>
 		</div>
 
+		<div class="modals__item">
+			<div data-modal-target="2" class="modal modal--success js-is-close">
+				<span class="modal__close-btn">
+					<span data-modal-close class="close-btn">
+						<i class="material-icons close-btn__icon">close</i>
+					</span>
+				</span>
+				<div
+					class="modal-body"
+					tabindex="-1"
+					role="document"
+					aria-labelledby="Ваша заявка отправлена"
+					aria-hidden="true">
+					<div class="modal-body__content">
+						<div class="success-window">
+							<i class="icon icon-send success-window__icon"></i>
+							<div class="success-window__title">Спасибо</div>
+							<div class="success-window__sign">Ваша заявка отправлена</div>
+							<div class="success-window__separator"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 	</div>
 
 
@@ -497,16 +522,23 @@
 	<script src="bower_components/jquery/dist/jquery.js"></script>
 	<script src="bower_components/slick-carousel/slick/slick.js"></script>
 	<script src="bower_components/jquery-mousewheel/jquery.mousewheel.js"></script>
+	<script src="bower_components/spawn-x/lib/spawn-x.umd.min.js"></script>
+	<script src="bower_components/spawn-x-effects/lib/spawn-x-effects.umd.min.js"></script>
 	<script src="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js"></script>
 	<!-- endinject -->
 	<!-- inject:js -->
 	<script src="shared/polyfills/polyfills.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
 	<script src="shared/libs/modal/modal.lib.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
+	<script src="shared/flux/constants.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
+	<script src="shared/flux/store.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
+	<script src="shared/flux/actions.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
+	<script src="shared/flux/effects.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
 	<script src="components/button/button.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
 	<script src="components/dots/dots.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
 	<script src="components/map/map.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
 	<script src="components/menu/menu.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
 	<script src="components/modal/modal.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
+	<script src="components/pagination/pagination.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
 	<script src="components/scrollbar/scrollbar.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
 	<script src="components/slider/slider.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
 	<!-- endinject -->

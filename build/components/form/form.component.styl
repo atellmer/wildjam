@@ -74,6 +74,15 @@ $base-font = 16
 			font-weight 200
 			color #c3c5c6
 
+		&:focus.js-is-invalid
+			border 1px solid $color-primary
+
+		&.js-is-invalid
+			border 1px solid #f66d67
+
+		&.js-is-invalid + .wj-form__icon
+			color red
+
 	&__textarea
 		resize none
 		min-height 200px
@@ -85,6 +94,7 @@ $base-font = 16
 		right 20px
 		transform translate(0, -50%)
 		color #c3c5c6
+		transition all .2s ease-in-out
 
 		&--txt
 			top 18px

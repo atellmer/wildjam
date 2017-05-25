@@ -71,6 +71,15 @@
   font-weight: 200;
   color: #c3c5c6;
 }
+.likearts-content .wj-form__input:focus.js-is-invalid {
+  border: 1px solid #3ebcff;
+}
+.likearts-content .wj-form__input.js-is-invalid {
+  border: 1px solid #f66d67;
+}
+.likearts-content .wj-form__input.js-is-invalid + .wj-form__icon {
+  color: #f00;
+}
 .likearts-content .wj-form__textarea {
   resize: none;
   min-height: 200px;
@@ -86,6 +95,11 @@
   -ms-transform: translate(0, -50%);
   transform: translate(0, -50%);
   color: #c3c5c6;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .likearts-content .wj-form__icon--txt {
   top: 18px;
