@@ -1,5 +1,5 @@
 ;
-(function () {
+(function (wjModal) {
 	document.addEventListener('DOMContentLoaded', ready);
 
 	function ready() {
@@ -13,8 +13,6 @@
 		закрыть программно окно
 		wjModal.close(id), где id - это номер окна в атрибуте data-modal-target
 		*/
-
-		//wjModal.open(2);
 	}
 
-})();
+})(wjModal);
