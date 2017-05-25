@@ -3,6 +3,15 @@ var $store = (function (Spawn, SpawnEffects) {
 	'use strict';
 
 	var initialState = {
+		blogerDetailPage: {
+			pagination: {
+				currentPage: null,
+				metadata: {
+					cardsOnPage: null,
+					allPages: null
+				}
+			}
+		},
 		shared: {
 			blogers: []
 		}

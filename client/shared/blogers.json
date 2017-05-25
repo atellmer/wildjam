@@ -24,7 +24,7 @@
 		"instagram_subscribers": 0,
 		"name": "LizzzTV"
 	}, {
-		"id": 8,
+		"id": 3,
 		"vk_subscribers_formatted": 557000,
 		"vk_subscribers": 557639,
 		"instagram_name": null,
@@ -36,7 +36,7 @@
 		"instagram_subscribers": 0,
 		"name": "Rakamakafo"
 	}, {
-		"id": 5,
+		"id": 4,
 		"vk_subscribers_formatted": 123000,
 		"vk_subscribers": 123671,
 		"instagram_name": null,
@@ -48,7 +48,7 @@
 		"instagram_subscribers": 0,
 		"name": "DIPT"
 	}, {
-		"id": 3,
+		"id": 5,
 		"vk_subscribers_formatted": 100000,
 		"vk_subscribers": 100351,
 		"instagram_name": "dima_maslen",
@@ -60,7 +60,7 @@
 		"instagram_subscribers": 120000,
 		"name": "Дмитрий Масленников"
 	}, {
-		"id": 4,
+		"id": 6,
 		"vk_subscribers_formatted": 315000,
 		"vk_subscribers": 315833,
 		"instagram_name": null,
@@ -71,6 +71,30 @@
 		"catalog_image": "/images/api/blogers/6.jpg",
 		"instagram_subscribers": 0,
 		"name": "RED21"
+	}, {
+		"id": 7,
+		"vk_subscribers_formatted": 315000,
+		"vk_subscribers": 315833,
+		"instagram_name": null,
+		"vk_name": "publicred21",
+		"youtube_subscribers": 1882716,
+		"instagram_subscribers_formatted": 0,
+		"youtube_subscribers_formatted": 1882000,
+		"catalog_image": "/images/api/blogers/6.jpg",
+		"instagram_subscribers": 0,
+		"name": "Тест 1"
+	}, {
+		"id": 8,
+		"vk_subscribers_formatted": 315000,
+		"vk_subscribers": 315833,
+		"instagram_name": null,
+		"vk_name": "publicred21",
+		"youtube_subscribers": 1882716,
+		"instagram_subscribers_formatted": 0,
+		"youtube_subscribers_formatted": 1882000,
+		"catalog_image": "/images/api/blogers/6.jpg",
+		"instagram_subscribers": 0,
+		"name": "Тест 2"
 	}],
 	"status": "ok"
 }

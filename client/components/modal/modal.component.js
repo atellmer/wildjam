@@ -14,7 +14,7 @@
 		wjModal.close(id), где id - это номер окна в атрибуте data-modal-target
 		*/
 
-		wjModal.open(2);
+		//wjModal.open(2);
 	}
 
 })();

@@ -58,6 +58,7 @@ $base-font = 16
 		align-items stretch
 		margin 0 -15px 40px -15px
 		padding 20px 0
+		min-height 540px
 
 	&__card
 		width calc(33.3333% - 30px)
@@ -68,6 +69,12 @@ $base-font = 16
 			width calc(50% - 30px)
 		@media (max-width $phone)
 			width calc(100% - 30px)
+
+		&.js-is-show
+			animation card-show .5s 1 ease-in-out forwards
+
+		&.js-is-hide
+			animation card-hide .5s 1 ease-in-out forwards
 
 	&__pagination
 		position relative
@@ -211,3 +218,16 @@ $base-font = 16
 			width 100%
 			padding 16px 20px
 			font-size 'calc(16 / %s * 1rem)' %($base-font)
+
+@keyframes card-show
+	0%
+		opacity 0
+	100%
+		opacity 1
+
+
+@keyframes card-hide
+	0%
+		opacity 1
+	100%
+		opacity 0
