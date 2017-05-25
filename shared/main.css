@@ -101,3 +101,104 @@ body {
     font-size: calc(17 / 16 * 1rem);
   }
 }
+.likearts-content [data-lazy-box] {
+  min-height: 540px !important;
+}
+.likearts-content [data-lazy-dump] {
+  width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  font-size: calc(20 / 16 * 1rem);
+  color: #ccc;
+}
+.likearts-content [data-lazy-card] {
+  width: calc(33.3333% - 30px) !important;
+  height: auto !important;
+  margin: 15px !important;
+  -webkit-transition: all 0.2s ease-in-out !important;
+  -moz-transition: all 0.2s ease-in-out !important;
+  -o-transition: all 0.2s ease-in-out !important;
+  -ms-transition: all 0.2s ease-in-out !important;
+  transition: all 0.2s ease-in-out !important;
+}
+@media (max-width: 1024px) {
+  .likearts-content [data-lazy-card] {
+    width: calc(50% - 30px) !important;
+  }
+}
+@media (max-width: 640px) {
+  .likearts-content [data-lazy-card] {
+    width: calc(100% - 30px) !important;
+  }
+}
+.likearts-content [data-lazy-card].js-is-show {
+  -webkit-animation: card-show 0.7s 1 ease-in-out forwards;
+  -moz-animation: card-show 0.7s 1 ease-in-out forwards;
+  -o-animation: card-show 0.7s 1 ease-in-out forwards;
+  -ms-animation: card-show 0.7s 1 ease-in-out forwards;
+  animation: card-show 0.7s 1 ease-in-out forwards;
+}
+@-moz-keyframes card-show {
+  0% {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+  }
+  100% {
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+  }
+}
+@-webkit-keyframes card-show {
+  0% {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+  }
+  100% {
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+  }
+}
+@-o-keyframes card-show {
+  0% {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+  }
+  100% {
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+  }
+}
+@keyframes card-show {
+  0% {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+  }
+  100% {
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+  }
+}

@@ -77,6 +77,20 @@
     width: calc(100% - 40px);
   }
 }
+.likearts-content .modal--success .modal-body {
+  background-color: #3ebcff;
+}
+.likearts-content .modal--success .modal-body__content {
+  min-height: 432px;
+}
+@media (max-width: 640px) {
+  .likearts-content .modal--success .modal-body__content {
+    min-height: 0;
+  }
+}
+.likearts-content .modal--success .close-btn__icon {
+  color: #fff !important;
+}
 .likearts-content .modal__close-btn {
   display: inline-block;
   position: absolute;
@@ -113,7 +127,7 @@
   max-height: calc(100vh - 40px);
   overflow: auto;
   background-color: #fff;
-  padding: 60px;
+  padding: 60px 120px;
 }
 @media (max-width: 900px) {
   .likearts-content .modal-body {
@@ -127,7 +141,8 @@
   }
 }
 .likearts-content .modal-body__title {
-  font-size: calc(20 / 16 * 1rem);
+  font-size: calc(28 / 16 * 1rem);
+  font-weight: 900;
   line-height: 1.27;
   margin: 0 0 20px 0;
 }
@@ -164,7 +179,7 @@
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
-  min-width: 500px;
+  min-width: 300px;
 }
 @media (max-width: 900px) {
   .likearts-content .modal-body__content {
@@ -187,13 +202,16 @@
 .likearts-content .modals .close-btn {
   position: relative;
   display: inline-block;
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   cursor: pointer;
+}
+.likearts-content .modals .close-btn:hover .close-btn__icon {
+  color: #3ebcff;
 }
 .likearts-content .modals .close-btn__icon {
   position: absolute;
@@ -204,8 +222,13 @@
   -o-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  color: #272757;
-  font-size: calc(28 / 16 * 1rem);
+  color: #b2b2b2;
+  font-size: calc(26 / 16 * 1rem);
+  -webkit-transition: color 0.2s ease-in-out;
+  -moz-transition: color 0.2s ease-in-out;
+  -o-transition: color 0.2s ease-in-out;
+  -ms-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 @-moz-keyframes modal-motion-window-open {
   0% {

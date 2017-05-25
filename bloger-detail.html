@@ -190,9 +190,11 @@
 							</div>
 						</div>
 						<div class="bloger-card__c-btn">
-							<a href="#" class="bloger-card__link">
-								<button class="wj-btn bloger-card__btn">Заказать рекламу</button>
-							</a>
+							<button
+								data-modal-trigger="1"
+								class="wj-btn bloger-card__btn">
+								Заказать рекламу
+							</button>
 						</div>
 					</div>
 				</div>
@@ -231,180 +233,21 @@
 				</iframe>
 			</div>
 			<h3 class="title title--h3 bloger-detail__title bloger-detail__title--h3">Еще блогеры</h3>
-			<div class="bloger-detail__cards">
 
-				<div aria-haspopup="true" class="bloger-detail__card card">
-					<div class="card__title">
-						<a href="#" class="card__link">Лиззтв</a>
-					</div>
-					<a href="#" class="card__link">
-						<div class="card__cover">
-							<img
-								src="./images/pages/bloger-detail/blogers/1.jpg"
-								class="card__pic"
-								alt="text">
-						</div>
-					</a>
-					<div class="card__desc">
-						<a
-							href="#"
-							target="_blank"
-							rel="noopener"
-							class="card__info">
-							<i class="icon icon-yt card__info-icon card__social-icon"></i>
-							<div class="card__info-stats">
-								<div class="card__info-count">2 742 800+</div>
-								<div class="card__info-sign">подписчиков</div>
-							</div>
-						</a>
-						<div class="card__social">
-							<a
-								href="#"
-								target="_blank"
-								rel="noopener"
-								class="card__social-link">
-								<i class="icon icon-vk card__social-icon"></i>
-								<div class="card__social-detail">
-									<div class="card__social-address">kate_clapp</div>
-									<div class="card__social-subs">1.6+ млн.</div>
-								</div>
-							</a>
-							<a
-								href="#"
-								target="_blank"
-								rel="noopener"
-								class="card__social-link">
-								<i class="icon icon-insta card__social-icon"></i>
-								<div class="card__social-detail">
-									<div class="card__social-address">kate_clapp</div>
-									<div class="card__social-subs">1.6+ млн.</div>
-								</div>
-							</a>
-						</div>
-					</div>
-				</div>
-
-				<div aria-haspopup="true" class="bloger-detail__card card">
-					<div class="card__title">
-						<a href="#" class="card__link">Ракамакафо</a>
-					</div>
-					<a href="#" class="card__link">
-						<div class="card__cover">
-							<img
-								src="./images/pages/bloger-detail/blogers/2.jpg"
-								class="card__pic"
-								alt="text">
-						</div>
-					</a>
-					<div class="card__desc">
-						<a
-							href="#"
-							target="_blank"
-							rel="noopener"
-							class="card__info">
-							<i class="icon icon-yt card__info-icon card__social-icon"></i>
-							<div class="card__info-stats">
-								<div class="card__info-count">2 742 800+</div>
-								<div class="card__info-sign">подписчиков</div>
-							</div>
-						</a>
-						<div class="card__social">
-							<a
-								href="#"
-								target="_blank"
-								rel="noopener"
-								class="card__social-link">
-								<i class="icon icon-vk card__social-icon"></i>
-								<div class="card__social-detail">
-									<div class="card__social-address">kate_clapp</div>
-									<div class="card__social-subs">1.6+ млн.</div>
-								</div>
-							</a>
-							<a
-								href="#"
-								target="_blank"
-								rel="noopener"
-								class="card__social-link">
-								<i class="icon icon-insta card__social-icon"></i>
-								<div class="card__social-detail">
-									<div class="card__social-address">kate_clapp</div>
-									<div class="card__social-subs">1.6+ млн.</div>
-								</div>
-							</a>
-						</div>
-					</div>
-				</div>
-
-				<div aria-haspopup="true" class="bloger-detail__card card">
-					<div class="card__title">
-						<a href="#" class="card__link">Дима Масленников</a>
-					</div>
-					<a href="#" class="card__link">
-						<div class="card__cover">
-							<img
-								src="./images/pages/bloger-detail/blogers/3.jpg"
-								class="card__pic"
-								alt="text">
-						</div>
-					</a>
-					<div class="card__desc">
-						<a
-							href="#"
-							target="_blank"
-							rel="noopener"
-							class="card__info">
-							<i class="icon icon-yt card__info-icon card__social-icon"></i>
-							<div class="card__info-stats">
-								<div class="card__info-count">2 742 800+</div>
-								<div class="card__info-sign">подписчиков</div>
-							</div>
-						</a>
-						<div class="card__social">
-							<a
-								href="#"
-								target="_blank"
-								rel="noopener"
-								class="card__social-link">
-								<i class="icon icon-vk card__social-icon"></i>
-								<div class="card__social-detail">
-									<div class="card__social-address">kate_clapp</div>
-									<div class="card__social-subs">1.6+ млн.</div>
-								</div>
-							</a>
-							<a
-								href="#"
-								target="_blank"
-								rel="noopener"
-								class="card__social-link">
-								<i class="icon icon-insta card__social-icon"></i>
-								<div class="card__social-detail">
-									<div class="card__social-address">kate_clapp</div>
-									<div class="card__social-subs">1.6+ млн.</div>
-								</div>
-							</a>
-						</div>
-					</div>
-				</div>
-
+			<div
+				data-lazy-box
+				data-lazy-template-blogers
+				data-lazy-number="3"
+				data-lazy-endpoint="/shared/blogers.json"
+				class="bloger-detail__cards">
+				<div data-lazy-dump>Нет результатов</div>
 			</div>
-			<div class="bloger-detail__pagination">
-				<div class="wj-pagination">
-					<div class="wj-pagination__line"></div>
-					<div class="wj-pagination__cover">
-						<a href="#" class="wj-pagination__btn wj-pagination__btn--prev">
-							<i class="wj-pagination__icon"></i>
-						</a>
-						<a href="#" class="wj-pagination__link is-active">1</a>
-						<a href="#" class="wj-pagination__link">2</a>
-						<a href="#" class="wj-pagination__link">3</a>
-						<a href="#" class="wj-pagination__link">4</a>
-						<a href="#" class="wj-pagination__btn wj-pagination__btn--next">
-							<i class="wj-pagination__icon"></i>
-						</a>
-					</div>
-					<div class="wj-pagination__line"></div>
-				</div>
+
+			<div
+				data-lazy-pagination-box
+				class="bloger-detail__pagination">
 			</div>
+
 		</div>
 	</main>
 
@@ -442,7 +285,7 @@
 					class="modal-body"
 					tabindex="-1"
 					role="document"
-					aria-labelledby="Обратный звонок"
+					aria-labelledby="Заказать звонок"
 					aria-hidden="true">
 					<div class="modal-body__header">
 						<h3 class="modal-body__title">Заказать звонок</h3>
@@ -500,7 +343,7 @@
 					class="modal-body"
 					tabindex="-1"
 					role="document"
-					aria-labelledby="Обратный звонок"
+					aria-labelledby="Заказать рекламу"
 					aria-hidden="true">
 					<div class="modal-body__header">
 						<h3 class="modal-body__title">Заказать рекламу</h3>
@@ -556,6 +399,31 @@
 			</div>
 		</div>
 
+		<div class="modals__item">
+			<div data-modal-target="2" class="modal modal--success js-is-close">
+				<span class="modal__close-btn">
+					<span data-modal-close class="close-btn">
+						<i class="material-icons close-btn__icon">close</i>
+					</span>
+				</span>
+				<div
+					class="modal-body"
+					tabindex="-1"
+					role="document"
+					aria-labelledby="Ваша заявка отправлена"
+					aria-hidden="true">
+					<div class="modal-body__content">
+						<div class="success-window">
+							<i class="icon icon-send success-window__icon"></i>
+							<div class="success-window__title">Спасибо</div>
+							<div class="success-window__sign">Ваша заявка отправлена</div>
+							<div class="success-window__separator"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 	</div>
 
 
@@ -566,16 +434,23 @@
 	<script src="bower_components/jquery/dist/jquery.js"></script>
 	<script src="bower_components/slick-carousel/slick/slick.js"></script>
 	<script src="bower_components/jquery-mousewheel/jquery.mousewheel.js"></script>
+	<script src="bower_components/spawn-x/lib/spawn-x.umd.min.js"></script>
+	<script src="bower_components/spawn-x-effects/lib/spawn-x-effects.umd.min.js"></script>
 	<script src="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js"></script>
 	<!-- endinject -->
 	<!-- inject:js -->
 	<script src="shared/polyfills/polyfills.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
 	<script src="shared/libs/modal/modal.lib.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
+	<script src="shared/flux/constants.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
+	<script src="shared/flux/store.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
+	<script src="shared/flux/actions.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
+	<script src="shared/flux/effects.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
 	<script src="components/button/button.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
 	<script src="components/dots/dots.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
 	<script src="components/map/map.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
 	<script src="components/menu/menu.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
 	<script src="components/modal/modal.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
+	<script src="components/pagination/pagination.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
 	<script src="components/scrollbar/scrollbar.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
 	<script src="components/slider/slider.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
 	<!-- endinject -->

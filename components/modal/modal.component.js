@@ -1,5 +1,5 @@
 ;
-(function () {
+(function (wjModal) {
 	document.addEventListener('DOMContentLoaded', ready);
 
 	function ready() {
@@ -15,4 +15,4 @@
 		*/
 	}
 
-})();
+})(wjModal);
