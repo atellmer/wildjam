@@ -81,6 +81,9 @@
     width: calc(100% - 30px);
   }
 }
+.likearts-content .blogers__card .card__pic {
+  filter: none;
+}
 .likearts-content .blogers__pagination {
   position: relative;
   padding: 15px 0;
