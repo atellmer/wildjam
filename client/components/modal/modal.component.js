@@ -3,16 +3,29 @@
 	document.addEventListener('DOMContentLoaded', ready);
 
 	function ready() {
-		// инициализируем модальные окна
 		wjModal.init();
+		sendBtnInit();
+	}
 
-		/*
-		открыть программно окно
-		wjModal.open(id), где id - это номер окна в атрибуте data-modal-target
+	function sendBtnInit() {
+		var btns = document.querySelectorAll('[data-modal-btn-send]'),
+				i;
 
-		закрыть программно окно
-		wjModal.close(id), где id - это номер окна в атрибуте data-modal-target
-		*/
+		for (i = 0; i < btns.length; i++) {
+			new Hammer(btns[i]).on('tap', tapHandler);
+		}
+
+		function tapHandler(ev) {
+			ev.preventDefault();
+
+			wjModal.close(1);
+
+			var timeout = setTimeout(function() {
+				wjModal.open(2);
+
+				clearTimeout(timeout);
+			}, 1000);
+		}
 	}
 
 })(wjModal);
