@@ -40,7 +40,7 @@
 }
 @media all and (max-width: 1140px) {
   .likearts-content .wj-form__input {
-    padding: 16px;
+    padding: 16px 48px 16px 16px;
     font-size: calc(16 / 16 * 1rem);
   }
 }
@@ -84,6 +84,11 @@
   resize: none;
   min-height: 200px;
   text-align: left;
+}
+@media (max-width: 640px) {
+  .likearts-content .wj-form__textarea {
+    min-height: 0;
+  }
 }
 .likearts-content .wj-form__icon {
   position: absolute;
@@ -154,7 +159,7 @@
 }
 @media all and (max-width: 1140px) {
   .likearts-content .wj-custom-form__input {
-    padding: 16px;
+    padding: 16px 48px 16px 16px;
     font-size: calc(16 / 16 * 1rem);
   }
 }
@@ -189,6 +194,11 @@
   resize: none;
   min-height: 200px;
   text-align: left;
+}
+@media (max-width: 640px) {
+  .likearts-content .wj-custom-form__textarea {
+    min-height: 0;
+  }
 }
 .likearts-content .wj-custom-form__icon {
   position: absolute;
