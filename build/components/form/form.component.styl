@@ -48,7 +48,7 @@ $base-font = 16
 		font-size 'calc(18 / %s * 1rem)' %($base-font)
 		border-radius 30px
 		@media all and (max-width 1140px)
-			padding 16px
+			padding 16px 48px 16px 16px
 			font-size 'calc(16 / %s * 1rem)' %($base-font)
 		@media (max-width $phone)
 			border-radius 10px
@@ -87,6 +87,8 @@ $base-font = 16
 		resize none
 		min-height 200px
 		text-align left
+		@media (max-width $phone)
+			min-height 0
 
 	&__icon
 		position absolute
@@ -136,7 +138,7 @@ $base-font = 16
 		font-size 'calc(18 / %s * 1rem)' %($base-font)
 		border-radius 30px
 		@media all and (max-width 1140px)
-			padding 16px
+			padding 16px 48px 16px 16px
 			font-size 'calc(16 / %s * 1rem)' %($base-font)
 		@media (max-width $phone)
 			border-radius 10px
@@ -166,6 +168,8 @@ $base-font = 16
 		resize none
 		min-height 200px
 		text-align left
+		@media (max-width $phone)
+			min-height 0
 
 	&__icon
 		position absolute
