@@ -23,8 +23,8 @@
 	<link rel="stylesheet" href="components/breadcrumbs/breadcrumbs.components.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
 	<link rel="stylesheet" href="components/button/button.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
 	<link rel="stylesheet" href="components/card/card.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
-	<link rel="stylesheet" href="components/dots/dots.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
 	<link rel="stylesheet" href="components/footer/footer.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
+	<link rel="stylesheet" href="components/dots/dots.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
 	<link rel="stylesheet" href="components/form/form.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
 	<link rel="stylesheet" href="components/header/header.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
 	<link rel="stylesheet" href="components/logo/logo.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
@@ -574,7 +574,7 @@
 								<input
 									type="text"
 									name="phone"
-									class="wj-form__input js-is-invalid"
+									class="wj-form__input"
 									placeholder="Ваш телефон">
 								<i class="material-icons wj-form__icon">phone</i>
 							</div>
@@ -650,10 +650,14 @@
 									wj-custom-form__icon--txt">subject</i>
 							</div>
 							<div class="custom-modal__c-btn">
-								<button class="
-									wj-btn 
+								<button
+									type="button"
+									data-modal-btn-send
+									class="wj-btn 
 									wj-custom-form__btn 
-									custom-modal__btn">Отправить</button>
+									custom-modal__btn">
+									Отправить
+								</button>
 							</div>
 						</form>
 					</div>
@@ -716,20 +720,6 @@
 	<script src="components/scrollbar/scrollbar.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
 	<script src="components/slider/slider.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
 	<!-- endinject -->
-
-	<script>
-		// удалить этот кусок
-		(function() {
-			document.addEventListener('DOMContentLoaded', ready);
-
-			function ready() {
-				setTimeout(function() {
-					wjModal.open(2);
-				}, 3000);
-			}
-
-		})();
-	</script>
 </body>
 
 </html>
