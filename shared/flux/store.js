@@ -4,6 +4,13 @@ var $store = (function (Spawn, SpawnEffects) {
 
 	var initialState = {
 		shared: {
+			modal: {
+				active: null,
+				success: 2
+			},
+			order: {
+				metadata: {}
+			},
 			lazy: {
 				items: [],
 				pagination: {

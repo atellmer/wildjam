@@ -11,8 +11,8 @@
   }
 }
 .likearts-content .custom-modal__btn {
-  padding: 16px;
-  font-size: calc(16 / 16 * 1rem);
+  padding: 16px !important;
+  font-size: calc(16 / 16 * 1rem) !important;
 }
 .likearts-content .custom-modal__textarea {
   min-height: 150px;

@@ -1,6 +1,8 @@
 {
 	"bloggers": [{
 		"id": 1,
+		"link": "http://beta.wildjam.ru",
+		"youtube_link": "https://youtube.com",
 		"vk_subscribers_formatted": 378000,
 		"vk_subscribers": 378718,
 		"instagram_name": "sobolevv",
@@ -13,6 +15,8 @@
 		"name": "Николай Соболев"
 	}, {
 		"id": 2,
+		"link": "#",
+		"youtube_link": "#",
 		"vk_subscribers_formatted": 214000,
 		"vk_subscribers": 214682,
 		"instagram_name": null,
@@ -25,6 +29,8 @@
 		"name": "LizzzTV"
 	}, {
 		"id": 3,
+		"link": "#",
+		"youtube_link": "#",
 		"vk_subscribers_formatted": 557000,
 		"vk_subscribers": 557639,
 		"instagram_name": null,
@@ -37,6 +43,8 @@
 		"name": "Rakamakafo"
 	}, {
 		"id": 4,
+		"link": "#",
+		"youtube_link": "#",
 		"vk_subscribers_formatted": 123000,
 		"vk_subscribers": 123671,
 		"instagram_name": null,
@@ -49,6 +57,8 @@
 		"name": "DIPT"
 	}, {
 		"id": 5,
+		"link": "#",
+		"youtube_link": "#",
 		"vk_subscribers_formatted": 100000,
 		"vk_subscribers": 100351,
 		"instagram_name": "dima_maslen",
@@ -61,6 +71,8 @@
 		"name": "Дмитрий Масленников"
 	}, {
 		"id": 6,
+		"link": "#",
+		"youtube_link": "#",
 		"vk_subscribers_formatted": 315000,
 		"vk_subscribers": 315833,
 		"instagram_name": null,
@@ -73,6 +85,8 @@
 		"name": "RED21"
 	}, {
 		"id": 7,
+		"link": "#",
+		"youtube_link": "#",
 		"vk_subscribers_formatted": 315000,
 		"vk_subscribers": 315833,
 		"instagram_name": null,
@@ -85,6 +99,8 @@
 		"name": "Тест 1"
 	}, {
 		"id": 8,
+		"link": "#",
+		"youtube_link": "#",
 		"vk_subscribers_formatted": 315000,
 		"vk_subscribers": 315833,
 		"instagram_name": null,

@@ -55,6 +55,8 @@ var wjModal = (function () {
 		target = document.querySelector('[data-modal-target="' + id + '"]');
 		closeBtn = document.querySelector('[data-modal-target="' + id + '"] [data-modal-close]');
 
+		overlay.setAttribute('data-modal-opened', id);
+
 		target.style.display = 'block';
 		overlay.style.display = 'block';
 
@@ -78,9 +80,11 @@ var wjModal = (function () {
 	}
 
 	function close(id) {
-		var target;
+		var target = document.querySelector('[data-modal-target="' + id + '"]'),
+				overlay = document.querySelector('.modals__overlay');
 
-		target = document.querySelector('[data-modal-target="' + id + '"]');
+		overlay.removeAttribute('data-modal-opened');
+
 		_toggleVisibility(target);
 	}
 
