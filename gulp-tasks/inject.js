@@ -22,8 +22,9 @@ gulp.task('inject', () => {
 		`${config.path.shared}/libs/**/*.js`,
 		`${config.path.shared}/flux/constants.js`,
 		`${config.path.shared}/flux/store.js`,
-		`${config.path.shared}/flux/actions.js`,
-		`${config.path.shared}/flux/effects.js`,
+		`${config.path.shared}/flux/actions/index.js`,
+		`${config.path.shared}/flux/actions/**/*.js`,
+		`${config.path.shared}/flux/effects/**/*.js`,
 		`${config.path.components}/**/*.js`
 		], {read: false}).pipe(hash(opts));
 	} else {
@@ -36,8 +37,9 @@ gulp.task('inject', () => {
 			`${config.path.shared}/libs/**/*.js`,
 			`${config.path.shared}/flux/constants.js`,
 			`${config.path.shared}/flux/store.js`,
-			`${config.path.shared}/flux/actions.js`,
-			`${config.path.shared}/flux/effects.js`,
+			`${config.path.shared}/flux/actions/index.js`,
+			`${config.path.shared}/flux/actions/**/*.js`,
+			`${config.path.shared}/flux/effects/**/*.js`,
 			`${config.path.components}/**/*.js`
 		], {read: false}).pipe(hash(opts));
 	}

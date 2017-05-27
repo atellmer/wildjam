@@ -1,18 +1,14 @@
 ;
-var $actions = (function ($, $store, $constants) {
+(function ($, $store, $constants, $actions) {
 	'use strict';
 
-	var actions = {
-		fetchLazyItemsRequest: fetchLazyItemsRequest,
-		fetchLazyItems: fetchLazyItems,
-		renderCard: renderCard,
-		renderPagination: renderPagination,
-		setPaginationMetadata: setPaginationMetadata,
-		setCurrentPage: setCurrentPage,
-		setCardAnimation: setCardAnimation
-	};
-
-	return actions;
+	$actions.fetchLazyItemsRequest = fetchLazyItemsRequest;
+	$actions.fetchLazyItems = fetchLazyItems;
+	$actions.renderCard = renderCard;
+	$actions.renderPagination = renderPagination;
+	$actions.setPaginationMetadata = setPaginationMetadata;
+	$actions.setCurrentPage = setCurrentPage;
+	$actions.setCardAnimation = setCardAnimation;
 
 	function fetchLazyItemsRequest(url) {
 		$store.update('', {
@@ -75,9 +71,9 @@ var $actions = (function ($, $store, $constants) {
 			for (i = 0; i < source.length; i++) {
 				template += getTemplate({
 					name: source[i].name,
-					link: '#',
+					link: source[i].link,
 					pic: source[i].catalog_image,
-					youtubeLink: '#',
+					youtubeLink: source[i].youtube_link,
 					youtubeSubs: source[i].youtube_subscribers_formatted,
 					vkLink: 'https://vk.com/' + source[i].vk_name,
 					vkAddress: formateName(source[i].vk_name),
@@ -330,4 +326,4 @@ var $actions = (function ($, $store, $constants) {
 		});
 	}
 
-})($, $store, $constants);
+})($, $store, $constants, $actions);
