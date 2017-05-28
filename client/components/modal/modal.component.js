@@ -35,10 +35,10 @@
 		function tapHandler(ev) {
 
 			$actions.tapSendOrderBtn({
-				name: form.name.value,
-				email: form.email.value,
-				phone: form.phone.value,
-				message: form.message.value
+				name: encodeURIComponent(form.name.value),
+				email: encodeURIComponent(form.email.value),
+				phone: encodeURIComponent(form.phone.value),
+				message: encodeURIComponent(form.message.value)
 			});
 		}
 	}

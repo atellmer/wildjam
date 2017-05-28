@@ -623,6 +623,14 @@ body {
 .likearts-content .wj-btn:disabled:hover {
   background-color: #3ebcff;
 }
+.likearts-content .wj-btn[disabled]:active,
+.likearts-content .wj-btn:disabled:active {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -o-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
 .likearts-content .loader {
   position: relative;
   top: 0;
@@ -1444,10 +1452,10 @@ body {
   border: 1px solid #3ebcff;
 }
 .likearts-content .wj-form__input.js-is-invalid {
-  border: 1px solid #f66d67;
+  border: 1px solid #ef5350;
 }
 .likearts-content .wj-form__input.js-is-invalid + .wj-form__icon {
-  color: #f00;
+  color: #ef5350;
 }
 .likearts-content .wj-form__textarea {
   resize: none;
@@ -1485,6 +1493,76 @@ body {
 }
 .likearts-content .wj-form .wj-form__input:focus + .wj-form__icon {
   color: #3ebcff;
+}
+.likearts-content .flash-message {
+  position: relative;
+  margin-bottom: 15px;
+  color: #ef5350;
+  background-color: #ffcdd2;
+  padding: 10px;
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -o-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-animation: flash-message 0.4s ease-in-out 1 forwards;
+  -moz-animation: flash-message 0.4s ease-in-out 1 forwards;
+  -o-animation: flash-message 0.4s ease-in-out 1 forwards;
+  -ms-animation: flash-message 0.4s ease-in-out 1 forwards;
+  animation: flash-message 0.4s ease-in-out 1 forwards;
+}
+@media (max-width: 640px) {
+  .likearts-content .flash-message {
+    font-size: calc(14 / 16 * 1rem);
+  }
+}
+@-moz-keyframes flash-message {
+  0% {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+  }
+  100% {
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+  }
+}
+@-webkit-keyframes flash-message {
+  0% {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+  }
+  100% {
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+  }
+}
+@-o-keyframes flash-message {
+  0% {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+  }
+  100% {
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+  }
+}
+@keyframes flash-message {
+  0% {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+  }
+  100% {
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+  }
 }
 .likearts-content .wj-custom-form {
   width: 100%;
@@ -1558,6 +1636,15 @@ body {
 .likearts-content .wj-custom-form__input:-ms-input-placeholder {
   font-weight: 200;
   color: #c3c5c6;
+}
+.likearts-content .wj-custom-form__input:focus.js-is-invalid {
+  border: 1px solid #3ebcff;
+}
+.likearts-content .wj-custom-form__input.js-is-invalid {
+  border: 1px solid #ef5350;
+}
+.likearts-content .wj-custom-form__input.js-is-invalid + .wj-custom-form__icon {
+  color: #ef5350;
 }
 .likearts-content .wj-custom-form__textarea {
   resize: none;
@@ -1781,6 +1868,16 @@ body {
 .likearts-content .header .contacts__link:hover {
   color: #bdbdbd;
 }
+.likearts-content .map {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 900px) {
+  .likearts-content .map {
+    height: 300px;
+  }
+}
 .likearts-content .logo {
   width: 185px;
   height: 45px;
@@ -1801,16 +1898,6 @@ body {
   .likearts-content .logo {
     width: calc(185 / 1.8 * 1px);
     height: calc(45 / 1.8 * 1px);
-  }
-}
-.likearts-content .map {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-@media (max-width: 900px) {
-  .likearts-content .map {
-    height: 300px;
   }
 }
 .likearts-content .menu-desktop {
@@ -2663,8 +2750,8 @@ body {
   -ms-flex-align: stretch;
   -webkit-align-items: stretch;
   align-items: stretch;
-  margin: 0 -15px 40px -15px;
-  padding: 20px 0;
+  margin: 0 -15px;
+  padding: 20px 0 0 0;
 }
 .likearts-content .blogers__card {
   width: calc(33.3333% - 30px);
@@ -5837,6 +5924,15 @@ body {
 .likearts-content .wj-pagination__link.is-active {
   background-color: #3ebcff;
   color: #fff;
+}
+.likearts-content .lazy-pagination {
+  width: 100%;
+  padding: 40px 15px !important;
+}
+.likearts-content .lazy-pagination .wj-pagination__link {
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  padding: 16px;
 }
 .likearts-content .slider {
   position: relative;

@@ -56,21 +56,28 @@
 			case $constants['WRITE_ORDER_DATA_END']:
 				{
 					$store.update('', {
-						type: $constants['VALIDATION_DATA_REQUESTED'],
+						type: $constants['CLIENT_VALIDATION_DATA_REQUESTED'],
 						data: action.data
 					});
 
 					break;
 				}
-			case $constants['VALIDATION_DATA_REQUESTED']:
+			case $constants['CLIENT_VALIDATION_DATA_REQUESTED']:
 				{
-					$actions.validateData(action.data);
+					$actions.removeInvalidFileds();
+					$actions.validateData({
+						name: action.data.name,
+						email: action.data.email,
+						phone: action.data.phone
+					});
 
 					break;
 				}
 
-			case $constants['VALIDATION_DATA_SUCCEEDED']:
+			case $constants['CLIENT_VALIDATION_DATA_SUCCEEDED']:
 				{
+					$actions.hideFlashMessage();
+
 					$store.update('', {
 						type: $constants['SEND_DATA_TO_SERVER_REQUESTED'],
 						data: action.data
@@ -79,9 +86,19 @@
 					break;
 				}
 
-			case $constants['VALIDATION_DATA_FAILED']:
+			case $constants['CLIENT_VALIDATION_DATA_FAILED']:
 				{
-					/*TODO*/
+					$actions.showFlashMessage();
+					$actions.setInvalidFileds(action.data);
+
+					break;
+				}
+
+			case $constants['SERVER_VALIDATION_DATA_FAILED']:
+				{
+					$actions.unblockSendBtn();
+					$actions.showFlashMessage();
+					$actions.setInvalidFileds(action.data);
 
 					break;
 				}
@@ -107,6 +124,7 @@
 			case  $constants['SEND_DATA_TO_SERVER_SUCCEEDED']:
 			{
 				$actions.unblockSendBtn();
+				$actions.cleanInputs();
 				$actions.successOrderFinished();
 
 				break;
@@ -114,7 +132,6 @@
 			case  $constants['SEND_DATA_TO_SERVER_FAILED']:
 			{
 				$actions.unblockSendBtn();
-
 				break;
 			}
 
