@@ -1,14 +1,16 @@
 ;
-(function (wjModal) {
+(function ($actions, wjModal) {
 	document.addEventListener('DOMContentLoaded', ready);
 
 	function ready() {
 		wjModal.init();
-		sendBtnInit();
+		openOrderModalBtnInit(1);
+		sendOrderBtnInit();
 	}
 
-	function sendBtnInit() {
-		var btns = document.querySelectorAll('[data-modal-btn-send]'),
+
+	function openOrderModalBtnInit(id) {
+		var btns = document.querySelectorAll('[data-modal-trigger="' + id + '"]'),
 				i;
 
 		for (i = 0; i < btns.length; i++) {
@@ -18,14 +20,27 @@
 		function tapHandler(ev) {
 			ev.preventDefault();
 
-			wjModal.close(1);
-
-			var timeout = setTimeout(function() {
-				wjModal.open(2);
-
-				clearTimeout(timeout);
-			}, 1000);
+			$actions.openOrderModal(id);
 		}
 	}
 
-})(wjModal);
+	function sendOrderBtnInit() {
+		var btn = document.querySelector('[data-modal-btn-send="order"]'),
+				form = document.querySelector('[data-form="order"]');
+
+		//new Hammer(btn).on('tap', tapHandler);
+		// for cursor: not-allowed;, without pointer-events: none;
+		btn.addEventListener('click', tapHandler);
+
+		function tapHandler(ev) {
+
+			$actions.tapSendOrderBtn({
+				name: encodeURIComponent(form.name.value),
+				email: encodeURIComponent(form.email.value),
+				phone: encodeURIComponent(form.phone.value),
+				message: encodeURIComponent(form.message.value)
+			});
+		}
+	}
+
+})($actions, wjModal);

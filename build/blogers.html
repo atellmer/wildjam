@@ -572,25 +572,17 @@
 						</div>
 					</div>
 				</div>
-			
-			</div>
-			<div class="blogers__pagination">
-				<div class="wj-pagination">
-					<div class="wj-pagination__line"></div>
-					<div class="wj-pagination__cover">
-						<a href="#" class="wj-pagination__btn wj-pagination__btn--prev">
-							<i class="wj-pagination__icon"></i>
-						</a>
-						<a href="#" class="wj-pagination__link is-active">1</a>
-						<a href="#" class="wj-pagination__link">2</a>
-						<a href="#" class="wj-pagination__link">3</a>
-						<a href="#" class="wj-pagination__link">4</a>
-						<a href="#" class="wj-pagination__btn wj-pagination__btn--next">
-							<i class="wj-pagination__icon"></i>
-						</a>
+
+				<div class="blogers__pagination lazy-pagination">
+					<div class="wj-pagination">
+						<div class="wj-pagination__line"></div>
+						<div class="wj-pagination__cover">
+							<a href="#" class="wj-pagination__link">Показать еще</a>
+						</div>
+						<div class="wj-pagination__line"></div>
 					</div>
-					<div class="wj-pagination__line"></div>
 				</div>
+
 			</div>
 		</div>
 	</main>
@@ -677,7 +669,8 @@
 		</div>
 
 		<div class="modals__item">
-			<div data-modal-target="1" class="modal js-is-close">
+			<div
+				data-modal-target="1" class="modal js-is-close">
 				<span class="modal__close-btn">
 					<span data-modal-close class="close-btn">
 						<i class="material-icons close-btn__icon">close</i>
@@ -693,7 +686,11 @@
 						<h3 class="modal-body__title">Заказать рекламу</h3>
 					</div>
 					<div class="modal-body__content">
-						<form class="wj-custom-form">
+						<form
+							data-form="order"
+							data-form-endpoint="http://beta.wildjam.ru/order"
+							class="wj-custom-form">
+							<div data-flash-container></div>
 							<div class="wj-custom-form__group">
 								<input
 									type="text"
@@ -734,7 +731,7 @@
 							<div class="custom-modal__c-btn">
 								<button
 									type="button"
-									data-modal-btn-send
+									data-modal-btn-send="order"
 									class="wj-btn 
 									wj-custom-form__btn 
 									custom-modal__btn">
@@ -774,8 +771,6 @@
 
 	</div>
 
-
-
 	<script src="https://maps.google.com/maps/api/js?key=AIzaSyCy_2OINz-LT82sP-eS-1QMblWhuhLhpTE"></script>
 	<!-- bower:js -->
 	<script src="bower_components/hammerjs/hammer.js"></script>
@@ -792,8 +787,11 @@
 	<script src="shared/libs/modal/modal.lib.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
 	<script src="shared/flux/constants.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
 	<script src="shared/flux/store.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
-	<script src="shared/flux/actions.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
-	<script src="shared/flux/effects.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
+	<script src="shared/flux/actions/index.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
+	<script src="shared/flux/actions/lazy-load.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
+	<script src="shared/flux/actions/order.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
+	<script src="shared/flux/effects/lazy-load.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
+	<script src="shared/flux/effects/order.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
 	<script src="components/button/button.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
 	<script src="components/dots/dots.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
 	<script src="components/map/map.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>

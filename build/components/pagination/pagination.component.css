@@ -177,3 +177,12 @@
   background-color: #3ebcff;
   color: #fff;
 }
+.likearts-content .lazy-pagination {
+  width: 100%;
+  padding: 40px 15px !important;
+}
+.likearts-content .lazy-pagination .wj-pagination__link {
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  padding: 16px;
+}
