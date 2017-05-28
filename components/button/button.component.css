@@ -82,6 +82,14 @@
 .likearts-content .wj-btn:disabled:hover {
   background-color: #3ebcff;
 }
+.likearts-content .wj-btn[disabled]:active,
+.likearts-content .wj-btn:disabled:active {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -o-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
 .likearts-content .loader {
   position: relative;
   top: 0;

@@ -19,7 +19,12 @@ var $actions = (function () {
 		sendDataToServer: null,
 		successOrderFinished: null,
 		blockSendBtn: null,
-		unblockSendBtn: null
+		unblockSendBtn: null,
+		showFlashMessage: null,
+		hideFlashMessage: null,
+		setInvalidFileds: null,
+		removeInvalidFileds: null,
+		cleanInputs: null
 	};
 
 	return actions;

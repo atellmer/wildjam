@@ -58,8 +58,8 @@
   -ms-flex-align: stretch;
   -webkit-align-items: stretch;
   align-items: stretch;
-  margin: 0 -15px 40px -15px;
-  padding: 20px 0;
+  margin: 0 -15px;
+  padding: 20px 0 0 0;
 }
 .likearts-content .blogers__card {
   width: calc(33.3333% - 30px);
