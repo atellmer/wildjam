@@ -5,7 +5,7 @@
 	$actions.openOrderModal = openOrderModal;
 	$actions.closeOrderModal = closeOrderModal;
 	$actions.closeOrderModalHandler = closeOrderModalHandler;
-	$actions.tapSendOrderBtn = tapSendOrderBtn;
+	$actions.tapSendBtn = tapSendBtn;
 	$actions.validateData = validateData;
 	$actions.sendDataToServer = sendDataToServer;
 	$actions.successOrderFinished = successOrderFinished;
@@ -62,10 +62,13 @@
 		}
 	}
 
-	function tapSendOrderBtn(data) {
+	function tapSendBtn(data, formName) {
 		$store.update('', {
-			type: $constants['TAP_SEND_ORDER_BUTTON'],
-			data: data
+			type: $constants['TAP_SEND_BUTTON'],
+			data: {
+				formData: data,
+				formName: formName
+			}
 		});
 	}
 
@@ -86,7 +89,7 @@
 		if (valid) {
 			$store.update('', {
 				type: $constants['CLIENT_VALIDATION_DATA_SUCCEEDED'],
-				data: data
+				data: $store.select('shared.order.metadata')
 			});
 		} else {
 			$store.update('', {
@@ -105,8 +108,8 @@
 	}
 
 	function sendDataToServer(data) {
-		var id = $store.select('shared.modal.active'),
-				url = document.querySelector('[data-modal-target="' + id + '"] [data-form-endpoint]')
+		var formName = $store.select('shared.form.active'),
+				url = document.querySelector('[data-form="' + formName + '"]')
 					.getAttribute('data-form-endpoint');
 
 		$store.update('', {
@@ -114,13 +117,12 @@
 			data: null
 		});
 
-		/*
-		$store.update('', {
-			type: $constants['SERVER_VALIDATION_DATA_FAILED'],
-			data: ['name', 'email', 'phone']
-		});
-		*/
-	
+		if (window.CSRF_TOKEN) {
+			data['csrfmiddlewaretoken'] = window.CSRF_TOKEN;
+		} else {
+			data['csrfmiddlewaretoken'] = null;
+		}
+		
 		$.ajax({
 			url: url,
 			type: 'POST',
@@ -159,7 +161,9 @@
 				successId = $store.select('shared.modal.success'), 
 				timeout;
 
-		closeOrderModal(activeId);
+		if (activeId !== null) {
+			closeOrderModal(activeId);
+		}
 
 		timeout = setTimeout(function() {
 			openOrderModal(successId);
@@ -174,8 +178,8 @@
 	}
 
 	function blockSendBtn() {
-		var id = $store.select('shared.modal.active'),
-				btn = document.querySelector('[data-modal-target="' + id + '"] [data-modal-btn-send]');
+		var formName = $store.select('shared.form.active'),
+				btn = document.querySelector('[data-form="' + formName + '"] [data-form-btn-send]');
 
 		$store.update('', {
 			type: $constants['BLOCK_SEND_BUTTON_START'],
@@ -205,8 +209,8 @@
 	}
 
 	function unblockSendBtn() {
-		var id = $store.select('shared.modal.active'),
-				btn = document.querySelector('[data-modal-target="' + id + '"] [data-modal-btn-send]');
+		var formName = $store.select('shared.form.active'),
+				btn = document.querySelector('[data-form="' + formName + '"] [data-form-btn-send]');
 
 		$store.update('', {
 			type: $constants['UNBLOCK_SEND_BUTTON_START'],
@@ -231,7 +235,8 @@
 	}
 
 	function showFlashMessage() {
-		var target = document.querySelector('[data-form="order"] [data-flash-container]');
+		var formName = $store.select('shared.form.active'),
+				target = document.querySelector('[data-form="' + formName + '"] [data-flash-container]');
 
 		$store.update('', {
 			type: $constants['SHOW_FLASH_MESSAGE_START'],
@@ -255,7 +260,8 @@
 	}
 
 	function hideFlashMessage() {
-		var target = document.querySelector('[data-form="order"] [data-flash-container]');
+		var formName = $store.select('shared.form.active'),
+				target = document.querySelector('[data-form="' + formName + '"] [data-flash-container]');
 
 		$store.update('', {
 			type: $constants['HIDE_FLASH_MESSAGE_START'],
@@ -273,7 +279,8 @@
 	}
 
 	function setInvalidFileds(data) {
-		var target = document.querySelector('[data-form="order"]'),
+		var formName = $store.select('shared.form.active'),
+				target = document.querySelector('[data-form="' + formName + '"]'),
 				i;
 
 		$store.update('', {
@@ -294,7 +301,8 @@
 	}
 
 	function removeInvalidFileds() {
-		var targets = document.querySelectorAll('[data-form="order"] [name]'),
+		var formName = $store.select('shared.form.active'),
+				targets = document.querySelectorAll('[data-form="' + formName + '"] [name]'),
 				i;
 
 		$store.update('', {
@@ -315,7 +323,8 @@
 	}
 
 	function cleanInputs() {
-		var targets = document.querySelectorAll('[data-form="order"] [name]'),
+		var formName = $store.select('shared.form.active'),
+				targets = document.querySelectorAll('[data-form="' + formName + '"] [name]'),
 				i;
 
 		for (i = 0; i < targets.length; i++) {

@@ -6,10 +6,13 @@ var $store = (function (Spawn, SpawnEffects) {
 		shared: {
 			modal: {
 				active: null,
-				success: 2
+				success: 1
 			},
 			order: {
 				metadata: {}
+			},
+			form: {
+				active: null,
 			},
 			lazy: {
 				items: [],
