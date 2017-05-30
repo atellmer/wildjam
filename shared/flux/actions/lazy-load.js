@@ -6,6 +6,7 @@
 	$actions.fetchLazyItems = fetchLazyItems;
 	$actions.renderCard = renderCard;
 	$actions.renderPagination = renderPagination;
+	$actions.addControlsListeners = addControlsListeners;
 	$actions.setPaginationMetadata = setPaginationMetadata;
 	$actions.setCurrentPage = setCurrentPage;
 	$actions.setCardAnimation = setCardAnimation;
@@ -265,6 +266,52 @@
 				ev.preventDefault();
 
 				var pageNumber = ev.target.getAttribute('data-pagination-page');
+
+				setCurrentPage(pageNumber);
+			}
+		}
+	}
+
+	function addControlsListeners() {	
+		$store.update('', {
+			type: $constants['ADD_CONTROLS_LISTENERS_START'],
+			data: null
+		});
+
+		addListeners();
+
+		$store.update('', {
+			type: $constants['ADD_CONTROLS_LISTENERS_END'],
+			data: null
+		});
+
+		function addListeners() {
+			var prevBtn = document.querySelector('[data-lazy-controls-prev]'),
+					nextBtn = document.querySelector('[data-lazy-controls-next]'),
+					i;
+
+			new Hammer(prevBtn).on('tap', prevBtnHandler);
+			new Hammer(nextBtn).on('tap', nextBtnHandler);
+
+			function prevBtnHandler(ev) {
+				ev.preventDefault();
+				var pageNumber = $store.select('shared.lazy.pagination.currentPage');
+
+				if (pageNumber > 1) {
+					pageNumber--;
+				}
+
+				setCurrentPage(pageNumber);
+			}
+
+			function nextBtnHandler(ev) {
+				ev.preventDefault();
+				var pageNumber = $store.select('shared.lazy.pagination.currentPage'),
+						allPages = $store.select('shared.lazy.pagination.metadata.allPages');
+
+				if (pageNumber < allPages) {
+					pageNumber++;
+				}
 
 				setCurrentPage(pageNumber);
 			}

@@ -58,7 +58,8 @@
 				}
 			case $constants['SET_PAGINATION_METADATA_END']:
 				{
-					$actions.renderPagination();
+					$actions.addControlsListeners();
+					//$actions.renderPagination();
 					break;
 				}
 			case $constants['SET_CURRENT_PAGE_END']:
@@ -80,6 +81,11 @@
 	function paginationEffect(store, action) {
 		switch (action.type) {
 			case $constants['RENDER_PAGINATION_END']:
+				{
+					$actions.setCurrentPage(1);
+					break;
+				}
+			case $constants['ADD_CONTROLS_LISTENERS_END']:
 				{
 					$actions.setCurrentPage(1);
 					break;

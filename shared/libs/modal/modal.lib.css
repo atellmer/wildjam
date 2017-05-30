@@ -122,7 +122,7 @@
 }
 .likearts-content .modal-body {
   width: 100%;
-  max-width: 800px;
+  max-width: 100%;
   height: auto;
   max-height: calc(100vh - 40px);
   overflow: auto;

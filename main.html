@@ -885,66 +885,8 @@
 		<div class="modals__overlay js-is-close"></div>
 
 		<div class="modals__item">
-			<div data-modal-target="0" class="modal js-is-close">
-				<span class="modal__close-btn">
-					<span data-modal-close class="close-btn">
-						<i class="material-icons close-btn__icon">close</i>
-					</span>
-				</span>
-				<div
-					class="modal-body"
-					tabindex="-1"
-					role="document"
-					aria-labelledby="Заказать звонок"
-					aria-hidden="true">
-					<div class="modal-body__header">
-						<h3 class="modal-body__title">Заказать звонок</h3>
-					</div>
-					<div class="modal-body__content">
-						<form class="wj-form">
-							<div class="wj-form__group">
-								<input
-									type="text"
-									name="name"
-									class="wj-form__input"
-									placeholder="Введите Ваше имя">
-								<i class="material-icons wj-form__icon">account_circle</i>
-							</div>
-							<div class="wj-form__group">
-								<input
-									type="email"
-									name="email"
-									class="wj-form__input"
-									placeholder="Ваш e-mail">
-								<i class="material-icons wj-form__icon">email</i>
-							</div>
-							<div class="wj-form__group">
-								<input
-									type="text"
-									name="phone"
-									class="wj-form__input"
-									placeholder="Ваш телефон">
-								<i class="material-icons wj-form__icon">phone</i>
-							</div>
-							<div class="wj-form__group">
-								<textarea
-									name="message"
-									class="wj-form__input wj-form__textarea modal__textarea"
-									placeholder="Ваше сообщение"></textarea>
-								<i class="material-icons wj-form__icon wj-form__icon--txt">subject</i>
-							</div>
-							<div class="modal__c-btn">
-								<button class="wj-btn wj-form__btn modal__btn">Отправить</button>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="modals__item">
 			<div
-				data-modal-target="1" class="modal js-is-close">
+				data-modal-target="0" class="modal js-is-close">
 				<span class="modal__close-btn">
 					<span data-modal-close class="close-btn">
 						<i class="material-icons close-btn__icon">close</i>
@@ -962,7 +904,7 @@
 					<div class="modal-body__content">
 						<form
 							data-form="order"
-							data-form-endpoint="http://beta.wildjam.ru/order"
+							data-form-endpoint="/api/sendmessage/"
 							class="wj-custom-form">
 							<div data-flash-container></div>
 							<div class="wj-custom-form__group">
@@ -1005,7 +947,7 @@
 							<div class="custom-modal__c-btn">
 								<button
 									type="button"
-									data-modal-btn-send="order"
+									data-form-btn-send
 									class="wj-btn 
 									wj-custom-form__btn 
 									custom-modal__btn">
@@ -1019,7 +961,7 @@
 		</div>
 
 		<div class="modals__item">
-			<div data-modal-target="2" class="modal modal--success js-is-close">
+			<div data-modal-target="1" class="modal modal--success js-is-close">
 				<span class="modal__close-btn">
 					<span data-modal-close class="close-btn">
 						<i class="material-icons close-btn__icon">close</i>
@@ -1069,6 +1011,7 @@
 	<script src="shared/flux/effects/order.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
 	<script src="components/button/button.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
 	<script src="components/dots/dots.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
+	<script src="components/form/form.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
 	<script src="components/map/map.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
 	<script src="components/menu/menu.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
 	<script src="components/modal/modal.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
