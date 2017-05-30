@@ -6,6 +6,11 @@
   background-color: #f4f6f8;
   padding: 0 0 100px 0;
 }
+@media (max-width: 1024px) {
+  .likearts-content .bloger-detail {
+    padding: 0 0 70px 0;
+  }
+}
 .likearts-content .bloger-detail__container {
   overflow: hidden;
   padding: 0 15px;
@@ -70,8 +75,13 @@
   -ms-flex-align: stretch;
   -webkit-align-items: stretch;
   align-items: stretch;
-  margin: 0 -15px 40px -15px;
+  margin: 0 -15px;
   padding: 20px 0;
+}
+@media (max-width: 1024px) {
+  .likearts-content .bloger-detail__cards {
+    margin: 0 -15px 80px -15px;
+  }
 }
 .likearts-content .bloger-detail__card {
   width: calc(33.3333% - 30px);
@@ -96,6 +106,7 @@
 .likearts-content .bloger-detail__pagination {
   position: relative;
   padding: 15px 0;
+  display: none;
 }
 .likearts-content .bloger-detail__videos {
   display: -webkit-box;

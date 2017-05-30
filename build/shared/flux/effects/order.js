@@ -33,15 +33,23 @@
 
 					break;
 				}
-			case $constants['TAP_SEND_ORDER_BUTTON']:
+			case $constants['TAP_SEND_BUTTON']:
 				{
+					$store.update('shared.form.active', {
+						type: $constants['SET_ACTIVE_FORM_START'],
+						data: action.data.formName
+					});
+					$store.update('', {
+						type: $constants['SET_ACTIVE_FORM_END'],
+						data: null
+					});
 					$store.update('shared.order.metadata', {
 						type: $constants['WRITE_ORDER_DATA_START'],
-						data: action.data
+						data: action.data.formData
 					});
 					$store.update('', {
 						type: $constants['WRITE_ORDER_DATA_END'],
-						data: action.data
+						data: action.data.formData
 					});
 
 					break;
