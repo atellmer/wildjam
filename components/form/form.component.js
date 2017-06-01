@@ -16,21 +16,9 @@
 	}
 
 	function formHandler(ev) {
-		var formName = ev.target.closest('[data-form]').getAttribute('data-form'),
-				form = document.querySelector('[data-form="' + formName + '"]'),
-				fields = [],
-				data = {},
-				i;
+		var formName = ev.target.closest('[data-form]').getAttribute('data-form');
 
-		if (form) {
-			fields = form.querySelectorAll('[name]');
-		}
-
-		for (i = 0; i < fields.length; i++) {
-			data[fields[i].getAttribute('name')] = encodeURIComponent(fields[i].value);
-		}
-
-		$actions.tapSendBtn(data, formName);
+		$actions.tapSendBtn(formName);
 	}
 
 })($actions, wjModal);
