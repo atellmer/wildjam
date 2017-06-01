@@ -1868,16 +1868,6 @@ body {
 .likearts-content .header .contacts__link:hover {
   color: #bdbdbd;
 }
-.likearts-content .map {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-@media (max-width: 900px) {
-  .likearts-content .map {
-    height: 300px;
-  }
-}
 .likearts-content .logo {
   width: 185px;
   height: 45px;
@@ -1898,6 +1888,16 @@ body {
   .likearts-content .logo {
     width: calc(185 / 1.8 * 1px);
     height: calc(45 / 1.8 * 1px);
+  }
+}
+.likearts-content .map {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 900px) {
+  .likearts-content .map {
+    height: 300px;
   }
 }
 .likearts-content .menu-desktop {
@@ -2448,7 +2448,6 @@ body {
   position: relative;
   width: 100%;
   height: auto;
-  background-color: #fff;
   display: -webkit-box;
   display: -moz-box;
   display: -webkit-flex;
@@ -2502,6 +2501,7 @@ body {
 .likearts-content .bloger-detail .bloger-card__detail {
   width: 50%;
   height: auto;
+  background-color: #fff;
   padding: 47px;
 }
 @media (max-width: 1140px) {
@@ -2559,9 +2559,7 @@ body {
   -webkit-align-items: center;
   align-items: center;
   border-top: 1px solid #e6e6e6;
-  border-bottom: 1px solid #e6e6e6;
   padding: 34px 0 19px 0;
-  margin-bottom: 20px;
 }
 @media (max-width: 1140px) {
   .likearts-content .bloger-detail .bloger-card__social {
@@ -2680,26 +2678,16 @@ body {
   color: #3ebcff;
   text-decoration: underline;
 }
-.likearts-content .bloger-detail .bloger-card__c-btn {
-  margin-top: 60px;
-}
-@media (max-width: 1024px) {
-  .likearts-content .bloger-detail .bloger-card__c-btn {
-    margin-top: 30px;
-  }
-}
 .likearts-content .bloger-detail .bloger-card__link {
   display: block;
 }
-.likearts-content .bloger-detail .bloger-card__btn {
-  padding: 27px 66px;
-}
-@media (max-width: 1140px) {
-  .likearts-content .bloger-detail .bloger-card__btn {
-    width: 100%;
-    padding: 16px 20px;
-    font-size: calc(16 / 16 * 1rem);
-  }
+.likearts-content .bloger-detail .bloger-card__tags {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-bottom: 35px;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
 }
 .likearts-content .blogers {
   position: relative;
@@ -6017,7 +6005,7 @@ body {
 }
 .likearts-content .slider__item {
   width: 100%;
-  height: 100%;
+  height: auto;
   max-width: 100%;
   min-height: 780px;
   object-fit: cover;
@@ -6030,6 +6018,64 @@ body {
 .likearts-content .slider .slick-slide,
 .likearts-content .slider .slick-slide * {
   outline: none !important;
+}
+.likearts-content .wj-tags {
+  position: relative;
+  padding: 20px 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -o-box-orient: horizontal;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: start;
+  -moz-box-pack: start;
+  -o-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.likearts-content .wj-tags__item {
+  -webkit-border-radius: 14px;
+  border-radius: 14px;
+  background-color: #f4f6f8;
+  color: #272757;
+  font-size: calc(11 / 16 * 1rem);
+  font-weight: 500;
+  line-height: 0.55;
+  text-transform: uppercase;
+  padding: 12px 22px;
+  margin: 3px;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.likearts-content .wj-tags__item--hover:hover {
+  background-color: #272757;
+  color: #fff;
+  cursor: pointer;
 }
 @-moz-keyframes card-show {
   0% {

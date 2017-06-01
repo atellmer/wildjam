@@ -58,82 +58,123 @@
 			}
 		}
 
-		render(data);
+		insert(data);
 
 		$store.update('', {
 			type: $constants['RENDER_CARD_END'],
 			data: null
 		});
 
-		function render(source) {
+		function insert(source) {
 			var box = document.querySelector('[data-lazy-box]'),
-					template, i;
+					template = '',
+					i;
 
 			for (i = 0; i < source.length; i++) {
-				template += getTemplate({
+				template += card({
 					name: source[i].name,
 					link: source[i].link,
 					pic: source[i].catalog_image,
 					youtubeLink: source[i].youtube_link,
 					youtubeSubs: source[i].youtube_subscribers_formatted,
 					vkLink: 'https://vk.com/' + source[i].vk_name,
-					vkAddress: formateName(source[i].vk_name),
-					vkSubs: formateSubs(source[i].vk_subscribers_formatted),
+					vkAddress: source[i].vk_name,
+					vkSubs: source[i].vk_subscribers_formatted,
 					instaLink: 'https://instagram.com/' + source[i].instagram_name,
-					instaAddress: formateName(source[i].instagram_name),
-					instaSubs: formateSubs(source[i].instagram_subscribers_formatted)
+					instaAddress: source[i].instagram_name,
+					instaSubs: source[i].instagram_subscribers_formatted
 				});
 			}
 			
 			box.innerHTML = template.replace('undefined', '');
+		}
 
-			function getTemplate(data) {
-				var template, blogerCard;
+		function card(props) {
+			var component = '';
 
-				blogerCard = [
+			component = render(props);
+
+			function render(props) {
+				return [
 					'<div data-lazy-card aria-haspopup="true" class="card">',
 						'<div class="card__title">',
-							'<a href="' + data.link + '" class="card__link">'+ data.name + '</a>',
+							'<a href="' + props.link + '" class="card__link">'+ props.name + '</a>',
 						'</div>',
-						'<a href="' + data.link + '" class="card__link">',
+						'<a href="' + props.link + '" class="card__link">',
 							'<div class="card__cover">',
-								'<img src="'+ data.pic +'" class="card__pic" alt="' + data.name + '">',
+								'<img src="'+ props.pic +'" class="card__pic" alt="' + props.name + '">',
 							'</div>',
 						'</a>',
 						'<div class="card__desc">',
-							'<a href="' + data.youtubeLink + '" target="_blank" rel="noopener" class="card__info">',
+							'<a href="' + props.youtubeLink + '" target="_blank" rel="noopener" class="card__info">',
 								'<i class="icon icon-yt card__info-icon card__social-icon"></i>',
 								'<div class="card__info-stats">',
-									'<div class="card__info-count">' + data.youtubeSubs + '\+' + '</div>',
+									'<div class="card__info-count">' + props.youtubeSubs + '\+' + '</div>',
 									'<div class="card__info-sign">подписчиков</div>',
 								'</div>',
 							'</a>',
 							'<div class="card__social">',
-								'<a href="' + data.vkLink + '" target="_blank" rel="noopener" class="card__social-link">',
-									'<i class="icon icon-vk card__social-icon"></i>',
-									'<div class="card__social-detail">',
-										'<div class="card__social-address">' + data.vkAddress + '</div>',
-										'<div class="card__social-subs">' + data.vkSubs + '</div>',
-									'</div>',
-								'</a>',
-								'<a href="' + data.instaLink + '" target="_blank" rel="noopener" class="card__social-link">',
-									'<i class="icon icon-insta card__social-icon"></i>',
-									'<div class="card__social-detail">',
-										'<div class="card__social-address">' + data.instaAddress + '</div>',
-										'<div class="card__social-subs">' + data.instaSubs + '</div>',
-									'</div>',
-								'</a>',
+								vkLink({
+									link: props.vkLink,
+									address: props.vkAddress,
+									subs: props.vkSubs
+								}),
+								instagramLink({
+									link: props.instaLink,
+									address: props.instaAddress,
+									subs: props.instaSubs
+								}),
 							'</div>',
 						'</div>',
 					'</div>'
 				].join('');
-
-				if (document.querySelector('[data-lazy-template-blogers]')) {
-					template = blogerCard;
-				}
-
-				return template;
 			}
+
+			return component;
+		}
+
+		function vkLink(props) {
+			var component = '';
+
+			if (props.address !== null) {
+				component = render(props);
+			}
+
+			function render(props) {
+				return [
+					'<a href="' + props.link + '" target="_blank" rel="noopener" class="card__social-link">',
+						'<i class="icon icon-vk card__social-icon"></i>',
+						'<div class="card__social-detail">',
+							'<div class="card__social-address">' + formateName(props.address) + '</div>',
+							'<div class="card__social-subs">' + formateName(props.subs) + '</div>',
+						'</div>',
+					'</a>',
+				].join('');
+			}
+
+			return component;
+		}
+
+		function instagramLink(props) {
+			var component = '';
+
+			if (props.address !== null) {
+				component = render(props);
+			}
+
+			function render(props) {
+				return [
+					'<a href="' + props.link + '" target="_blank" rel="noopener" class="card__social-link">',
+						'<i class="icon icon-insta card__social-icon"></i>',
+						'<div class="card__social-detail">',
+							'<div class="card__social-address">' + formateName(props.address) + '</div>',
+							'<div class="card__social-subs">' + formateName(props.subs) + '</div>',
+						'</div>',
+					'</a>',
+				].join('');
+			}
+
+			return component;
 		}
 
 		function formateName(source) {
