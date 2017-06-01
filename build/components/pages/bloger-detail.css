@@ -162,7 +162,6 @@
   position: relative;
   width: 100%;
   height: auto;
-  background-color: #fff;
   display: -webkit-box;
   display: -moz-box;
   display: -webkit-flex;
@@ -216,6 +215,7 @@
 .likearts-content .bloger-detail .bloger-card__detail {
   width: 50%;
   height: auto;
+  background-color: #fff;
   padding: 47px;
 }
 @media (max-width: 1140px) {
@@ -273,9 +273,7 @@
   -webkit-align-items: center;
   align-items: center;
   border-top: 1px solid #e6e6e6;
-  border-bottom: 1px solid #e6e6e6;
   padding: 34px 0 19px 0;
-  margin-bottom: 20px;
 }
 @media (max-width: 1140px) {
   .likearts-content .bloger-detail .bloger-card__social {
@@ -394,24 +392,14 @@
   color: #3ebcff;
   text-decoration: underline;
 }
-.likearts-content .bloger-detail .bloger-card__c-btn {
-  margin-top: 60px;
-}
-@media (max-width: 1024px) {
-  .likearts-content .bloger-detail .bloger-card__c-btn {
-    margin-top: 30px;
-  }
-}
 .likearts-content .bloger-detail .bloger-card__link {
   display: block;
 }
-.likearts-content .bloger-detail .bloger-card__btn {
-  padding: 27px 66px;
-}
-@media (max-width: 1140px) {
-  .likearts-content .bloger-detail .bloger-card__btn {
-    width: 100%;
-    padding: 16px 20px;
-    font-size: calc(16 / 16 * 1rem);
-  }
+.likearts-content .bloger-detail .bloger-card__tags {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-bottom: 35px;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
 }

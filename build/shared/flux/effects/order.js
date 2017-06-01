@@ -37,19 +37,15 @@
 				{
 					$store.update('shared.form.active', {
 						type: $constants['SET_ACTIVE_FORM_START'],
-						data: action.data.formName
+						data: action.data
 					});
 					$store.update('', {
 						type: $constants['SET_ACTIVE_FORM_END'],
 						data: null
 					});
-					$store.update('shared.order.metadata', {
-						type: $constants['WRITE_ORDER_DATA_START'],
-						data: action.data.formData
-					});
 					$store.update('', {
-						type: $constants['WRITE_ORDER_DATA_END'],
-						data: action.data.formData
+						type: $constants['CLIENT_VALIDATION_FORM_REQUESTED'],
+						data: null
 					});
 
 					break;
@@ -61,31 +57,26 @@
 
 	function validationEffect(store, action) {
 		switch (action.type) {
-			case $constants['WRITE_ORDER_DATA_END']:
-				{
-					$store.update('', {
-						type: $constants['CLIENT_VALIDATION_DATA_REQUESTED'],
-						data: action.data
-					});
-
-					break;
-				}
-			case $constants['CLIENT_VALIDATION_DATA_REQUESTED']:
+			case $constants['CLIENT_VALIDATION_FORM_REQUESTED']:
 				{
 					$actions.removeInvalidFileds();
-					$actions.validateData({
-						name: action.data.name,
-						email: action.data.email,
-						phone: action.data.phone
-					});
+					$actions.validateForm();
 
 					break;
 				}
 
-			case $constants['CLIENT_VALIDATION_DATA_SUCCEEDED']:
+			case $constants['CLIENT_VALIDATION_FORM_SUCCEEDED']:
 				{
 					$actions.hideFlashMessage();
 
+					$store.update('shared.order.metadata', {
+						type: $constants['WRITE_ORDER_DATA_START'],
+						data: action.data
+					});
+					$store.update('', {
+						type: $constants['WRITE_ORDER_DATA_END'],
+						data: null
+					});
 					$store.update('', {
 						type: $constants['SEND_DATA_TO_SERVER_REQUESTED'],
 						data: action.data
@@ -94,7 +85,7 @@
 					break;
 				}
 
-			case $constants['CLIENT_VALIDATION_DATA_FAILED']:
+			case $constants['CLIENT_VALIDATION_FORM_FAILED']:
 				{
 					$actions.showFlashMessage();
 					$actions.setInvalidFileds(action.data);

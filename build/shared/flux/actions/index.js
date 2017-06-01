@@ -16,7 +16,7 @@ var $actions = (function () {
 		closeOrderModal: null,
 		closeOrderModalHandler: null,
 		tapSendBtn: null,
-		validateData: null,
+		validateForm: null,
 		sendDataToServer: null,
 		successOrderFinished: null,
 		blockSendBtn: null,

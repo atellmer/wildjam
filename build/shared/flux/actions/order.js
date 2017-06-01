@@ -6,7 +6,7 @@
 	$actions.closeOrderModal = closeOrderModal;
 	$actions.closeOrderModalHandler = closeOrderModalHandler;
 	$actions.tapSendBtn = tapSendBtn;
-	$actions.validateData = validateData;
+	$actions.validateForm = validateForm;
 	$actions.sendDataToServer = sendDataToServer;
 	$actions.successOrderFinished = successOrderFinished;
 	$actions.blockSendBtn = blockSendBtn;
@@ -62,40 +62,66 @@
 		}
 	}
 
-	function tapSendBtn(data, formName) {
+	function tapSendBtn(formName) {
 		$store.update('', {
 			type: $constants['TAP_SEND_BUTTON'],
-			data: {
-				formData: data,
-				formName: formName
-			}
+			data: formName
 		});
 	}
 
-	function validateData(data) {
-		var valid = true,
+	function validateForm() {
+		var formName = $store.select('shared.form.active'),
+				form = document.querySelector('[data-form="' + formName + '"]'),
 				errorFields = [],
 				i;
 
-		for (i in data) {
-			if (data.hasOwnProperty(i)) {
-				if (isEmpty(data[i])) {
-					errorFields.push(i);
-					valid = false;
-				}
+		if (checkForRequired(form, errorFields)) {
+			setValid(true);
+		} else {
+			setValid(false, errorFields);
+
+			return;
+		}
+
+		function setValid(predict, errorFields) {
+			if (predict) {
+				$store.update('', {
+					type: $constants['CLIENT_VALIDATION_FORM_SUCCEEDED'],
+					data: collectionFormData(form)
+				});
+			} else {
+				$store.update('', {
+					type: $constants['CLIENT_VALIDATION_FORM_FAILED'],
+					data: errorFields
+				});
 			}
 		}
 
-		if (valid) {
-			$store.update('', {
-				type: $constants['CLIENT_VALIDATION_DATA_SUCCEEDED'],
-				data: $store.select('shared.order.metadata')
-			});
-		} else {
-			$store.update('', {
-				type: $constants['CLIENT_VALIDATION_DATA_FAILED'],
-				data: errorFields
-			});
+		function collectionFormData(form) {
+			var fields = form.querySelectorAll('[name]'),
+					data = {},
+					i;
+
+			for (i = 0; i < fields.length; i++) {
+				data[fields[i].getAttribute('name')] = fields[i].value;
+			}
+
+			return data;
+		}
+
+		function checkForRequired(form, errorFields) {
+			var check = true,
+					fields = form.querySelectorAll('[name][required]'),
+					i;
+
+				for (i = 0; i < fields.length; i++) {
+					if (isEmpty(fields[i].value)) {
+						errorFields.push(fields[i].name);
+						check = false;
+					}
+				}
+
+				return check;
 		}
 
 		function isEmpty(data) {
@@ -122,7 +148,7 @@
 		} else {
 			data['csrfmiddlewaretoken'] = null;
 		}
-		
+
 		$.ajax({
 			url: url,
 			type: 'POST',
