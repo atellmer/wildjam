@@ -187,9 +187,6 @@ body {
     font-size: calc(17 / 16 * 1rem);
   }
 }
-.likearts-content [data-lazy-box] {
-  min-height: 540px !important;
-}
 .likearts-content [data-lazy-dump] {
   width: 100%;
   display: -webkit-box;
@@ -307,6 +304,8 @@ body {
   position: fixed;
   top: 50%;
   left: 50%;
+  width: 100%;
+  max-width: 640px;
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
@@ -374,12 +373,6 @@ body {
 @media (max-width: 900px) {
   .likearts-content .modal-body {
     padding: 40px 30px;
-  }
-}
-@media (max-width: 768px) {
-  .likearts-content .modal-body {
-    width: 100%;
-    margin: 0;
   }
 }
 .likearts-content .modal-body__title {
@@ -674,7 +667,7 @@ body {
 }
 .likearts-content .card {
   position: relative;
-  width: 100%;
+  width: auto;
   height: auto;
   background-color: #fff;
   -webkit-transition: all 0.2s ease-in-out;
@@ -1499,6 +1492,7 @@ body {
   color: #ef5350;
   background-color: #ffcdd2;
   padding: 10px;
+  max-width: 100%;
   -webkit-transform-origin: 0 0;
   -moz-transform-origin: 0 0;
   -o-transform-origin: 0 0;
@@ -2287,7 +2281,7 @@ body {
   position: relative;
   width: 100%;
   height: auto;
-  min-height: 100vh;
+  min-height: 800px;
   background-color: #f4f6f8;
   padding: 0 0 100px 0;
 }
@@ -2425,7 +2419,7 @@ body {
 }
 .likearts-content .bloger-detail__videos-item {
   width: calc(33.3333% - 30px);
-  height: 243px;
+  height: auto;
   margin: 15px;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
@@ -2782,7 +2776,7 @@ body {
   position: relative;
   width: 100%;
   height: auto;
-  min-height: 100vh;
+  min-height: 800px;
   background-color: #f4f6f8;
   padding: 0 0 100px 0;
 }
@@ -5108,7 +5102,7 @@ body {
   position: relative;
   width: 100%;
   height: auto;
-  min-height: 100vh;
+  min-height: 800px;
   background-color: #f4f6f8;
   padding: 0 0 100px 0;
 }
@@ -6075,6 +6069,73 @@ body {
   background-color: #272757;
   color: #fff;
   cursor: pointer;
+}
+.likearts-content .wj-video-item {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+.likearts-content .wj-video-item:hover:before {
+  background-color: rgba(0,0,0,0);
+}
+.likearts-content .wj-video-item:hover .wj-video-item__icon {
+  -webkit-transform: translate(-50%, -50%) scale(1.2);
+  -moz-transform: translate(-50%, -50%) scale(1.2);
+  -o-transform: translate(-50%, -50%) scale(1.2);
+  -ms-transform: translate(-50%, -50%) scale(1.2);
+  transform: translate(-50%, -50%) scale(1.2);
+  color: #fff;
+  text-shadow: 0px 0px 30px #000;
+}
+.likearts-content .wj-video-item:before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.likearts-content .wj-video-item__pic {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 243px;
+  object-fit: cover;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.likearts-content .wj-video-item__icon {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: calc(80 / 16 * 1rem);
+  color: #3ebcff;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-transform-origin: center center;
+  -moz-transform-origin: center center;
+  -o-transform-origin: center center;
+  -ms-transform-origin: center center;
+  transform-origin: center center;
 }
 @-moz-keyframes card-show {
   0% {
