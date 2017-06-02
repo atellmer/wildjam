@@ -101,9 +101,6 @@ body {
     font-size: calc(17 / 16 * 1rem);
   }
 }
-.likearts-content [data-lazy-box] {
-  min-height: 540px !important;
-}
 .likearts-content [data-lazy-dump] {
   width: 100%;
   display: -webkit-box;

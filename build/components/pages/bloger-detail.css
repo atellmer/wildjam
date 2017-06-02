@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   height: auto;
-  min-height: 100vh;
+  min-height: 800px;
   background-color: #f4f6f8;
   padding: 0 0 100px 0;
 }
@@ -140,7 +140,7 @@
 }
 .likearts-content .bloger-detail__videos-item {
   width: calc(33.3333% - 30px);
-  height: 243px;
+  height: auto;
   margin: 15px;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
