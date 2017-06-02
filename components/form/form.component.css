@@ -123,6 +123,7 @@
   color: #ef5350;
   background-color: #ffcdd2;
   padding: 10px;
+  max-width: 100%;
   -webkit-transform-origin: 0 0;
   -moz-transform-origin: 0 0;
   -o-transform-origin: 0 0;

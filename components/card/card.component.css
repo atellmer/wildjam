@@ -1,6 +1,6 @@
 .likearts-content .card {
   position: relative;
-  width: 100%;
+  width: auto;
   height: auto;
   background-color: #fff;
   -webkit-transition: all 0.2s ease-in-out;
