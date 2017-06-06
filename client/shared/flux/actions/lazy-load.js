@@ -107,7 +107,7 @@
 						'</a>',
 						'<div class="card__desc">',
 							'<a href="' + props.youtubeLink + '" target="_blank" rel="noopener" class="card__info">',
-								'<i class="icon icon-yt card__info-icon card__social-icon"></i>',
+								'<i class="wj-social-icon wj-social-icon--yt card__social-icon"></i>',
 								'<div class="card__info-stats">',
 									'<div class="card__info-count">' + props.youtubeSubs + '\+' + '</div>',
 									'<div class="card__info-sign">подписчиков</div>',
@@ -143,7 +143,7 @@
 			function render(props) {
 				return [
 					'<a href="' + props.link + '" target="_blank" rel="noopener" class="card__social-link">',
-						'<i class="icon icon-vk card__social-icon"></i>',
+						'<i class="wj-social-icon wj-social-icon--vk card__social-icon"></i>',
 						'<div class="card__social-detail">',
 							'<div class="card__social-address">' + formateName(props.address) + '</div>',
 							'<div class="card__social-subs">' + formateName(props.subs) + '</div>',
@@ -165,7 +165,7 @@
 			function render(props) {
 				return [
 					'<a href="' + props.link + '" target="_blank" rel="noopener" class="card__social-link">',
-						'<i class="icon icon-insta card__social-icon"></i>',
+						'<i class="wj-social-icon wj-social-icon--insta card__social-icon"></i>',
 						'<div class="card__social-detail">',
 							'<div class="card__social-address">' + formateName(props.address) + '</div>',
 							'<div class="card__social-subs">' + formateName(props.subs) + '</div>',
