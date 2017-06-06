@@ -294,6 +294,10 @@
     align-items: flex-start;
   }
 }
+.likearts-content .bloger-detail .bloger-card__social-icon {
+  width: 52px !important;
+  height: 52px !important;
+}
 .likearts-content .bloger-detail .bloger-card__social-link {
   display: -webkit-box;
   display: -moz-box;

@@ -1,0 +1,22 @@
+.likearts-content .wj-social-icon {
+  display: inline-block;
+  position: relative;
+  width: 42px;
+  height: 42px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+.likearts-content .wj-social-icon--yt {
+  background-image: url("../../images/icons/svg/youtube.svg");
+}
+.likearts-content .wj-social-icon--vk {
+  background-image: url("../../images/icons/svg/vk.svg");
+}
+.likearts-content .wj-social-icon--insta {
+  background-image: url("../../images/icons/svg/instagram.svg");
+}
