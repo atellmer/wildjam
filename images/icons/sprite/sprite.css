@@ -52,45 +52,9 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   width: 44px;
   height: 78px;
 }
-.icon-insta-b {
-  background-image: url(sprite.png);
-  background-position: -96px -158px;
-  width: 52px;
-  height: 52px;
-}
-.icon-insta {
-  background-image: url(sprite.png);
-  background-position: -237px -42px;
-  width: 42px;
-  height: 42px;
-}
 .icon-send {
   background-image: url(sprite.png);
   background-position: 0px 0px;
   width: 78px;
   height: 80px;
-}
-.icon-vk-b {
-  background-image: url(sprite.png);
-  background-position: -148px -158px;
-  width: 52px;
-  height: 52px;
-}
-.icon-vk {
-  background-image: url(sprite.png);
-  background-position: -237px 0px;
-  width: 42px;
-  height: 42px;
-}
-.icon-yt-b {
-  background-image: url(sprite.png);
-  background-position: -44px -158px;
-  width: 52px;
-  height: 52px;
-}
-.icon-yt {
-  background-image: url(sprite.png);
-  background-position: -237px -84px;
-  width: 42px;
-  height: 42px;
 }
