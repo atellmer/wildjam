@@ -86,7 +86,7 @@
 				});
 			}
 			
-			box.innerHTML = template.replace('undefined', '');
+			box.innerHTML = template;
 		}
 
 		function card(props) {
@@ -230,7 +230,7 @@
 
 		function render(count) {
 			var box = document.querySelector('[data-lazy-pagination-box]'),
-					template;
+					template = '';
 
 			template = [
 				'<div class="wj-pagination">',
@@ -248,7 +248,7 @@
 				'</div>'
 			].join('');
 
-			box.innerHTML = template.replace('undefined', '');
+			box.innerHTML = template;
 
 			function renderButtons(count) {
 				var template, i;
