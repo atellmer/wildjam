@@ -281,11 +281,15 @@ $base-font = 16
 
 	&__cover
 		background-color #f4f6f8
-		padding 1px 0 0 0
+		padding 1px 0 100px 0
+		@media (max-width $tablet)
+			padding 1px 0 40px 0
 
 	&__container
 		position relative
 		margin-top 40px
+		@media (max-width 1140px)
+			margin-top 54px
 		@media (max-width $tablet)
 			margin-top 60px
 		@media (max-width $phone)
@@ -309,7 +313,7 @@ $base-font = 16
 		@media (max-height 830px)
 			top 60px
 		@media (max-height 750px)
-			top 120px
+			top 155px
 		@media (max-height 750px) and (max-width $phone)
 			top 70px
 
@@ -333,7 +337,7 @@ $base-font = 16
 
 	&__shield
 		position absolute
-		top 82%
+		top 65%
 		left -300px
 		transform rotate(-90deg)
 		text-transform uppercase
@@ -360,217 +364,51 @@ $base-font = 16
 		@media (max-width $phone)
 			width 100%
 
-
 .likearts-content .section-4
 	position relative
-	z-index 2
+	z-index 3
 	width 100%
 	height auto
-	background-color $color-bg
-	padding 0 0 1px 0
+	border-top 1px solid #eee
+
+	&__cover
+		background-color #f4f6f8
+		padding 1px 0 1px 0
 
 	&__container
-		margin-top 20px
+		position relative
+		margin-top 150px
+		margin-bottom 150px
 		@media (max-width $notebook)
-			margin-top 48px
+			margin-top 138px
+		@media (max-width $tablet)
+			margin-top 112px
+		@media (max-width $phone)
+			margin-top 87px
+			margin-bottom 30px
 
 	&__content
 		padding 15px
-		overflow hidden
+		overflow-x hidden
 
 	&__pointer
 		position absolute
-		top 20px
-		left 50%
-		transform translate(-50%, 0)
-		@media (max-width $notebook)
-			top 20px
-		@media (max-width $phone)
-			top 95px
-		@media (max-height 830px)
-			top 60px
-		@media (max-height 750px)
-			top 140px
-		@media (max-height 750px) and (max-width $phone)
-			top 75px
-
-	&__c-cases
-		width 100%
-		height auto
-
-	&__cases
-		position relative
-		display flex
-		flex-flow row wrap
-		justify-content space-between
-		align-items stretch
-		margin 30px -25px 0 -25px
-
-	&__c-btn
-		width 100%
-		display flex
-		justify-content center
-		align-items center
-		margin 50px 0 30px 0
-		@media (max-width $phone)
-			margin 30px 0
-
-	&__btn-link
-		display block
-		@media (max-width $phone)
-			width 100%
-
-.likearts-content .section-4 .case
-	position relative
-	width calc(50% - 50px)
-	height auto
-	background-color transparent
-	margin 25px
-	@media (max-width $phone)
-		width 100%
-		margin 15px 25px
-
-	&__link
-		display block
-		text-decoration none
-
-	&__title
-		font-size 'calc(23 / %s * 1rem)' %($base-font)
-		line-height 2.04
-		text-transform uppercase
-		margin-bottom 18px
-		text-decoration none
-		max-width 535px
-		white-space nowrap
-		overflow hidden
-		text-overflow ellipsis
-		@media (max-width $tablet)
-			font-size 'calc(20 / %s * 1rem)' %($base-font)
-		@media (max-width $phone)
-			max-width none
-			white-space normal
-		&:hover
-			.case__title-number,
-			.case__title-separator,
-			.case__title-name
-				color $color-primary
-
-	&__title-number
-		color $color-primary
-		font-weight 900
-		transition color .2s ease-in-out
-	
-	&__title-separator
-		color #e0e0e0
-		font-weight 300
-		transition color .2s ease-in-out
-		
-	&__title-name
-		color $color-text
-		font-weight 900
-		transition color .2s ease-in-out
-
-	&__pic
-		width 100%
-		height 100%
-		max-width 100%
-		max-height 347px
-		object-fit cover
-		transition all .2s ease-in-out
-		&:hover
-			box-shadow 0 15px 29px rgba(75, 125, 156, 0.17)
-
-	&__desc
-		padding 60px 0 0 0
-		@media (max-width $tablet)
-			padding 20px 0 0 0
-
-	&__desc-item
-		margin-bottom 24px
-
-	&__desc-title
-		color $color-text
-		font-size 'calc(16 / %s * 1rem)' %($base-font)
-		font-weight 900
-		line-height 2.94
-		text-transform uppercase
-
-	&__desc-list
-		margin 0
-		padding 0 0 0 18px
-		list-style none
-
-	&__desc-list-item
-		position relative
-		color $color-text
-		font-size 'calc(16 / %s * 1rem)' %($base-font)
-		font-weight 300
-		line-height 1.2
-		margin-bottom 20px
-		padding-left 18px
-		@media (max-width $tablet)
-			font-size 'calc(14 / %s * 1rem)' %($base-font)
-		&:before
-			content ''
-			position absolute
-			top 0
-			left -18px
-			display inline-block
-			width 18px
-			height 18px
-			background-image url('../../images/icons/confirm@2x.png')
-			background-size cover
-			background-position center
-			background-repeat no-repeat
-
-	&__desc-text
-		color $color-text
-		font-size 'calc(16 / %s * 1rem)' %($base-font)
-		font-weight 300
-		line-height 1.38
-		margin 0
-		@media (max-width $tablet)
-			font-size 'calc(14 / %s * 1rem)' %($base-font)
-
-.likearts-content .section-5
-	position relative
-	z-index 1
-	width 100%
-	height auto
-	background-color #f4f6f8
-	padding 0 0 1px 0
-	overflow hidden
-
-	&__container
-		margin-top 20px
-		margin-bottom 100px
-		@media (max-width $notebook)
-			margin-top 48px
-		@media (max-width $phone)
-			margin-top 24px
-
-	&__content
-		padding 15px
-		overflow hidden
-
-	&__pointer
-		position absolute
-		top 30px
+		top -85px
 		left 50%
 		transform translate(-50%, 0)
 		z-index 2
 		@media (max-width $notebook)
-			top 10px
+			top -90px
 		@media (max-width $tablet)
-			top 16px
+			top -46px
 		@media (max-width $phone)
-			top 80px
+			top 42px
 		@media (max-height 830px)
-			top 34px
+			top -57px
 		@media (max-height 750px)
-			top 105px
+			top 60px
 		@media (max-height 750px) and (max-width $phone)
-			top 70px
+			top 42px
 
 	&__cards
 		position relative
@@ -594,7 +432,7 @@ $base-font = 16
 
 	&__shield
 		position absolute
-		top 64%
+		top 61%
 		left -50px
 		transform rotate(-90deg)
 		text-transform uppercase
@@ -619,7 +457,7 @@ $base-font = 16
 			-webkit-text-fill-color transparent
 			-webkit-background-clip text
 		position absolute
-		top 38%
+		top 27%
 		right -237px
 		z-index 0
 		transform rotate(-90deg)
@@ -635,17 +473,17 @@ $base-font = 16
 		@media (max-width 1470px)
 			display none
 
-.likearts-content .section-6
+.likearts-content .section-5
 	display block
 	position relative
-	z-index 2
+	z-index 3
 	width 100%
 	height auto
 	background-color #fff
 	padding 1px 0 0 0
 
 	&__container
-		margin-top 130px
+		margin-top 140px
 		@media (max-width $tablet)
 			margin-top 100px
 		@media (max-width $phone)
