@@ -43,13 +43,17 @@ $base-font = 16
 			filter none
 
 	&__title
-		font-size 'calc(18 / %s * 1rem)' %($base-font)
+		display flex
+		justify-content center
+		align-items center
+		height 96px
+		overflow hidden
+		font-size 'calc(16 / %s * 1rem)' %($base-font)
 		font-weight 700
 		text-transform uppercase
 		text-align center
-		padding 35px 15px
-		@media (max-width $phone)
-			font-size 'calc(16 / %s * 1rem)' %($base-font)
+		padding 0 15px
+		line-height 1.3
 
 	&__cover
 		overflow hidden
