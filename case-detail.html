@@ -23,6 +23,7 @@
 	<link rel="stylesheet" href="components/breadcrumbs/breadcrumbs.components.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
 	<link rel="stylesheet" href="components/button/button.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
 	<link rel="stylesheet" href="components/card/card.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
+	<link rel="stylesheet" href="components/case-card/case-card.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
 	<link rel="stylesheet" href="components/dots/dots.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
 	<link rel="stylesheet" href="components/footer/footer.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
 	<link rel="stylesheet" href="components/form/form.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
@@ -43,8 +44,8 @@
 	<link rel="stylesheet" href="components/pagination/pagination.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
 	<link rel="stylesheet" href="components/slider/slider.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
 	<link rel="stylesheet" href="components/social-icon/social-icon.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
-	<link rel="stylesheet" href="components/video-item/video-item.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
 	<link rel="stylesheet" href="components/tags/tags.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
+	<link rel="stylesheet" href="components/video-item/video-item.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
 	<!-- endinject -->
 </head>
 
@@ -127,119 +128,110 @@
 						class="case-card__cover">
 					</div>
 					<div class="case-card__content">
-						<div class="case-card__counts">
-							<div class="case-card__counts-item">
-								<div class="case-card__counts-group">
-									<span class="case-card__counts-number">13 500 000+</span>
-									<span class="case-card__counts-sign">Общее количество <br> просмотров</span>
-								</div>
-							</div>
-							<div class="case-card__counts-item">
-								<div class="case-card__counts-group">
-									<span class="case-card__counts-number">34</span>
-									<span class="case-card__counts-sign">блогера на <br> каналах ютуб</span>
-								</div>
-								<div class="case-card__counts-group">
-									<span class="case-card__counts-number">10</span>
-									<span class="case-card__counts-sign">блогеров <br> в инстаграм</span>
-								</div>
-							</div>
+						<div class="case-card__content-col">
+							<div
+								data-case-video-slider
+								class="case-card__video">
+								<a href="https://www.youtube.com/watch?v=jRIY-PiABo4"
+									target="_blank"
+									rel="noopener"
+									aria-haspopup="true"
+									data-case-video-item
+									class="wj-video-item case-card__video-item">
+									<img src="./images/videos/1.jpg" alt="" class="wj-video-item__pic"> 
+									<i class="material-icons wj-video-item__icon">play_circle_outline</i>
+								</a>
+								<a href="https://www.youtube.com/watch?v=uS-Il6BS15o"
+									target="_blank"
+									rel="noopener"
+									aria-haspopup="true"
+									data-case-video-item
+									class="wj-video-item case-card__video-item">
+									<img src="./images/videos/2.jpg" alt="" class="wj-video-item__pic"> 
+									<i class="material-icons wj-video-item__icon">play_circle_outline</i>
+								</a>
+								<a href="https://www.youtube.com/watch?v=s7-qfW95ATs"
+									target="_blank"
+									rel="noopener"
+									aria-haspopup="true"
+									data-case-video-item
+									class="wj-video-item case-card__video-item">
+									<img src="./images/videos/3.jpg" alt="" class="wj-video-item__pic">
+									<i class="material-icons wj-video-item__icon">play_circle_outline</i>
+								</a>
+								<a href="https://www.youtube.com/watch?v=KkElLPMOeJ0"
+									target="_blank"
+									rel="noopener"
+									aria-haspopup="true"
+									data-case-video-item
+									class="wj-video-item case-card__video-item">
+									<img src="./images/videos/4.jpg" alt="" class="wj-video-item__pic">
+									<i class="material-icons wj-video-item__icon">play_circle_outline</i>
+								</a>
+								<a href="https://www.youtube.com/watch?v=aYNj7X_LtOU"
+									target="_blank"
+									rel="noopener"
+									aria-haspopup="true"
+									data-case-video-item
+									class="wj-video-item case-card__video-item">
+									<img src="./images/videos/5.jpg" alt="" class="wj-video-item__pic">
+									<i class="material-icons wj-video-item__icon">play_circle_outline</i>
+								</a>
+							</div>	
 						</div>
-						<div class="case-card__separator"></div>
-						<div class="case-card__detail">
-							<div class="case-card__detail-item">
-									<div class="case-card__desc">
-									<div class="case-card__desc-item">
-										<div class="case-card__desc-title">Задачи:</div>
-										<ul class="case-card__desc-list">
-											<li class="case-card__desc-list-item">Увеличение объема продаж смартфона «Zenfone 2»</li>
-											<li class="case-card__desc-list-item">Повышение лояльности аудитории к новому продукту</li>
-											<li class="case-card__desc-list-item">Привлечение подписчиков в социальных сетях</li>
-										</ul>
+						<div class="case-card__content-col">
+							<div class="case-card__detail">
+
+								<div class="case-stats">
+									<div class="case-stats__item">
+										<div class="case-stats__item-sign">Общее количество просмотров:</div>
+										<div class="case-stats__item-count">6 800 000+</div>
 									</div>
-									<div class="case-card__desc-item">
-										<div class="case-card__desc-title">Результат:</div>
-										<ul class="case-card__desc-list">
-											<li class="case-card__desc-list-item">
-												Охват проекта
-												<span class="text-bold">более 800 000 человек</span>
-											</li>
-											<li class="case-card__desc-list-item">
-												Рост числа подписчкиов группы ASUS Вконтакте <br>
-												<span class="text-bold">на 10 000+</span>
-											</li>
-											<li class="case-card__desc-list-item">
-												Увеличение объема продаж
-												<span class="text-bold">смартфонов на 7%</span>
-											</li>
-										</ul>
+									<div class="case-stats__item">
+										<div class="case-stats__social">
+											<div class="case-stats__social-item">
+												<i class="case-stats__social-icon case-stats__social-icon--like"></i>
+												<span class="case-stats__social-count">5400</span>
+											</div>
+											<div class="case-stats__social-separator"></div>
+											<div class="case-stats__social-item">
+												<i class="material-icons case-stats__social-icon">chat_bubble_outline</i>
+												<span class="case-stats__social-count">300</span>
+											</div>
+										</div>
 									</div>
 								</div>
-							</div>
-							<div class="case-card__detail-item">
-								<div class="case-card__desc">
-									<div class="case-card__desc-item">
-										<div class="case-card__desc-title">Решение:</div>
-										<p class="case-card__desc-text">
-											Был запущен отдельный проект «Школа блогеров», в котором ведущие блогеры раскрывают секреты своего мастерства, снимая популярные видео на смартфон от Asus.
-										</p>
-									</div>
+								<div class="case-card__detail-desc">
+									<p>
+										В каждом выпуске шоу Костя и Макс прибывают в новый город и у них есть всего 24 часа, чтобы ознакомиться с ним. Они рассказывают о своих впечатлениях, выполняют вызовы, пробуют новое и вместе со спонсором придумывают конкурсы для зрителей проекта. Для описания условий проекта используется закадровый голос. Он в подробностях рассказывает о том, как с помощью Аviasales можно найти и приобрести самые выгодные билеты. В конце ролика благодарят спонсора за предоставленную возможность и содействие в создании проекта.
+									</p>
 								</div>
 							</div>
 						</div>
 					</div>
+					<div class="case-card__separator"></div>
+					<div class="case-links">
+						<a
+							href="#"
+							class="case-links__item">
+							<span class="case-links__box">
+								<span class="case-links__box-sign">предыдущий кейс:</span>
+								<span class="case-links__box-name">Eristika</span>
+							</span>
+						</a>
+						<span class="case-links__separator"></span>
+						<a
+							href="#"
+							class="case-links__item">
+							<span class="case-links__box">
+								<span class="case-links__box-sign">следующий кейс:</span>
+								<span class="case-links__box-name">Axe</span>
+							</span>
+						</a>
+					</div>
 				</div>
 			</div>
 
-			<h3 class="title title--h3 case-detail__title case-detail__title--h3">Рекламные ролики</h3>
-			<div class="case-detail__videos">
-
-				<a href="https://www.youtube.com/watch?v=jRIY-PiABo4"
-					target="_blank"
-					rel="noopener"
-					aria-haspopup="true"
-					class="wj-video-item case-detail__videos-item">
-					<img src="./images/videos/1.jpg" alt="" class="wj-video-item__pic"> 
-					<i class="material-icons wj-video-item__icon">play_circle_outline</i>
-				</a>
-
-				<a href="https://www.youtube.com/watch?v=uS-Il6BS15o"
-					target="_blank"
-					rel="noopener"
-					aria-haspopup="true"
-					class="wj-video-item case-detail__videos-item">
-					<img src="./images/videos/2.jpg" alt="" class="wj-video-item__pic">
-					<i class="material-icons wj-video-item__icon">play_circle_outline</i>
-				</a>
-
-				<a href="https://www.youtube.com/watch?v=s7-qfW95ATs"
-					target="_blank"
-					rel="noopener"
-					aria-haspopup="true"
-					class="wj-video-item case-detail__videos-item">
-					<img src="./images/videos/3.jpg" alt="" class="wj-video-item__pic">
-					<i class="material-icons wj-video-item__icon">play_circle_outline</i>
-				</a>
-
-				<a href="https://www.youtube.com/watch?v=KkElLPMOeJ0"
-					target="_blank"
-					rel="noopener"
-					aria-haspopup="true"
-					class="wj-video-item case-detail__videos-item">
-					<img src="./images/videos/4.jpg" alt="" class="wj-video-item__pic">
-					<i class="material-icons wj-video-item__icon">play_circle_outline</i>
-				</a>
-
-				<a href="https://www.youtube.com/watch?v=aYNj7X_LtOU"
-					target="_blank"
-					rel="noopener"
-					aria-haspopup="true"
-					class="wj-video-item case-detail__videos-item">
-					<img src="./images/videos/5.jpg" alt="" class="wj-video-item__pic">
-					<i class="material-icons wj-video-item__icon">play_circle_outline</i>
-				</a>
-
-			</div>
 			<h3 class="title title--h3 case-detail__title case-detail__title--h3">Приняли участие</h3>
 			<div class="case-detail__cards">
 
@@ -396,126 +388,6 @@
 					</div>
 				</div>
 	
-				<div aria-haspopup="true" class="blogers__card card">
-					<div class="card__title">
-						<a href="#" class="card__link">Dipt</a>
-					</div>
-					<a href="#" class="card__link">
-						<div class="card__cover">
-							<img
-								src="./images/pages/case-detail/blogers/4.jpg"
-								class="card__pic"
-								alt="text">
-						</div>
-					</a>
-					<div class="card__desc">
-						<a
-							href="#"
-							target="_blank"
-							rel="noopener"
-							class="card__info">
-							<i class="wj-social-icon wj-social-icon--yt card__social-icon"></i>
-							<div class="card__info-stats">
-								<div class="card__info-count">2 742 800+</div>
-								<div class="card__info-sign">подписчиков</div>
-							</div>
-						</a>
-						<div class="card__social">
-							<a
-								href="#"
-								target="_blank"
-								rel="noopener"
-								class="card__social-link">
-								<i class="wj-social-icon wj-social-icon--vk card__social-icon"></i>
-								<div class="card__social-detail">
-									<div class="card__social-address">kate_clapp</div>
-									<div class="card__social-subs">1.6+ млн.</div>
-								</div>
-							</a>
-							<a
-								href="#"
-								target="_blank"
-								rel="noopener"
-								class="card__social-link">
-								<i class="wj-social-icon wj-social-icon--insta card__social-icon"></i>
-								<div class="card__social-detail">
-									<div class="card__social-address">kate_clapp</div>
-									<div class="card__social-subs">1.6+ млн.</div>
-								</div>
-							</a>
-						</div>
-					</div>
-				</div>
-
-				<div aria-haspopup="true" class="blogers__card card">
-					<div class="card__title">
-						<a href="#" class="card__link">Red21 (ржавый)</a>
-					</div>
-					<a href="#" class="card__link">
-						<div class="card__cover">
-							<img
-								src="./images/pages/case-detail/blogers/5.jpg"
-								class="card__pic"
-								alt="text">
-						</div>
-					</a>
-					<div class="card__desc">
-						<a
-							href="#"
-							target="_blank"
-							rel="noopener"
-							class="card__info">
-							<i class="wj-social-icon wj-social-icon--yt card__social-icon"></i>
-							<div class="card__info-stats">
-								<div class="card__info-count">2 742 800+</div>
-								<div class="card__info-sign">подписчиков</div>
-							</div>
-						</a>
-						<div class="card__social">
-							<a
-								href="#"
-								target="_blank"
-								rel="noopener"
-								class="card__social-link">
-								<i class="wj-social-icon wj-social-icon--vk card__social-icon"></i>
-								<div class="card__social-detail">
-									<div class="card__social-address">kate_clapp</div>
-									<div class="card__social-subs">1.6+ млн.</div>
-								</div>
-							</a>
-							<a
-								href="#"
-								target="_blank"
-								rel="noopener"
-								class="card__social-link">
-								<i class="wj-social-icon wj-social-icon--insta card__social-icon"></i>
-								<div class="card__social-detail">
-									<div class="card__social-address">kate_clapp</div>
-									<div class="card__social-subs">1.6+ млн.</div>
-								</div>
-							</a>
-						</div>
-					</div>
-				</div>
-			
-			</div>
-			<div class="case-detail__pagination">
-				<div class="wj-pagination">
-					<div class="wj-pagination__line"></div>
-					<div class="wj-pagination__cover">
-						<a href="#" class="wj-pagination__btn wj-pagination__btn--prev">
-							<i class="wj-pagination__icon"></i>
-						</a>
-						<a href="#" class="wj-pagination__link is-active">1</a>
-						<a href="#" class="wj-pagination__link">2</a>
-						<a href="#" class="wj-pagination__link">3</a>
-						<a href="#" class="wj-pagination__link">4</a>
-						<a href="#" class="wj-pagination__btn wj-pagination__btn--next">
-							<i class="wj-pagination__icon"></i>
-						</a>
-					</div>
-					<div class="wj-pagination__line"></div>
-				</div>
 			</div>
 		</div>
 	</main>
@@ -671,6 +543,7 @@
 	<script src="shared/flux/effects/lazy-load.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
 	<script src="shared/flux/effects/order.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
 	<script src="components/button/button.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
+	<script src="components/case-card/case-card.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
 	<script src="components/dots/dots.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
 	<script src="components/form/form.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
 	<script src="components/map/map.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
