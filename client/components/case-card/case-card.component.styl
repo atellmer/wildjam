@@ -1,0 +1,299 @@
+@import 'nib'
+
+//colors
+$color-primary = #3ebcff
+$color-bg = #fff
+$color-text = #272757
+$color-text-hint = #5c5c85
+
+//resolutions
+$phone = 640px
+$tablet = 768px
+$notebook = 1024px
+$desktop = 1600px
+
+//params
+$container-width = 1140px
+$base-font = 16
+
+.likearts-content .case-card
+	position relative
+	width 100%
+	height auto
+	background-color #fff
+	overflow hidden
+
+	&__cover
+		width 100%
+		height 255px
+		background-size cover
+		background-position center
+		background-repeat no-repeat
+		@media (max-width $tablet)
+			height 200px
+		@media (max-width $phone)
+			height 150px
+
+	&__content
+		padding 44px 33px
+		display flex
+		flex-flow row wrap
+		justify-content flex-start
+		align-items stretch
+		@media (max-width 980px)
+			margin 0
+		@media (max-width $tablet)
+			padding 30px
+		@media (max-width $phone)
+			padding 15px
+
+	&__separator
+		width calc(100% - 40px)
+		height 1px
+		background-color #e6e6e6 
+		margin 0 20px
+		@media (max-width $tablet)
+			display none
+
+	&__content-col
+		width calc(50% - 30px)
+		margin 0 15px
+		@media (max-width 980px)
+			width 100%
+			margin 0
+
+	&__detail
+		@media (max-width $tablet)
+			margin-top 20px
+
+	&__video
+		display flex
+		flex-flow row wrap
+		align-items center
+		justify-content center
+
+	&__video-item
+		width 100%
+		height 270px
+		@media (max-width $phone)
+			height 200px
+
+	.slick-list
+		margin-bottom 20px
+
+	.slick-dots
+		padding 0
+		list-style none
+		display inline-flex
+		flex-flow row wrap
+		justify-content flex-end
+		align-items center
+
+		li
+			button
+				position relative
+				font-size 0
+				line-height 0
+				display block
+				width 20px
+				height 20px
+				padding 5px
+				cursor pointer
+				color transparent
+				border 0
+				outline none
+				background transparent
+				display flex
+				justify-content center
+				align-items center
+
+			:before
+				content ''
+				position absolute
+				width 8px
+				height 8px
+				background-color #cfdae0
+				border-radius 50%
+
+	li.slick-active
+		:before
+			width 20px
+			height 20px
+			background-color #fff
+			border 6px solid $color-primary
+
+	&__dots-sign
+		color $color-primary
+		font-size 'calc(12 / %s * 1rem)' %($base-font)
+		font-weight 900
+		line-height 1.33
+		text-transform uppercase
+		margin-right 8px
+		@media (max-width $tablet)
+			display none
+
+	&__detail-desc
+		margin-top 40px
+		@media (max-width $phone)
+			margin-top 20px
+
+		p
+			color $color-text
+			font-size 16px
+			font-weight 300
+			line-height 1.5
+			margin 0 0 10px 0
+
+.likearts-content .case-card .case-stats
+	position relative
+	display flex
+	flex-flow row wrap
+	justify-content space-between
+	align-items flex-end
+
+	&__item
+		flex 1 0 auto
+		margin-bottom 10px
+		@media (max-width 1140px)
+			width 100%
+
+	&__item-sign
+		color $color-text
+		font-size 'calc(12 / %s * 1rem)' %($base-font)
+		font-weight 400
+		line-height 1.17
+		text-transform uppercase
+		@media (max-width $phone)
+			font-size 'calc(10 / %s * 1rem)' %($base-font)
+
+	&__item-count
+		color $color-text
+		font-size 'calc(40 / %s * 1rem)' %($base-font)
+		font-weight 700
+		text-transform uppercase
+		max-width 270px
+		white-space nowrap
+		overflow hidden
+		text-overflow ellipsis
+		margin-right 40px
+		@media (max-width 1140px)
+			max-width 100%
+			margin-right 0
+		@media (max-width $tablet)
+			font-size 'calc(30 / %s * 1rem)' %($base-font)
+
+	&__social
+		display flex
+		flex-flow row wrap
+		justify-content flex-start
+		align-items center
+		margin 10px 0
+
+	&__social-item
+		display flex
+		flex-flow row wrap
+		justify-content center
+		align-items center
+
+	&__social-separator
+		width 1px
+		height 25px
+		border-left 1px dotted #000
+		margin 0 16px
+
+	&__social-count
+		color #000
+		font-size 'calc(20 / %s * 1rem)' %($base-font)
+		font-weight 400
+		line-height 0.7
+		text-transform uppercase
+
+	&__social-icon
+		display inline-block
+		width 24px
+		height 24px
+		background-size cover
+		background-repeat no-repeat
+		background-position center
+		margin-right 12px
+
+		&--like
+			background-image url('../../images/icons/svg/like.svg')
+
+		&--comment
+			background-image url('../../images/icons/svg/comment.svg')
+
+.likearts-content .case-card .case-links
+	width 100%
+	height auto
+	min-height 109px
+	display flex
+	flex-flow row wrap
+	justify-content space-between
+	align-items stretch
+	@media (max-width $tablet)
+		flex-flow column wrap
+
+	&__item
+		width calc(50% - 1px)
+		display flex
+		flex-flow row wrap
+		justify-content center
+		align-items center
+		text-decoration none
+		background-color #fff
+		transition all .2s ease-in-out
+		padding 30px
+		background-size cover
+		background-position center
+		background-repeat no-repeat
+		@media (max-width $tablet)
+			width 100%
+			border-top 1px solid #e6e6e6
+		&:hover
+			background-color $color-primary
+
+			.case-links__box-sign
+				color #fff
+
+			.case-links__box-name
+				color #fff
+
+	&__box
+		width 100%
+		display flex
+		flex-flow column wrap
+		justify-content center
+		align-items center
+
+	&__box-sign
+		flex-shrink 0
+		opacity 0.5
+		color $color-text
+		font-size 'calc(10 / %s * 1rem)' %($base-font)
+		font-weight 300
+		text-transform uppercase
+		transition all .2s ease-in-out
+		max-width 100%
+		white-space nowrap
+		overflow hidden
+		text-overflow ellipsis
+
+	&__box-name
+		color #000
+		font-size 'calc(30 / %s * 1rem)' %($base-font)
+		font-weight 700
+		text-transform uppercase
+		transition all .2s ease-in-out
+		max-width 100%
+		white-space nowrap
+		overflow hidden
+		text-overflow ellipsis
+
+	&__separator
+		width 1px
+		height auto
+		background-color #e6e6e6
+		margin 20px 0
+		@media (max-width $tablet)
+			display none
