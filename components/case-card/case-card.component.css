@@ -308,7 +308,7 @@
   font-size: calc(40 / 16 * 1rem);
   font-weight: 700;
   text-transform: uppercase;
-  max-width: 270px;
+  max-width: 100%;
   white-space: nowrap;
   overflow: hidden;
   -o-text-overflow: ellipsis;
