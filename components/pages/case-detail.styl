@@ -70,23 +70,9 @@ $base-font = 16
 		@media (max-width $phone)
 			width calc(100% - 30px)
 
-	&__pagination
-		position relative
-		padding 15px 0
+	&__case
+		.card__cover
+			height 210px
 
-	&__videos
-		display flex
-		flex-flow row wrap
-		justify-content flex-start
-		align-items stretch
-		margin 0 -15px 77px -15px
-
-	&__videos-item
-		width calc(33.3333% - 30px)
-		height 243px
-		margin 15px
-		transition all .2s ease-in-out
-		@media (max-width $notebook)
-			width calc(50% - 30px)
-		@media (max-width $phone)
-			width calc(100% - 30px)
+		.card__pic
+			filter none
