@@ -2,7 +2,7 @@
 (function() {
 	'use strict';
 
-	document.addEventListener('DOMContentLoaded', ready);
+	window.addEventListener('load', ready);
 
 	function ready() {
 		var slider = $('[data-case-video-slider]');
@@ -17,9 +17,9 @@
 				pauseOnHover: false,
 				dots: true
 			});
-		}
 
-		renderDotsSign();
+			renderDotsSign();
+		}
 	}
 
 	function renderDotsSign() {
@@ -39,6 +39,8 @@
 					sign: count + sign
 				}));
 			}
+
+			root.classList.contains('js-is-hide') ? root.classList.remove('js-is-hide') : false;
 		}
 
 		function render(props) {
