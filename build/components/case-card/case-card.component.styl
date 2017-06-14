@@ -71,10 +71,14 @@ $base-font = 16
 		flex-flow row wrap
 		align-items center
 		justify-content center
+		transition opacity 2s ease-in-out
 		@media (max-width $tablet)
 			margin 0 -30px
 		@media (max-width $phone)
 			margin 0 -15px
+
+		&.js-is-hide
+			opacity 0
 
 	&__video-item
 		width 100%

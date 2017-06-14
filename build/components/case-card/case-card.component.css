@@ -123,6 +123,11 @@
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-transition: opacity 2s ease-in-out;
+  -moz-transition: opacity 2s ease-in-out;
+  -o-transition: opacity 2s ease-in-out;
+  -ms-transition: opacity 2s ease-in-out;
+  transition: opacity 2s ease-in-out;
 }
 @media (max-width: 768px) {
   .likearts-content .case-card__video {
@@ -133,6 +138,11 @@
   .likearts-content .case-card__video {
     margin: 0 -15px;
   }
+}
+.likearts-content .case-card__video.js-is-hide {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
 }
 .likearts-content .case-card__video-item {
   width: 100%;
