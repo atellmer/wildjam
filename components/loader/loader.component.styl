@@ -1,0 +1,75 @@
+@import 'nib'
+
+//colors
+$color-primary = #3ebcff
+$color-bg = #fff
+$color-text = #272757
+$color-text-hint = #5c5c85
+
+//resolutions
+$phone = 640px
+$tablet = 768px
+$notebook = 1024px
+$desktop = 1600px
+
+//params
+$container-width = 1140px
+$base-font = 16
+
+
+.likearts-content .wj-loader
+	position relative
+	top 0
+	left 0
+	display inline-block
+	width 60px
+	height 60px
+	@media (max-width $phone)
+		width 40px
+		height 40px
+
+	&--small
+		width 30px !important
+		height auto !important
+
+	&--white
+		.circular
+			stroke #fff !important
+
+	&:before
+		content ''
+		display inline-block
+
+	.circular
+		animation rotate 2s linear infinite
+		height 100%
+		transform-origin center center
+		width 100%
+		position absolute
+		top 0
+		bottom 0
+		left 0
+		right 0
+		margin auto
+		stroke $color-primary
+
+	.path
+		stroke-dasharray 1, 200
+		stroke-dashoffset 0
+		animation dash 1.5s ease-in-out infinite
+		stroke-linecap round
+
+@keyframes rotate
+	100%
+		transform rotate(360deg)
+
+@keyframes dash
+	0%
+		stroke-dasharray 1, 200
+		stroke-dashoffset 0
+	50%
+		stroke-dasharray 89, 200
+		stroke-dashoffset -35px
+	100%
+		stroke-dasharray 89, 200
+		stroke-dashoffset -124px
