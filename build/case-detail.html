@@ -20,14 +20,15 @@
 	<link rel="stylesheet" href="shared/main.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
 	<link rel="stylesheet" href="shared/variables.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
 	<link rel="stylesheet" href="shared/libs/modal/modal.lib.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
-	<link rel="stylesheet" href="components/breadcrumbs/breadcrumbs.components.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
 	<link rel="stylesheet" href="components/button/button.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
+	<link rel="stylesheet" href="components/breadcrumbs/breadcrumbs.components.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
 	<link rel="stylesheet" href="components/card/card.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
 	<link rel="stylesheet" href="components/case-card/case-card.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
 	<link rel="stylesheet" href="components/dots/dots.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
 	<link rel="stylesheet" href="components/footer/footer.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
 	<link rel="stylesheet" href="components/form/form.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
 	<link rel="stylesheet" href="components/header/header.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
+	<link rel="stylesheet" href="components/loader/loader.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
 	<link rel="stylesheet" href="components/logo/logo.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
 	<link rel="stylesheet" href="components/map/map.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
 	<link rel="stylesheet" href="components/menu/menu.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
@@ -131,6 +132,11 @@
 							<div
 								data-case-video-slider
 								class="case-card__video js-is-hide">
+								<div data-loader class="wj-loader">
+									<svg class="circular" viewbox="25 25 50 50">
+										<circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="4" stroke-miterlimit="10"/>
+									</svg>
+								</div>
 								<a href="https://www.youtube.com/watch?v=jRIY-PiABo4"
 									target="_blank"
 									rel="noopener"
