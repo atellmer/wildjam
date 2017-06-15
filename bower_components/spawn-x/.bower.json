@@ -42,7 +42,6 @@
     "commit": "b1649ba837b2aed7acf6d7249f46d43b6754a5c6"
   },
   "_source": "https://github.com/atellmer/spawn-x.git",
-  "_target": "^2.3.10",
-  "_originalSource": "spawn-x",
-  "_direct": true
+  "_target": "2.3.10",
+  "_originalSource": "spawn-x"
 }
