@@ -1184,6 +1184,9 @@ body {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
 }
+.likearts-content .case-card__video.js-is-hide .case-card__video-item {
+  height: 0 !important;
+}
 .likearts-content .case-card__video-item {
   width: 100%;
   height: 270px;
