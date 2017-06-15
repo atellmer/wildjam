@@ -71,7 +71,7 @@ $base-font = 16
 		flex-flow row wrap
 		align-items center
 		justify-content center
-		transition opacity 2s ease-in-out
+		transition opacity .4s ease-in-out
 		@media (max-width $tablet)
 			margin 0 -30px
 		@media (max-width $phone)
@@ -79,6 +79,9 @@ $base-font = 16
 
 		&.js-is-hide
 			opacity 0
+
+			.case-card__video-item
+				height 0 !important
 
 	&__video-item
 		width 100%
