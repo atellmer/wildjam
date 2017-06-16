@@ -941,60 +941,40 @@
   }
 }
 .likearts-content .section-4 .case__desc-item {
-  margin-bottom: 24px;
-}
-.likearts-content .section-4 .case__desc-title {
-  color: #272757;
-  font-size: calc(16 / 16 * 1rem);
-  font-weight: 900;
-  line-height: 2.94;
-  text-transform: uppercase;
-}
-.likearts-content .section-4 .case__desc-list {
-  margin: 0;
-  padding: 0 0 0 18px;
-  list-style: none;
-}
-.likearts-content .section-4 .case__desc-list-item {
-  position: relative;
-  color: #272757;
-  font-size: calc(16 / 16 * 1rem);
-  font-weight: 300;
-  line-height: 1.2;
-  margin-bottom: 20px;
-  padding-left: 18px;
-}
-@media (max-width: 768px) {
-  .likearts-content .section-4 .case__desc-list-item {
-    font-size: calc(14 / 16 * 1rem);
-  }
-}
-.likearts-content .section-4 .case__desc-list-item:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -18px;
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  background-image: url("../../images/icons/confirm@2x.png");
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  margin-bottom: 40px;
 }
 .likearts-content .section-4 .case__desc-text {
   color: #272757;
   font-size: calc(16 / 16 * 1rem);
   font-weight: 300;
   line-height: 1.38;
-  margin: 0;
+  margin: 0 0 15px 0;
 }
 @media (max-width: 768px) {
   .likearts-content .section-4 .case__desc-text {
     font-size: calc(14 / 16 * 1rem);
   }
+}
+.likearts-content .section-4 .case__desc-stats .case-stats__item-sign {
+  color: #3ebcff;
+}
+.likearts-content .section-4 .case__desc-stats .case-stats__item {
+  width: 100% !important;
+}
+.likearts-content .section-4 .case__desc-stats .case-stats__item-count {
+  text-align: center;
+  margin-right: 0;
+}
+.likearts-content .section-4 .case__desc-stats .case-stats__item-sign {
+  text-align: center;
+}
+.likearts-content .section-4 .case__desc-stats .case-stats__social {
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 .likearts-content .section-5 {
   position: relative;
