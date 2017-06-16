@@ -1,0 +1,101 @@
+@import 'nib'
+
+//colors
+$color-primary = #3ebcff
+$color-bg = #fff
+$color-text = #272757
+$color-text-hint = #5c5c85
+
+//resolutions
+$phone = 640px
+$tablet = 768px
+$notebook = 1024px
+$desktop = 1600px
+
+//params
+$container-width = 1140px
+$base-font = 16
+
+.likearts-content .case-stats
+	position relative
+	display flex
+	flex-flow row wrap
+	justify-content space-between
+	align-items flex-end
+
+	&__item
+		flex 1 0 auto
+		margin-bottom 10px
+		@media (max-width 1140px)
+			width 100%
+
+	&__item-sign
+		color $color-text
+		font-size 'calc(12 / %s * 1rem)' %($base-font)
+		font-weight 400
+		line-height 1.17
+		text-transform uppercase
+		@media (max-width 980px)
+			text-align center
+		@media (max-width $phone)
+			font-size 'calc(10 / %s * 1rem)' %($base-font)
+
+	&__item-count
+		color $color-text
+		font-size 'calc(40 / %s * 1rem)' %($base-font)
+		font-weight 700
+		text-transform uppercase
+		max-width 100%
+		white-space nowrap
+		overflow hidden
+		text-overflow ellipsis
+		margin-right 40px
+		@media (max-width 1140px)
+			max-width 100%
+			margin-right 0
+		@media (max-width 980px)
+			text-align center
+			font-size 'calc(30 / %s * 1rem)' %($base-font)
+
+	&__social
+		display flex
+		flex-flow row wrap
+		justify-content flex-start
+		align-items center
+		margin 10px 0
+		@media (max-width 980px)
+			justify-content center
+
+	&__social-item
+		display flex
+		flex-flow row wrap
+		justify-content center
+		align-items center
+
+	&__social-separator
+		width 1px
+		height 25px
+		border-left 1px dotted #000
+		margin 0 16px
+
+	&__social-count
+		color #000
+		font-size 'calc(20 / %s * 1rem)' %($base-font)
+		font-weight 400
+		line-height 0.7
+		text-transform uppercase
+
+	&__social-icon
+		display inline-block
+		width 24px
+		height 24px
+		background-size cover
+		background-repeat no-repeat
+		background-position center
+		margin-right 12px
+
+		&--like
+			background-image url('../../images/icons/svg/like.svg')
+
+		&--comment
+			background-image url('../../images/icons/svg/comment.svg')

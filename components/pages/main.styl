@@ -486,51 +486,33 @@ $base-font = 16
 			padding 20px 0 0 0
 
 	&__desc-item
-		margin-bottom 24px
-
-	&__desc-title
-		color $color-text
-		font-size 'calc(16 / %s * 1rem)' %($base-font)
-		font-weight 900
-		line-height 2.94
-		text-transform uppercase
-
-	&__desc-list
-		margin 0
-		padding 0 0 0 18px
-		list-style none
-
-	&__desc-list-item
-		position relative
-		color $color-text
-		font-size 'calc(16 / %s * 1rem)' %($base-font)
-		font-weight 300
-		line-height 1.2
-		margin-bottom 20px
-		padding-left 18px
-		@media (max-width $tablet)
-			font-size 'calc(14 / %s * 1rem)' %($base-font)
-		&:before
-			content ''
-			position absolute
-			top 0
-			left -18px
-			display inline-block
-			width 18px
-			height 18px
-			background-image url('../../images/icons/confirm@2x.png')
-			background-size cover
-			background-position center
-			background-repeat no-repeat
+		margin-bottom 40px
 
 	&__desc-text
 		color $color-text
 		font-size 'calc(16 / %s * 1rem)' %($base-font)
 		font-weight 300
 		line-height 1.38
-		margin 0
+		margin 0 0 15px 0
 		@media (max-width $tablet)
 			font-size 'calc(14 / %s * 1rem)' %($base-font)
+
+	&__desc-stats
+		.case-stats__item-sign
+			color $color-primary
+
+		.case-stats__item
+			width 100% !important
+
+		.case-stats__item-count
+			text-align center
+			margin-right 0
+
+		.case-stats__item-sign
+			text-align center
+
+		.case-stats__social
+			justify-content center
 
 .likearts-content .section-5
 	position relative
