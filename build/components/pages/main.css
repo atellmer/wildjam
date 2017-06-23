@@ -659,6 +659,9 @@
     width: calc(100% - 30px);
   }
 }
+.likearts-content .section-3__card .card__pic {
+  filter: none;
+}
 .likearts-content .section-3__shield {
   position: absolute;
   top: 82%;
