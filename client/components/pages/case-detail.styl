@@ -22,7 +22,26 @@ $base-font = 16
 	height auto
 	min-height 800px
 	background-color #f4f6f8
-	padding 0 0 100px 0
+	padding 0
+
+	&__cover
+		position relative
+		width 100%
+		height auto
+		min-height 155px
+		background-size cover
+		background-position center
+		background-repeat no-repeat
+
+		&:before
+			content ''
+			position absolute
+			top 0
+			left 0
+			width 100%
+			height 100%
+			background-color #0c1f2b
+			opacity 0.8
 
 	&__container
 		overflow hidden
@@ -30,49 +49,30 @@ $base-font = 16
 
 	&__breadcrumbs
 		position relative
-		padding 61px 0 48px 0
+		padding 61px 0 10px 0
+		text-shadow 0 1px 0 rgba(0, 0, 0, 0.5)
 		@media (max-width $tablet)
 			padding 30px 0
+
+		.wj-breadcrumbs__link
+			color #959ea7
+
+		.wj-breadcrumbs__separator
+			&:after
+				color #EEEEEE
 
 	&__title
 		text-align left
 		margin-bottom 37px
 		text-transform uppercase
+		color #fff
+		font-size 'calc(60 / %s * 1rem)' %($base-font)
 		@media (max-width $phone)
-			font-size 'calc(20 / %s * 1rem)' %($base-font)
+			font-size 'calc(30 / %s * 1rem)' %($base-font)
 			margin-bottom 15px
 
-		&--h3
-			text-align center
-			margin-bottom 40px
-			@media (max-width $phone)
-				margin-bottom 15px
-
-	&__case-card
-		margin-bottom 78px
-
-	&__cards
-		position relative
-		display flex
-		flex-flow row wrap
-		justify-content flex-start
-		align-items stretch
-		margin 0 -15px 40px -15px
-		padding 20px 0
-
-	&__card
-		width calc(33.3333% - 30px)
+	&__case-slider
+		width 100%
 		height auto
-		margin 15px
-		transition all .2s ease-in-out
-		@media (max-width $notebook)
-			width calc(50% - 30px)
-		@media (max-width $phone)
-			width calc(100% - 30px)
-
-	&__case
-		.card__cover
-			height 210px
-
-		.card__pic
-			filter none
+		min-height 232px
+		background-color #0c1f2b
