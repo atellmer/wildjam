@@ -1,0 +1,68 @@
+@import 'nib'
+
+//colors
+$color-primary = #3ebcff
+$color-bg = #fff
+$color-text = #272757
+$color-text-hint = #5c5c85
+
+//resolutions
+$phone = 640px
+$tablet = 768px
+$notebook = 1024px
+$desktop = 1600px
+
+//params
+$container-width = 1140px
+$base-font = 16
+
+.likearts-content .bloger-badge
+	position relative
+	width 100%
+	height auto
+	min-height 50px
+	background-color transparent
+	display flex
+	flex-flow row nowrap
+	justify-content flex-start
+	align-items center
+	margin-bottom 8px
+
+	&__avatar
+		width 100%
+		height 100%
+		max-width 50px
+		max-height 50px
+		border-radius 50%
+		object-fit cover
+
+	&__content
+		padding-left 12px
+		width calc(100% - 50px)
+
+	&__name
+		max-width 100%
+		white-space nowrap
+		overflow hidden
+		text-overflow ellipsis
+		color $color-primary
+		font-size 'calc(18 / %s * 1rem)' %($base-font)
+		font-weight 400
+		line-height 0.78
+		text-transform uppercase
+		margin-bottom 6px
+
+	&__subs-count
+		max-width 100%
+		white-space nowrap
+		overflow hidden
+		text-overflow ellipsis
+		color #000
+		font-size 'calc(14 / %s * 1rem)' %($base-font)
+		font-weight 700
+		text-transform uppercase
+
+	&__subs-sign
+		color $color-text
+		font-size 'calc(9 / %s * 1rem)' %($base-font)
+		font-weight 400
