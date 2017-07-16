@@ -1,0 +1,141 @@
+@import 'nib'
+
+//colors
+$color-primary = #3ebcff
+$color-bg = #fff
+$color-text = #272757
+$color-text-hint = #5c5c85
+
+//resolutions
+$phone = 640px
+$tablet = 768px
+$notebook = 1024px
+$desktop = 1600px
+
+//params
+$container-width = 1140px
+$base-font = 16
+
+.likearts-content .case-table
+	position relative
+	width calc(100% + 16px)
+	height auto
+	display flex
+	flex-flow row wrap
+	justify-content flex-start
+	align-items stretch
+	margin 0 -8px 8px -8px
+	@media (max-width $container-width)
+		width 100%
+		margin 0
+
+	&__item
+		position relative
+		width calc(50% - 16px)
+		height auto
+		display flex
+		flex-flow row nowrap
+		justify-content flex-start
+		align-items stretch
+		margin 0 8px
+		@media (max-width $container-width)
+			width 100%
+			margin 0 0 8px 0
+
+		&--blue
+			.case-table__num-count,
+			.case-table__list-value
+				color $color-primary
+
+		&--purple
+			.case-table__num-count,
+			.case-table__list-value
+				color #542b7e
+
+	&__main
+		display flex
+		flex-flow row nowrap
+		justify-content space-between
+		align-items center
+
+	&__icon
+		display inline-block
+		width 13px
+		height 39px
+		background-size cover
+		background-position center
+		background-repeat no-repeat
+
+		&--man
+			background-image url('../../images/icons/svg/man.svg')
+
+		&--woman
+			background-image url('../../images/icons/svg/woman.svg')
+
+	&__num
+		margin-left 13px
+
+	&__num-sign
+		color #000
+		font-size 'calc(10 / %s * 1rem)' %($base-font)
+		font-weight 700
+		line-height 1.4
+		text-transform uppercase
+
+	&__num-count
+		color $color-text
+		font-size 'calc(30 / %s * 1rem)' %($base-font)
+		font-weight 700
+		line-height 0.8
+		text-transform uppercase
+		@media (max-width 1200px)
+			font-size 'calc(20 / %s * 1rem)' %($base-font)
+
+	&__separator
+		width 1px
+		height auto
+		min-height 36px
+		border-left 1px dotted #e6e6e6
+		margin 0 10px
+
+	&__list
+		flex-grow 1
+		display flex
+		flex-flow row nowrap
+		justify-content space-between
+		align-content stretch
+
+	&__list-item
+		margin 0 2px
+		display flex
+		flex-flow column wrap
+		justify-content center
+		align-content center
+
+	&__list-title
+		color #000
+		font-size 'calc(10 / %s * 1rem)' %($base-font)
+		font-weight 400
+		line-height 1.4
+		text-transform uppercase
+		text-align center
+		margin-bottom 6px
+		@media (max-width 980px)
+			font-size 'calc(12 / %s * 1rem)' %($base-font)
+		@media (max-width $phone)
+			font-size 'calc(10 / %s * 1rem)' %($base-font)
+
+	&__list-value
+		color $color-text
+		font-size 'calc(15 / %s * 1rem)' %($base-font)
+		font-weight 400
+		line-height 0.93
+		text-transform uppercase
+		text-align center
+		@media (max-width 980px)
+			font-size 'calc(18 / %s * 1rem)' %($base-font)
+		@media (max-width $phone)
+			font-size 'calc(15 / %s * 1rem)' %($base-font)
+
+		&.is-main
+			font-weight 700
