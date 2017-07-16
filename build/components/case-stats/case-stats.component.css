@@ -28,10 +28,6 @@
   -webkit-align-items: flex-start;
   align-items: flex-start;
 }
-.likearts-content .case-stats--mark-blue {
-  background-color: #9fa8da;
-  min-height: 60px;
-}
 .likearts-content .case-stats__item {
   width: 50%;
 }

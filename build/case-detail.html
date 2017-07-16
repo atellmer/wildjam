@@ -28,12 +28,14 @@
 	<link rel="stylesheet" href="components/case-links/case-links.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
 	<link rel="stylesheet" href="components/case-overview/case-overview.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
 	<link rel="stylesheet" href="components/case-stats/case-stats.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
+	<link rel="stylesheet" href="components/case-table/case-table.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
+	<link rel="stylesheet" href="components/diagram/diagram.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
 	<link rel="stylesheet" href="components/dots/dots.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
 	<link rel="stylesheet" href="components/footer/footer.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
 	<link rel="stylesheet" href="components/form/form.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
 	<link rel="stylesheet" href="components/header/header.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
-	<link rel="stylesheet" href="components/logo/logo.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
 	<link rel="stylesheet" href="components/loader/loader.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
+	<link rel="stylesheet" href="components/logo/logo.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
 	<link rel="stylesheet" href="components/map/map.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
 	<link rel="stylesheet" href="components/menu/menu.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
 	<link rel="stylesheet" href="components/modal/modal.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
@@ -283,12 +285,79 @@
 								</div>
 								<div class="case-card__separator"></div>
 								<div class="case-card__subtitle">Демография:</div>
-								<div class="case-stats case-stats--mark-blue">
-									<div class="case-stats__item">1</div>
-									<div class="case-stats__item">2</div>
+								<div class="case-table">
+									<div class="case-table__item case-table__item--blue">
+										<div class="case-table__main">
+											<i class="case-table__icon case-table__icon--man"></i>
+											<div class="case-table__num">
+												<div class="case-table__num-sign">Муж.</div>
+												<div class="case-table__num-count">75%</div>
+											</div>
+										</div>
+										<div class="case-table__separator"></div>
+										<div class="case-table__list">
+											<div class="case-table__list-item">
+												<div class="case-table__list-title">13-17</div>
+												<div class="case-table__list-value">15</div>
+											</div>
+											<div class="case-table__list-item">
+												<div class="case-table__list-title">18-24</div>
+												<div class="case-table__list-value is-main">30,5</div>
+											</div>
+											<div class="case-table__list-item">
+												<div class="case-table__list-title">25-34</div>
+												<div class="case-table__list-value">19,7</div>
+											</div>
+											<div class="case-table__list-item">
+												<div class="case-table__list-title">35+</div>
+												<div class="case-table__list-value">11,8</div>
+											</div>
+										</div>
+									</div>
+									<div class="case-table__item case-table__item--purple">
+										<div class="case-table__main">
+											<i class="case-table__icon case-table__icon--woman"></i>
+											<div class="case-table__num">
+												<div class="case-table__num-sign">Жен.</div>
+												<div class="case-table__num-count">25%</div>
+											</div>
+										</div>
+										<div class="case-table__separator"></div>
+										<div class="case-table__list">
+											<div class="case-table__list-item">
+												<div class="case-table__list-title">13-17</div>
+												<div class="case-table__list-value">4,4</div>
+											</div>
+											<div class="case-table__list-item">
+												<div class="case-table__list-title">18-24</div>
+												<div class="case-table__list-value is-main">10</div>
+											</div>
+											<div class="case-table__list-item">
+												<div class="case-table__list-title">25-34</div>
+												<div class="case-table__list-value">8,5</div>
+											</div>
+											<div class="case-table__list-item">
+												<div class="case-table__list-title">35+</div>
+												<div class="case-table__list-value">2,1</div>
+											</div>
+										</div>
+									</div>
 								</div>
-								<div class="case-diagram">
-									diagrams
+								<div class="case-card__diagram">
+									<div class="diagram" data-diagram>
+										<canvas
+											data-diagram-barchart
+											class="diagram__barchart"
+											width="400"
+											height="250">
+										</canvas>
+										<canvas
+											data-diagram-piechart
+											class="diagram__piechart"
+											width="400"
+											height="250">
+										</canvas>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -440,6 +509,8 @@
 	<script src="bower_components/spawn-x/lib/spawn-x.umd.min.js"></script>
 	<script src="bower_components/spawn-x-effects/lib/spawn-x-effects.umd.min.js"></script>
 	<script src="bower_components/waitForImages/src/jquery.waitforimages.js"></script>
+	<script src="bower_components/chart.js/dist/Chart.min.js"></script>
+	<script src="bower_components/Chart.PieceLabel.js/src/Chart.PieceLabel.js"></script>
 	<script src="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js"></script>
 	<!-- endinject -->
 	<!-- inject:js -->
@@ -455,6 +526,7 @@
 	<script src="shared/flux/effects/order.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
 	<script src="components/button/button.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
 	<script src="components/case-card/case-card.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
+	<script src="components/diagram/diagram.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
 	<script src="components/dots/dots.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
 	<script src="components/form/form.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
 	<script src="components/map/map.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>

@@ -294,3 +294,6 @@
     font-size: calc(10 / 16 * 1rem);
   }
 }
+.likearts-content .case-card__diagram {
+  margin-top: 30px;
+}
