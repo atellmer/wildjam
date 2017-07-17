@@ -62,9 +62,10 @@
     margin-bottom: 15px;
   }
 }
-.likearts-content .case-detail__case-slider {
+.likearts-content .case-detail__show {
   width: 100%;
   height: auto;
-  min-height: 232px;
-  background-color: #0c1f2b;
+  background-color: transparent;
+  padding: 0 15px;
+  overflow: hidden;
 }

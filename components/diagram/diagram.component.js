@@ -1,5 +1,5 @@
 ;
-(function () {
+(function ($diagramData) {
 	'use strict';
 	document.addEventListener('DOMContentLoaded', ready);
 
@@ -25,14 +25,14 @@
 			datasets: [
 				{
 					label: 'Мужчины',
-					data: [15, 30.5, 19.7, 11.8],
+					data: $diagramData.men,
 					backgroundColor: 'rgba(62, 188, 255, 0.8)',
 					borderColor: 'rgba(1, 176, 220, 1)',
 					borderWidth: 1
 				},
 				{
 					label: 'Женщины',
-					data: [4.4, 10, 8.5, 2.1],
+					data: $diagramData.women,
 					backgroundColor: 'rgba(84, 43, 126, 0.8)',
 					borderColor: 'rgba(84, 43, 126, 1)',
 					borderWidth: 1
@@ -82,7 +82,7 @@
 			datasets: [
 				{
 					label: 'Группа',
-					data: [19.4, 40.5, 28.2, 13.9],
+					data: combineData($diagramData.men, $diagramData.women),
 					backgroundColor: [
 						'rgba(156, 39, 176, 0.8)',
 						'rgba(244, 67, 54, 0.8)',
@@ -111,11 +111,17 @@
 					fontSize: 15,
 					fontStyle: 'bold',
 					fontColor: '#fff',
-					fontFamily: '"Gotham Pro", Monaco, monospace'
+					fontFamily: '"GothamPro", Monaco, monospace'
 				}
 			},
 			data: data
 		});
+
+		function combineData(sourceOne, sourceTwo) {
+			return sourceOne.map(function(el, index) {
+				return el + sourceTwo[index];
+			});
+		}
 
 		function formatTooltip(data, tooltip) {
 			return (data.datasets[tooltip.datasetIndex].label + ' ' + data.labels[tooltip.index] + 
@@ -123,4 +129,4 @@
 		}
 	}
 
-})();
+})($diagramData);
