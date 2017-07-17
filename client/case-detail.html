@@ -98,71 +98,16 @@
 				<div class="case-card">
 					<div class="case-card__content">
 						<div class="case-card__content-col case-card__content-col--45">
-							<div data-case-video-slider
-								class="case-card__video js-is-hide">
-								<div data-loader class="wj-loader">
-									<svg class="circular" viewbox="25 25 50 50">
-										<circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="4" stroke-miterlimit="10"/>
-									</svg>
-								</div>
+							<div class="case-card__video">
 								<a href="https://www.youtube.com/watch?v=jRIY-PiABo4"
 									target="_blank"
 									rel="noopener"
 									aria-haspopup="true"
-									data-case-video-item
 									class="wj-video-item case-card__video-item">
 									<img
 										src="./images/videos/1.jpg"
 										alt=""
 										class="wj-video-item__pic"> 
-									<i class="material-icons wj-video-item__icon">play_circle_outline</i>
-								</a>
-								<a href="https://www.youtube.com/watch?v=uS-Il6BS15o"
-									target="_blank"
-									rel="noopener"
-									aria-haspopup="true"
-									data-case-video-item
-									class="wj-video-item case-card__video-item">
-									<img
-										src="./images/videos/2.jpg"
-										alt=""
-										class="wj-video-item__pic">
-									<i class="material-icons wj-video-item__icon">play_circle_outline</i>
-								</a>
-								<a href="https://www.youtube.com/watch?v=s7-qfW95ATs"
-									target="_blank"
-									rel="noopener"
-									aria-haspopup="true"
-									data-case-video-item
-									class="wj-video-item case-card__video-item">
-									<img
-										src="./images/videos/3.jpg"
-										alt=""
-										class="wj-video-item__pic">
-									<i class="material-icons wj-video-item__icon">play_circle_outline</i>
-								</a>
-								<a href="https://www.youtube.com/watch?v=KkElLPMOeJ0"
-									target="_blank"
-									rel="noopener"
-									aria-haspopup="true"
-									data-case-video-item
-									class="wj-video-item case-card__video-item">
-									<img
-										src="./images/videos/4.jpg"
-										alt=""
-										class="wj-video-item__pic">
-									<i class="material-icons wj-video-item__icon">play_circle_outline</i>
-								</a>
-								<a href="https://www.youtube.com/watch?v=aYNj7X_LtOU"
-									target="_blank"
-									rel="noopener"
-									aria-haspopup="true"
-									data-case-video-item
-									class="wj-video-item case-card__video-item">
-									<img
-										src="./images/videos/5.jpg"
-										alt=""
-										class="wj-video-item__pic">
 									<i class="material-icons wj-video-item__icon">play_circle_outline</i>
 								</a>
 							</div>
@@ -308,6 +253,12 @@
 									</div>
 								</div>
 								<div class="case-card__diagram">
+									<script>
+										window.$diagramData = {
+											men: [15, 30.5, 19.7, 11.8],
+											women: [4.4, 10, 8.5, 2.1]
+										};
+									</script>
 									<div class="diagram" data-diagram>
 										<canvas
 											data-diagram-barchart
@@ -329,9 +280,149 @@
 				</div>
 			</div>
 		</div>
-		<div class="case-detail__case-slider">
-			<div class="case-slider"></div>
+		<div class="main-layout case-detail__show">
+			<div
+				data-case-show
+				class="case-show">
+				<a href="#" data-case-show-item class="case-show__item">
+					<img
+						class="case-show__item-pic"
+						src="./images/pages/case-detail/cases/1.jpg"
+						alt="text">
+					<div class="case-show__item-cover">
+						<div class="case-show__item-title">Мегафон</div>
+						<div class="case-show__item-count">5 000 000+</div>
+						<div class="case-show__item-sign">просмотров</div>
+					</div>
+				</a>
+				<a href="#" data-case-show-item class="case-show__item">
+					<img
+						class="case-show__item-pic"
+						src="./images/pages/case-detail/cases/2.jpg"
+						alt="text">
+					<div class="case-show__item-cover">
+						<div class="case-show__item-title">Tinder</div>
+						<div class="case-show__item-count">21 000 000+</div>
+						<div class="case-show__item-sign">просмотров</div>
+					</div>
+				</a>
+				<a href="#" data-case-show-item class="case-show__item">
+					<img
+						class="case-show__item-pic"
+						src="./images/pages/case-detail/cases/3.jpg"
+						alt="text">
+					<div class="case-show__item-cover">
+						<div class="case-show__item-title">Meizu</div>
+						<div class="case-show__item-count">9 200 000+</div>
+						<div class="case-show__item-sign">просмотров</div>
+					</div>
+				</a>
+				<a href="#" data-case-show-item class="case-show__item js-is-hide">
+					<img
+						class="case-show__item-pic"
+						src="./images/pages/case-detail/cases/2.jpg"
+						alt="text">
+					<div class="case-show__item-cover">
+						<div class="case-show__item-title">Asus</div>
+						<div class="case-show__item-count">5 000 000+</div>
+						<div class="case-show__item-sign">просмотров</div>
+					</div>
+				</a>
+				<a href="#" data-case-show-item class="case-show__item js-is-hide">
+					<img
+						class="case-show__item-pic"
+						src="./images/pages/case-detail/cases/2.jpg"
+						alt="text">
+					<div class="case-show__item-cover">
+						<div class="case-show__item-title">Юла</div>
+						<div class="case-show__item-count">5 000 000+</div>
+						<div class="case-show__item-sign">просмотров</div>
+					</div>
+				</a>
+				<a href="#" data-case-show-item class="case-show__item js-is-hide">
+					<img
+						class="case-show__item-pic"
+						src="./images/pages/case-detail/cases/2.jpg"
+						alt="text">
+					<div class="case-show__item-cover">
+						<div class="case-show__item-title">Artskills.ru</div>
+						<div class="case-show__item-count">5 000 000+</div>
+						<div class="case-show__item-sign">просмотров</div>
+					</div>
+				</a>
+				<a href="#" data-case-show-item class="case-show__item js-is-hide">
+					<img
+						class="case-show__item-pic"
+						src="./images/pages/case-detail/cases/2.jpg"
+						alt="text">
+					<div class="case-show__item-cover">
+						<div class="case-show__item-title">Leeco</div>
+						<div class="case-show__item-count">5 000 000+</div>
+						<div class="case-show__item-sign">просмотров</div>
+					</div>
+				</a>
+				<a href="#" data-case-show-item class="case-show__item js-is-hide">
+					<img
+						class="case-show__item-pic"
+						src="./images/pages/case-detail/cases/2.jpg"
+						alt="text">
+					<div class="case-show__item-cover">
+						<div class="case-show__item-title">Альфа-банк</div>
+						<div class="case-show__item-count">5 000 000+</div>
+						<div class="case-show__item-sign">просмотров</div>
+					</div>
+				</a>
+				<a href="#" data-case-show-item class="case-show__item js-is-hide">
+					<img
+						class="case-show__item-pic"
+						src="./images/pages/case-detail/cases/2.jpg"
+						alt="text">
+					<div class="case-show__item-cover">
+						<div class="case-show__item-title">Дизлайк</div>
+						<div class="case-show__item-count">5 000 000+</div>
+						<div class="case-show__item-sign">просмотров</div>
+					</div>
+				</a>
+				<a href="#" data-case-show-item class="case-show__item js-is-hide">
+					<img
+						class="case-show__item-pic"
+						src="./images/pages/case-detail/cases/2.jpg"
+						alt="text">
+					<div class="case-show__item-cover">
+						<div class="case-show__item-title">Samsung</div>
+						<div class="case-show__item-count">5 000 000+</div>
+						<div class="case-show__item-sign">просмотров</div>
+					</div>
+				</a>
+				<a href="#" data-case-show-item class="case-show__item js-is-hide">
+					<img
+						class="case-show__item-pic"
+						src="./images/pages/case-detail/cases/2.jpg"
+						alt="text">
+					<div class="case-show__item-cover">
+						<div class="case-show__item-title">Snickers</div>
+						<div class="case-show__item-count">5 000 000+</div>
+						<div class="case-show__item-sign">просмотров</div>
+					</div>
+				</a>
+				<a href="#" data-case-show-item class="case-show__item js-is-hide">
+					<img
+						class="case-show__item-pic"
+						src="./images/pages/case-detail/cases/2.jpg"
+						alt="text">
+					<div class="case-show__item-cover">
+						<div class="case-show__item-title">Мегафон</div>
+						<div class="case-show__item-count">5 000 000+</div>
+						<div class="case-show__item-sign">просмотров</div>
+					</div>
+				</a>
+			</div>
 		</div>
+		<button
+			data-case-show-btn="0"
+			class="case-show-btn">
+			Показать еще
+		</button>
 	</main>
 
 	<footer class="footer footer--white">
@@ -472,7 +563,6 @@
 	<script src="bower_components/jquery-mousewheel/jquery.mousewheel.js"></script>
 	<script src="bower_components/spawn-x/lib/spawn-x.umd.min.js"></script>
 	<script src="bower_components/spawn-x-effects/lib/spawn-x-effects.umd.min.js"></script>
-	<script src="bower_components/waitForImages/src/jquery.waitforimages.js"></script>
 	<script src="bower_components/chart.js/dist/Chart.min.js"></script>
 	<script src="bower_components/Chart.PieceLabel.js/src/Chart.PieceLabel.js"></script>
 	<script src="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js"></script>
@@ -489,13 +579,13 @@
 	<script src="shared/flux/effects/lazy-load.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
 	<script src="shared/flux/effects/order.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
 	<script src="components/button/button.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
-	<script src="components/case-card/case-card.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
+	<script src="components/case-show/case-show.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
 	<script src="components/diagram/diagram.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
 	<script src="components/dots/dots.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
 	<script src="components/form/form.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
 	<script src="components/map/map.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
-	<script src="components/modal/modal.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
 	<script src="components/menu/menu.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
+	<script src="components/modal/modal.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
 	<script src="components/pagination/pagination.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
 	<script src="components/scrollbar/scrollbar.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
 	<script src="components/slider/slider.component.js?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709"></script>
