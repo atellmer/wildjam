@@ -148,8 +148,24 @@
 									<i class="material-icons wj-video-item__icon">play_circle_outline</i>
 								</a>
 							</div>
-							<div class="case-card__date-sign">
-								Опубликовано: 2017-06-25 03:00:00
+							<div class="case-card__subtitle">Количество просмотров:</div>
+							<div class="case-stats">
+								<div class="case-stats__item">
+									<div class="case-stats__item-count">14 136 780</div>
+								</div>
+								<div class="case-stats__item">
+									<div class="case-stats__social">
+										<div class="case-stats__social-item">
+											<i class="case-stats__social-icon case-stats__social-icon--like"></i>
+											<span class="case-stats__social-count">540000</span>
+										</div>
+										<div class="case-stats__social-separator"></div>
+										<div class="case-stats__social-item">
+											<i class="material-icons case-stats__social-icon">chat_bubble_outline</i>
+											<span class="case-stats__social-count">30000</span>
+										</div>
+									</div>
+								</div>
 							</div>
 							<div class="case-card__desc">
 								<p>
@@ -206,26 +222,6 @@
 												wj-social-icon 
 												wj-social-icon--vk 
 												case-overview__social-icon"></i>
-										</div>
-									</div>
-								</div>
-								<div class="case-card__separator"></div>
-								<div class="case-card__subtitle">Количество просмотров:</div>
-								<div class="case-stats">
-									<div class="case-stats__item">
-										<div class="case-stats__item-count">14 136 780</div>
-									</div>
-									<div class="case-stats__item">
-										<div class="case-stats__social">
-											<div class="case-stats__social-item">
-												<i class="case-stats__social-icon case-stats__social-icon--like"></i>
-												<span class="case-stats__social-count">540 000</span>
-											</div>
-											<div class="case-stats__social-separator"></div>
-											<div class="case-stats__social-item">
-												<i class="material-icons case-stats__social-icon">chat_bubble_outline</i>
-												<span class="case-stats__social-count">30 000</span>
-											</div>
 										</div>
 									</div>
 								</div>
@@ -297,18 +293,22 @@
 										};
 									</script>
 									<div class="diagram" data-diagram>
-										<canvas
-											data-diagram-barchart
-											class="diagram__barchart"
-											width="400"
-											height="250">
-										</canvas>
-										<canvas
-											data-diagram-piechart
-											class="diagram__piechart"
-											width="400"
-											height="250">
-										</canvas>
+										<div class="diagram__item diagram__item--60">
+											<canvas
+												data-diagram-barchart
+												class="diagram__barchart"
+												width="350"
+												height="200">
+											</canvas>
+										</div>
+										<div class="diagram__item diagram__item--40">
+											<canvas
+												data-diagram-piechart
+												class="diagram__piechart"
+												width="200"
+												height="160">
+											</canvas>
+										</div>
 									</div>
 								</div>
 							</div>

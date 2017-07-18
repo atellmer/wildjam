@@ -75,11 +75,12 @@ $base-font = 16
 		align-items flex-start
 		justify-content center
 		transition opacity .4s ease-in-out
+		margin 0 0 30px 0
 		@media (max-width $tablet)
-			margin 0 -30px
+			margin 0 -30px 30px -30px
 		@media (max-width $phone)
-			margin 0 -15px
-			min-height 270px
+			margin 0 -15px 30px -15px
+			min-height 0
 
 		&.js-is-hide
 			height 100%
@@ -152,23 +153,13 @@ $base-font = 16
 		margin-right 8px
 		@media (max-width $tablet)
 			display none
-
-	&__date-sign
-		color $color-text
-		font-size 'calc(12 / %s * 1rem)' %($base-font)
-		font-weight 700
-		line-height 1.58
-		margin-top 20px
-		@media (max-width 980px)
-			text-align center
-			margin-top 14px
 	
 	&__desc
-		margin-top 40px
+		margin-top 30px
 		padding-left 19px
 		border-left 3px solid $color-primary
 		@media (max-width $phone)
-			margin-top 20px
+			margin-top 10px
 
 		p
 			color $color-text
@@ -190,4 +181,4 @@ $base-font = 16
 			font-size 'calc(10 / %s * 1rem)' %($base-font)
 
 	&__diagram
-		margin-top 30px
+		margin-top 50px
