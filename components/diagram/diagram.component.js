@@ -108,7 +108,7 @@
 				},
 				pieceLabel: {
 					mode: 'label',
-					fontSize: 15,
+					fontSize: 12,
 					fontStyle: 'bold',
 					fontColor: '#fff',
 					fontFamily: '"GothamPro", Monaco, monospace'

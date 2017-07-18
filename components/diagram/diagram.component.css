@@ -15,12 +15,12 @@
   -webkit-flex-flow: row wrap;
   -ms-flex-flow: row wrap;
   flex-flow: row wrap;
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
-  -o-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -o-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
   -webkit-box-align: center;
   -moz-box-align: center;
   -o-box-align: center;
@@ -28,6 +28,22 @@
   -webkit-align-items: center;
   align-items: center;
 }
-.likearts-content .diagram__piechart {
-  margin-top: 30px;
+.likearts-content .diagram__item {
+  width: 100%;
+}
+.likearts-content .diagram__item--60 {
+  width: 60%;
+}
+@media (max-width: 640px) {
+  .likearts-content .diagram__item--60 {
+    width: 100%;
+  }
+}
+.likearts-content .diagram__item--40 {
+  width: 40%;
+}
+@media (max-width: 640px) {
+  .likearts-content .diagram__item--40 {
+    width: 100%;
+  }
 }

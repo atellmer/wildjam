@@ -126,16 +126,17 @@
   -o-transition: opacity 0.4s ease-in-out;
   -ms-transition: opacity 0.4s ease-in-out;
   transition: opacity 0.4s ease-in-out;
+  margin: 0 0 30px 0;
 }
 @media (max-width: 768px) {
   .likearts-content .case-card__video {
-    margin: 0 -30px;
+    margin: 0 -30px 30px -30px;
   }
 }
 @media (max-width: 640px) {
   .likearts-content .case-card__video {
-    margin: 0 -15px;
-    min-height: 270px;
+    margin: 0 -15px 30px -15px;
+    min-height: 0;
   }
 }
 .likearts-content .case-card__video.js-is-hide {
@@ -246,27 +247,14 @@
     display: none;
   }
 }
-.likearts-content .case-card__date-sign {
-  color: #272757;
-  font-size: calc(12 / 16 * 1rem);
-  font-weight: 700;
-  line-height: 1.58;
-  margin-top: 20px;
-}
-@media (max-width: 980px) {
-  .likearts-content .case-card__date-sign {
-    text-align: center;
-    margin-top: 14px;
-  }
-}
 .likearts-content .case-card__desc {
-  margin-top: 40px;
+  margin-top: 30px;
   padding-left: 19px;
   border-left: 3px solid #3ebcff;
 }
 @media (max-width: 640px) {
   .likearts-content .case-card__desc {
-    margin-top: 20px;
+    margin-top: 10px;
   }
 }
 .likearts-content .case-card__desc p {
@@ -295,5 +283,5 @@
   }
 }
 .likearts-content .case-card__diagram {
-  margin-top: 30px;
+  margin-top: 50px;
 }
