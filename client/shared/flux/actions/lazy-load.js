@@ -96,7 +96,7 @@
 
 			function render(props) {
 				return [
-					'<div data-lazy-card aria-haspopup="true" class="card">',
+					'<div data-lazy-card aria-haspopup="true" class="card card--no-color-effects">',
 						'<div class="card__title">',
 							'<a href="' + props.link + '" class="card__link">'+ props.name + '</a>',
 						'</div>',
@@ -145,8 +145,7 @@
 					'<a href="' + props.link + '" target="_blank" rel="noopener" class="card__social-link">',
 						'<i class="wj-social-icon wj-social-icon--vk card__social-icon"></i>',
 						'<div class="card__social-detail">',
-							'<div class="card__social-address">' + formateName(props.address) + '</div>',
-							'<div class="card__social-subs">' + formateName(props.subs) + '</div>',
+							'<div class="card__social-subs">' + formateSubs(props.subs) + '</div>',
 						'</div>',
 					'</a>',
 				].join('');
@@ -167,8 +166,7 @@
 					'<a href="' + props.link + '" target="_blank" rel="noopener" class="card__social-link">',
 						'<i class="wj-social-icon wj-social-icon--insta card__social-icon"></i>',
 						'<div class="card__social-detail">',
-							'<div class="card__social-address">' + formateName(props.address) + '</div>',
-							'<div class="card__social-subs">' + formateName(props.subs) + '</div>',
+							'<div class="card__social-subs">' + formateSubs(props.subs) + '</div>',
 						'</div>',
 					'</a>',
 				].join('');
@@ -191,22 +189,22 @@
 			var str = source + '';
 
 			if (str.length === 1) {
-				str += ' тыс.+';
+				str += '+ тыс.';
 				return str;
 			}
 
 			if (str.length === 6) {
-				str = str.substr(0, 3) + ' тыс.+';
+				str = str.substr(0, 3) + '+ тыс.';
 				return str;
 			}
 
 			if (str.length === 7) {
-				str = str.substr(0, 1) + '.' + str.substr(1, 2) + ' млн.+';
+				str = str.substr(0, 1) + '.' + str.substr(1, 2) + '+ млн.';
 				return str;
 			}
 
 			if (str.length === 8) {
-				str = str.substr(0, 2) + '.' + str.substr(2, 3) + ' млн.+';
+				str = str.substr(0, 2) + '.' + str.substr(2, 3) + '+ млн.';
 				return str;
 			}
 

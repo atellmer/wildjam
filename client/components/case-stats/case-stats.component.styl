@@ -19,14 +19,25 @@ $base-font = 16
 .likearts-content .case-stats
 	position relative
 	display flex
-	flex-flow row wrap
-	justify-content space-between
-	align-items center
+	flex-flow row nowrap
+	justify-content flex-start
+	align-items stretch
+	@media (max-width $container-width)
+		flex-flow row wrap
 
 	&__item
-		width 50%
-		@media (max-width 1140px)
+		width calc(50% - 20px)
+		@media (max-width $container-width)
 			width 100%
+
+	&__separator
+		width 1px
+		height auto
+		min-height 25px
+		border-left 1px dotted #000
+		margin 0 20px
+		@media (max-width $container-width)
+			display none
 
 	&__item-count
 		color $color-primary
@@ -37,20 +48,23 @@ $base-font = 16
 		white-space nowrap
 		overflow hidden
 		text-overflow ellipsis
-		margin-right 20px
-		@media (max-width 1140px)
+		@media (max-width $container-width)
 			max-width 100%
-			margin-right 0
+			text-align center
 		@media (max-width 980px)
 			text-align center
 			font-size 'calc(30 / %s * 1rem)' %($base-font)
 
 	&__social
 		display flex
-		flex-flow row nowrap
+		flex-flow column wrap
 		justify-content space-between
-		align-items center
-		margin 10px 0
+		align-items flex-start
+		@media (max-width $container-width)
+			margin-top 16px
+			flex-flow row wrap
+			justify-content center
+			align-items center
 		@media (max-width 980px)
 			justify-content center
 
@@ -59,14 +73,13 @@ $base-font = 16
 		flex-flow row wrap
 		justify-content center
 		align-items center
-
-	&__social-separator
-		width 1px
-		height 25px
-		border-left 1px dotted #000
-		margin 0 8px
+		margin-bottom 2px
+		@media (max-width $container-width)
+			&:first-child
+				margin-right 16px
 
 	&__social-count
+		flex-grow 1
 		color #000
 		font-size 'calc(18 / %s * 1rem)' %($base-font)
 		font-weight 400
@@ -81,10 +94,10 @@ $base-font = 16
 		background-size cover
 		background-repeat no-repeat
 		background-position center
-		margin-right 8px
+		margin-right 12px
 
 		&--like
 			background-image url('../../images/icons/svg/like.svg')
 
 		&--comment
-			background-image url('../../images/icons/svg/comment.svg')
+			margin-left -2px

@@ -1,5 +1,5 @@
 ;
-(function ($diagramData) {
+(function () {
 	'use strict';
 	document.addEventListener('DOMContentLoaded', ready);
 
@@ -12,121 +12,78 @@
 	}
 
 	function diagramInit(root) {
-		barChartInit(root);
-		pieChartInit(root);
+		horizontalBarChartInit(root);
 	}
 
-	function barChartInit(root) {
-		var canvas = root.querySelector('[data-diagram-barchart]');
+	function horizontalBarChartInit(root) {
+		var canvas = root.querySelector('[data-diagram-horizontal-barchart]');
 		var ctx = canvas.getContext('2d');
 
 		var data = {
-			labels: ['13-17', '18-24', '25-34', '35+'],
+			labels: ['13-17', '18-24', '25-34', '35-44', '45-54', '55-64', '65+'],
 			datasets: [
 				{
 					label: 'Мужчины',
 					data: $diagramData.men,
-					backgroundColor: 'rgba(62, 188, 255, 0.8)',
-					borderColor: 'rgba(1, 176, 220, 1)',
+					backgroundColor: 'rgba(62, 188, 255, 0.3)',
+					borderColor: 'rgba(62, 188, 255, 0.4)',
+					hoverBackgroundColor: 'rgba(62, 188, 255, 0.5)',
 					borderWidth: 1
 				},
 				{
 					label: 'Женщины',
 					data: $diagramData.women,
-					backgroundColor: 'rgba(84, 43, 126, 0.8)',
-					borderColor: 'rgba(84, 43, 126, 1)',
+					backgroundColor: 'rgba(84, 39, 127, 0.3)',
+					borderColor: 'rgba(84, 39, 127, 0.4)',
+					hoverBackgroundColor: 'rgba(84, 39, 127, 0.5)',
 					borderWidth: 1
 				}
 			]
 		};
 
 		var chart = new Chart(ctx, {
-			type: 'bar',
+			type: 'horizontalBar',
 			options: {
 				legend: {
 					display: false
-				},
-				tooltips: {
-					callbacks: {
-						label: function(tooltip) {
-							return formatTooltip(data, tooltip)
-						}
-					}
 				},
 				scales: {
-					yAxes: [{
-						ticks: {
-							callback: function(value, index, values) {
-								return value + '%';
+					xAxes: [
+						{
+							ticks: {
+								callback: formatTicks
 							},
-							min: 0,
-							beginAtZero: true
+							stacked: true
 						}
-					}]
-				}
-			},
-			data: data
-		});
-
-		function formatTooltip(data, tooltip) {
-			return data.datasets[tooltip.datasetIndex].label + ': ' + tooltip.yLabel + '%';
-		}
-	}
-
-	function pieChartInit(root) {
-		var canvas = root.querySelector('[data-diagram-piechart]');
-		var ctx = canvas.getContext('2d');
-
-		var data = {
-			labels: ['13-17', '18-24', '25-34', '35+'],
-			datasets: [
-				{
-					label: 'Группа',
-					data: combineData($diagramData.men, $diagramData.women),
-					backgroundColor: [
-						'rgba(156, 39, 176, 0.8)',
-						'rgba(244, 67, 54, 0.8)',
-						'rgba(76, 175, 80, 0.8)',
-						'rgba(33, 150, 243, 0.8)'
+					],
+					yAxes: [
+						{
+							stacked: true
+						}
 					]
-				}
-			]
-		};
-
-		var chart = new Chart(ctx, {
-			type: 'pie',
-			options: {
-				legend: {
-					display: false
 				},
 				tooltips: {
+					enabled: true,
+					mode: 'single',
 					callbacks: {
-						label: function(tooltip) {
-							return formatTooltip(data, tooltip);
-						}
+						label: formatTooltip
 					}
-				},
-				pieceLabel: {
-					mode: 'label',
-					fontSize: 12,
-					fontStyle: 'bold',
-					fontColor: '#fff',
-					fontFamily: '"GothamPro", Monaco, monospace'
-				}
+        }
 			},
 			data: data
 		});
 
-		function combineData(sourceOne, sourceTwo) {
-			return sourceOne.map(function(el, index) {
-				return el + sourceTwo[index];
-			});
+		function formatTicks(label, index, labels) {
+			return Math.abs(label) + '%';
 		}
 
-		function formatTooltip(data, tooltip) {
-			return (data.datasets[tooltip.datasetIndex].label + ' ' + data.labels[tooltip.index] + 
-				' лет: ' + data.datasets[tooltip.datasetIndex].data[tooltip.index] + '%');
+		function formatTooltip(tooltipItems, data) {
+			if (tooltipItems.xLabel < 0) {
+				return Math.abs(tooltipItems.xLabel) + '% (мужчины)';
+			}
+
+			return Math.abs(tooltipItems.xLabel) + '% (женщины)';
 		}
 	}
 
-})($diagramData);
+})();

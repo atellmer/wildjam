@@ -111,21 +111,28 @@
 									<i class="material-icons wj-video-item__icon">play_circle_outline</i>
 								</a>
 							</div>
-							<div class="case-card__subtitle">Количество просмотров:</div>
 							<div class="case-stats">
 								<div class="case-stats__item">
+									<div class="
+										case-card__subtitle 
+										case-card__subtitle--views">Количество просмотров:</div>
 									<div class="case-stats__item-count">14 136 780</div>
 								</div>
+								<div class="case-stats__separator"></div>
 								<div class="case-stats__item">
 									<div class="case-stats__social">
 										<div class="case-stats__social-item">
-											<i class="case-stats__social-icon case-stats__social-icon--like"></i>
-											<span class="case-stats__social-count">540000</span>
+											<i class="
+												case-stats__social-icon 
+												case-stats__social-icon--like"></i>
+											<span class="case-stats__social-count">540 000</span>
 										</div>
-										<div class="case-stats__social-separator"></div>
 										<div class="case-stats__social-item">
-											<i class="material-icons case-stats__social-icon">chat_bubble_outline</i>
-											<span class="case-stats__social-count">30000</span>
+											<i class="
+												material-icons 
+												case-stats__social-icon 
+												case-stats__social-icon--comment">chat_bubble_outline</i>
+											<span class="case-stats__social-count">30 000</span>
 										</div>
 									</div>
 								</div>
@@ -150,11 +157,15 @@
 									<div class="case-overview__item">
 										<div class="case-card__subtitle">Блогер:</div>
 										<div class="bloger-badge">
-											<img class="bloger-badge__avatar"
-												src="./images/pages/case-detail/avatar.png"
-												alt="text">
+											<a href="#">
+												<img class="bloger-badge__avatar"
+													src="./images/pages/case-detail/avatar.png"
+													alt="text">
+											</a>
 											<div class="bloger-badge__content">
-												<div class="bloger-badge__name">Костя Павлов</div>
+												<a href="#">
+													<div class="bloger-badge__name">Костя Павлов</div>
+												</a>
 												<div class="bloger-badge__subs">
 													<div class="bloger-badge__subs-count">2 417 000+</div>
 													<div class="bloger-badge__subs-sign">подписчиков</div>
@@ -196,26 +207,26 @@
 											<i class="case-table__icon case-table__icon--man"></i>
 											<div class="case-table__num">
 												<div class="case-table__num-sign">Муж.</div>
-												<div class="case-table__num-count">75%</div>
+												<div class="case-table__num-count">93,8%</div>
 											</div>
 										</div>
 										<div class="case-table__separator"></div>
 										<div class="case-table__list">
 											<div class="case-table__list-item">
 												<div class="case-table__list-title">13-17</div>
-												<div class="case-table__list-value">15</div>
+												<div class="case-table__list-value">6,7</div>
 											</div>
 											<div class="case-table__list-item">
 												<div class="case-table__list-title">18-24</div>
-												<div class="case-table__list-value is-main">30,5</div>
+												<div class="case-table__list-value is-main">45,3</div>
 											</div>
 											<div class="case-table__list-item">
 												<div class="case-table__list-title">25-34</div>
-												<div class="case-table__list-value">19,7</div>
+												<div class="case-table__list-value">32,4</div>
 											</div>
 											<div class="case-table__list-item">
 												<div class="case-table__list-title">35+</div>
-												<div class="case-table__list-value">11,8</div>
+												<div class="case-table__list-value">9,4</div>
 											</div>
 										</div>
 									</div>
@@ -224,26 +235,26 @@
 											<i class="case-table__icon case-table__icon--woman"></i>
 											<div class="case-table__num">
 												<div class="case-table__num-sign">Жен.</div>
-												<div class="case-table__num-count">25%</div>
+												<div class="case-table__num-count">6,2%</div>
 											</div>
 										</div>
 										<div class="case-table__separator"></div>
 										<div class="case-table__list">
 											<div class="case-table__list-item">
 												<div class="case-table__list-title">13-17</div>
-												<div class="case-table__list-value">4,4</div>
+												<div class="case-table__list-value">0,5</div>
 											</div>
 											<div class="case-table__list-item">
 												<div class="case-table__list-title">18-24</div>
-												<div class="case-table__list-value is-main">10</div>
+												<div class="case-table__list-value is-main">3,0</div>
 											</div>
 											<div class="case-table__list-item">
 												<div class="case-table__list-title">25-34</div>
-												<div class="case-table__list-value">8,5</div>
+												<div class="case-table__list-value">1,8</div>
 											</div>
 											<div class="case-table__list-item">
 												<div class="case-table__list-title">35+</div>
-												<div class="case-table__list-value">2,1</div>
+												<div class="case-table__list-value">1</div>
 											</div>
 										</div>
 									</div>
@@ -251,25 +262,17 @@
 								<div class="case-card__diagram">
 									<script>
 										window.$diagramData = {
-											men: [15, 30.5, 19.7, 11.8],
-											women: [4.4, 10, 8.5, 2.1]
+											men: [-6.7, -45.3, -32.4, -5.8, -1.4, -0.4, -1.8],
+											women: [0.5, 3.0, 1.8, 0.6, 0.2, 0.1, 0.1]
 										};
 									</script>
 									<div class="diagram" data-diagram>
-										<div class="diagram__item diagram__item--60">
+										<div class="diagram__item">
 											<canvas
-												data-diagram-barchart
+												data-diagram-horizontal-barchart
 												class="diagram__barchart"
 												width="350"
 												height="200">
-											</canvas>
-										</div>
-										<div class="diagram__item diagram__item--40">
-											<canvas
-												data-diagram-piechart
-												class="diagram__piechart"
-												width="200"
-												height="160">
 											</canvas>
 										</div>
 									</div>
@@ -564,7 +567,6 @@
 	<script src="bower_components/spawn-x/lib/spawn-x.umd.min.js"></script>
 	<script src="bower_components/spawn-x-effects/lib/spawn-x-effects.umd.min.js"></script>
 	<script src="bower_components/chart.js/dist/Chart.min.js"></script>
-	<script src="bower_components/Chart.PieceLabel.js/src/Chart.PieceLabel.js"></script>
 	<script src="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js"></script>
 	<!-- endinject -->
 	<!-- inject:js -->
