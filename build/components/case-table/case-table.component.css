@@ -132,6 +132,11 @@
 .likearts-content .case-table__num {
   margin-left: 13px;
 }
+@media (max-width: 1140px) {
+  .likearts-content .case-table__num {
+    min-width: 70px;
+  }
+}
 .likearts-content .case-table__num-sign {
   color: #000;
   font-size: calc(10 / 16 * 1rem);
@@ -141,7 +146,7 @@
 }
 .likearts-content .case-table__num-count {
   color: #272757;
-  font-size: calc(30 / 16 * 1rem);
+  font-size: calc(27 / 16 * 1rem);
   font-weight: 700;
   line-height: 0.8;
   text-transform: uppercase;

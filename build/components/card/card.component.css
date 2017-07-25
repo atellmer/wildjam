@@ -45,6 +45,9 @@
 .likearts-content .card--no-effects .card__pic {
   filter: none;
 }
+.likearts-content .card--no-color-effects .card__pic {
+  filter: none;
+}
 .likearts-content .card__title {
   display: -webkit-box;
   display: -moz-box;

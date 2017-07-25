@@ -158,8 +158,6 @@ $base-font = 16
 		margin-top 30px
 		padding-left 19px
 		border-left 3px solid $color-primary
-		@media (max-width $phone)
-			margin-top 10px
 
 		p
 			color $color-text
@@ -179,6 +177,11 @@ $base-font = 16
 			text-align center
 		@media (max-width $phone)
 			font-size 'calc(10 / %s * 1rem)' %($base-font)
+
+		&--views
+			margin-bottom 0px
+			@media (max-width $container-width)
+				text-align center
 
 	&__diagram
 		margin-top 50px

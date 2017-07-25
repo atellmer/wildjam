@@ -32,6 +32,7 @@
   -webkit-align-items: center;
   align-items: center;
   margin-bottom: 8px;
+  text-decoration: none;
 }
 .likearts-content .bloger-badge__avatar {
   width: 100%;
@@ -58,6 +59,14 @@
   line-height: 0.78;
   text-transform: uppercase;
   margin-bottom: 6px;
+  -webkit-transition: color 0.2s ease-in-out;
+  -moz-transition: color 0.2s ease-in-out;
+  -o-transition: color 0.2s ease-in-out;
+  -ms-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+}
+.likearts-content .bloger-badge__name:hover {
+  color: #bdbdbd;
 }
 .likearts-content .bloger-badge__subs-count {
   max-width: 100%;
