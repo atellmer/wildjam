@@ -252,11 +252,6 @@
   padding-left: 19px;
   border-left: 3px solid #3ebcff;
 }
-@media (max-width: 640px) {
-  .likearts-content .case-card__desc {
-    margin-top: 10px;
-  }
-}
 .likearts-content .case-card__desc p {
   color: #272757;
   font-size: calc(14 / 16 * 1rem);
@@ -280,6 +275,14 @@
 @media (max-width: 640px) {
   .likearts-content .case-card__subtitle {
     font-size: calc(10 / 16 * 1rem);
+  }
+}
+.likearts-content .case-card__subtitle--views {
+  margin-bottom: 0px;
+}
+@media (max-width: 1140px) {
+  .likearts-content .case-card__subtitle--views {
+    text-align: center;
   }
 }
 .likearts-content .case-card__diagram {

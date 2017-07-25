@@ -74,6 +74,8 @@ $base-font = 16
 
 	&__num
 		margin-left 13px
+		@media (max-width $container-width)
+			min-width 70px
 
 	&__num-sign
 		color #000
@@ -84,7 +86,7 @@ $base-font = 16
 
 	&__num-count
 		color $color-text
-		font-size 'calc(30 / %s * 1rem)' %($base-font)
+		font-size 'calc(27 / %s * 1rem)' %($base-font)
 		font-weight 700
 		line-height 0.8
 		text-transform uppercase

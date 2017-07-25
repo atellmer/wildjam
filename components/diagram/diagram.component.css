@@ -31,19 +31,3 @@
 .likearts-content .diagram__item {
   width: 100%;
 }
-.likearts-content .diagram__item--60 {
-  width: 60%;
-}
-@media (max-width: 640px) {
-  .likearts-content .diagram__item--60 {
-    width: 100%;
-  }
-}
-.likearts-content .diagram__item--40 {
-  width: 40%;
-}
-@media (max-width: 640px) {
-  .likearts-content .diagram__item--40 {
-    width: 100%;
-  }
-}
