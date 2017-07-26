@@ -31,8 +31,8 @@
 	<link rel="stylesheet" href="components/case-stats/case-stats.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
 	<link rel="stylesheet" href="components/case-table/case-table.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
 	<link rel="stylesheet" href="components/diagram/diagram.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
-	<link rel="stylesheet" href="components/dots/dots.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
 	<link rel="stylesheet" href="components/footer/footer.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
+	<link rel="stylesheet" href="components/dots/dots.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
 	<link rel="stylesheet" href="components/form/form.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
 	<link rel="stylesheet" href="components/header/header.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
 	<link rel="stylesheet" href="components/loader/loader.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
@@ -120,82 +120,246 @@
 				<div class="wj-breadcrumbs">
 					<a href="#" class="wj-breadcrumbs__link">Главная</a>
 					<span class="wj-breadcrumbs__separator"></span>
-					<a href="#" class="wj-breadcrumbs__link">Блогеры</a>
-					<span class="wj-breadcrumbs__separator"></span>
 					<a href="#" class="wj-breadcrumbs__link is-active">Кейсы</a>
 				</div>
 			</div>
-			<h2 class="title title--h2 cases__title">Наши кейсы</h2>
-			<div class="cases__cards">
-				<div aria-haspopup="true" class="card cases__card">
-					<div class="card__title">
-						<a href="#" class="card__link">Axe</a>
-					</div>
-					<a href="#" class="card__link">
-						<div class="card__cover">
-							<img
-								src="./images/pages/cases/1.jpg"
-								class="card__pic"
-								alt="text">
-						</div>
-					</a>
-				</div>
-				<div aria-haspopup="true" class="card cases__card">
-					<div class="card__title">
-						<a href="#" class="card__link">Aviasales</a>
-					</div>
-					<a href="#" class="card__link">
-						<div class="card__cover">
-							<img
-								src="./images/pages/cases/2.jpg"
-								class="card__pic"
-								alt="text">
-						</div>
-					</a>
-				</div>
-				<div aria-haspopup="true" class="card cases__card">
-					<div class="card__title">
-						<a href="#" class="card__link">Скидка.ру</a>
-					</div>
-					<a href="#" class="card__link">
-						<div class="card__cover">
-							<img
-								src="./images/pages/cases/3.jpg"
-								class="card__pic"
-								alt="text">
-						</div>
-					</a>
-				</div>
-				<div aria-haspopup="true" class="card cases__card">
-					<div class="card__title">
-						<a href="#" class="card__link">Eristika</a>
-					</div>
-					<a href="#" class="card__link">
-						<div class="card__cover">
-							<img
-								src="./images/pages/cases/4.jpg"
-								class="card__pic"
-								alt="text">
-						</div>
-					</a>
+			<div class="cases__header">
+				<h2 class="title title--h2 cases__title">Наши кейсы</h2>
+				<div class="cases__controls">
+					<span class="cases__controls-sign">Cортировать по:</span>
+					<a href="#" class="cases__controls-link is-active is-up-to-down">просмотрам</a>
+					<a href="#" class="cases__controls-link">дате</a>
 				</div>
 			</div>
-			<div class="cases__pagination">
-				<div class="wj-pagination">
-					<div class="wj-pagination__line"></div>
-					<div class="wj-pagination__cover">
-						<a href="#" class="wj-pagination__btn wj-pagination__btn--prev">
-							<i class="wj-pagination__icon"></i>
-						</a>
-						<a href="#" class="wj-pagination__link is-active">1</a>
-						<a href="#" class="wj-pagination__link">2</a>
-						<a href="#" class="wj-pagination__link">3</a>
-						<a href="#" class="wj-pagination__link">4</a>
-						<a href="#" class="wj-pagination__btn wj-pagination__btn--next">
-							<i class="wj-pagination__icon"></i>
-						</a>
+			<div class="cases__case-show case-show">
+				<a href="#" class="case-show__item">
+					<img
+						class="case-show__item-pic"
+						src="./images/pages/cases/cases/1.jpg"
+						alt="text">
+					<div class="case-show__item-cover">
+						<div class="case-show__item-badge">
+							<img
+								class="case-show__item-avatar"
+								src="./images/pages/cases/avatars/1.jpg"
+								alt="text">
+							<span class="case-show__item-name">Макс Брандт</span>
+						</div>
+						<div class="case-show__item-title">Мегафон</div>
+						<div class="case-show__item-count">5 000 000+</div>
+						<div class="case-show__item-sign">просмотров</div>
 					</div>
-					<div class="wj-pagination__line"></div>
+				</a>
+				<a href="#" class="case-show__item">
+					<img
+						class="case-show__item-pic"
+						src="./images/pages/cases/cases/2.jpg"
+						alt="text">
+					<div class="case-show__item-cover">
+						<div class="case-show__item-badge">
+							<img
+								class="case-show__item-avatar"
+								src="./images/pages/cases/avatars/2.jpg"
+								alt="text">
+							<span class="case-show__item-name">Костя Павлов</span>
+						</div>
+						<div class="case-show__item-title">Tinder</div>
+						<div class="case-show__item-count">21 000 000+</div>
+						<div class="case-show__item-sign">просмотров</div>
+					</div>
+				</a>
+				<a href="#" class="case-show__item">
+					<img
+						class="case-show__item-pic"
+						src="./images/pages/cases/cases/3.jpg"
+						alt="text">
+					<div class="case-show__item-cover">
+						<div class="case-show__item-badge">
+							<img
+								class="case-show__item-avatar"
+								src="./images/pages/cases/avatars/3.jpg"
+								alt="text">
+							<span class="case-show__item-name">Тимур Сидельников</span>
+						</div>
+						<div class="case-show__item-title">Meizu</div>
+						<div class="case-show__item-count">9 200 000+</div>
+						<div class="case-show__item-sign">просмотров</div>
+					</div>
+				</a>
+				<a href="#" class="case-show__item">
+					<img
+						class="case-show__item-pic"
+						src="./images/pages/cases/cases/1.jpg"
+						alt="text">
+					<div class="case-show__item-cover">
+						<div class="case-show__item-badge">
+							<img
+								class="case-show__item-avatar"
+								src="./images/pages/cases/avatars/2.jpg"
+								alt="text">
+							<span class="case-show__item-name">Костя Павлов</span>
+						</div>
+						<div class="case-show__item-title">Aviasales</div>
+						<div class="case-show__item-count">6 800 000+</div>
+						<div class="case-show__item-sign">просмотров</div>
+					</div>
+				</a>
+				<a href="#" class="case-show__item">
+					<img
+						class="case-show__item-pic"
+						src="./images/pages/cases/cases/2.jpg"
+						alt="text">
+					<div class="case-show__item-cover">
+						<div class="case-show__item-badge">
+							<img
+								class="case-show__item-avatar"
+								src="./images/pages/cases/avatars/4.jpg"
+								alt="text">
+							<span class="case-show__item-name">
+								Dipt
+								<span class="case-show__item-separator">/</span>
+								<i class="case-show__item-icon wj-social-icon wj-social-icon--yt"></i>
+							</span>
+						</div>
+						<div class="case-show__item-title">Asus</div>
+						<div class="case-show__item-count">14 000 000+</div>
+						<div class="case-show__item-sign">просмотров</div>
+					</div>
+				</a>
+				<a href="#" class="case-show__item">
+					<img
+						class="case-show__item-pic"
+						src="./images/pages/cases/cases/3.jpg"
+						alt="text">
+					<div class="case-show__item-cover">
+						<div class="case-show__item-badge">
+							<img
+								class="case-show__item-avatar"
+								src="./images/pages/cases/avatars/2.jpg"
+								alt="text">
+							<span class="case-show__item-name">Костя Павлов</span>
+						</div>
+						<div class="case-show__item-title">Юла</div>
+						<div class="case-show__item-count">18 000 000+</div>
+						<div class="case-show__item-sign">просмотров</div>
+					</div>
+				</a>
+				<a href="#" class="case-show__item">
+					<img
+						class="case-show__item-pic"
+						src="./images/pages/cases/cases/1.jpg"
+						alt="text">
+					<div class="case-show__item-cover">
+						<div class="case-show__item-badge">
+							<img
+								class="case-show__item-avatar"
+								src="./images/pages/cases/avatars/2.jpg"
+								alt="text">
+							<span class="case-show__item-name">Дмитрий Масленников</span>
+						</div>
+						<div class="case-show__item-title">Artskills.ru</div>
+						<div class="case-show__item-count">6 000 000+</div>
+						<div class="case-show__item-sign">просмотров</div>
+					</div>
+				</a>
+				<a href="#" class="case-show__item">
+					<img
+						class="case-show__item-pic"
+						src="./images/pages/cases/cases/2.jpg"
+						alt="text">
+					<div class="case-show__item-cover">
+						<div class="case-show__item-badge">
+							<img
+								class="case-show__item-avatar"
+								src="./images/pages/cases/avatars/2.jpg"
+								alt="text">
+							<span class="case-show__item-name">Тилльняшка</span>
+						</div>
+						<div class="case-show__item-title">Leeco</div>
+						<div class="case-show__item-count">2 100 000+</div>
+						<div class="case-show__item-sign">просмотров</div>
+					</div>
+				</a>
+				<a href="#" class="case-show__item">
+					<img
+						class="case-show__item-pic"
+						src="./images/pages/cases/cases/3.jpg"
+						alt="text">
+					<div class="case-show__item-cover">
+						<div class="case-show__item-badge">
+							<img
+								class="case-show__item-avatar"
+								src="./images/pages/cases/avatars/2.jpg"
+								alt="text">
+							<span class="case-show__item-name">Lizztv</span>
+						</div>
+						<div class="case-show__item-title">Альфа-банк</div>
+						<div class="case-show__item-count">9 200 000+</div>
+						<div class="case-show__item-sign">просмотров</div>
+					</div>
+				</a>
+				<a href="#" class="case-show__item">
+					<img
+						class="case-show__item-pic"
+						src="./images/pages/cases/cases/1.jpg"
+						alt="text">
+					<div class="case-show__item-cover">
+						<div class="case-show__item-badge">
+							<img
+								class="case-show__item-avatar"
+								src="./images/pages/cases/avatars/2.jpg"
+								alt="text">
+							<span class="case-show__item-name">Костя Павлов</span>
+						</div>
+						<div class="case-show__item-title">Дизлайк</div>
+						<div class="case-show__item-count">7 000 000+</div>
+						<div class="case-show__item-sign">просмотров</div>
+					</div>
+				</a>
+				<a href="#" class="case-show__item">
+					<img
+						class="case-show__item-pic"
+						src="./images/pages/cases/cases/2.jpg"
+						alt="text">
+					<div class="case-show__item-cover">
+						<div class="case-show__item-badge">
+							<img
+								class="case-show__item-avatar"
+								src="./images/pages/cases/avatars/2.jpg"
+								alt="text">
+							<span class="case-show__item-name">Костя Павлов</span>
+						</div>
+						<div class="case-show__item-title">Samsung</div>
+						<div class="case-show__item-count">2 700 000+</div>
+						<div class="case-show__item-sign">просмотров</div>
+					</div>
+				</a>
+				<a href="#" class="case-show__item">
+					<img
+						class="case-show__item-pic"
+						src="./images/pages/cases/cases/3.jpg"
+						alt="text">
+					<div class="case-show__item-cover">
+						<div class="case-show__item-badge">
+							<img
+								class="case-show__item-avatar"
+								src="./images/pages/cases/avatars/2.jpg"
+								alt="text">
+							<span class="case-show__item-name">Костя Павлов</span>
+						</div>
+						<div class="case-show__item-title">Snickers</div>
+						<div class="case-show__item-count">18 000 000+</div>
+						<div class="case-show__item-sign">просмотров</div>
+					</div>
+				</a>
+			</div>
+			<div class="cases__pagination lazy-pagination">
+				<div class="wj-pagination">
+					<div></div>
+					<div class="wj-pagination__cover">
+						<a href="#" class="wj-pagination__link">Показать еще</a>
+					</div>
+					<div></div>
 				</div>
 			</div>
 		</div>
@@ -340,6 +504,7 @@
 	<script src="bower_components/spawn-x/lib/spawn-x.umd.min.js"></script>
 	<script src="bower_components/spawn-x-effects/lib/spawn-x-effects.umd.min.js"></script>
 	<script src="bower_components/chart.js/dist/Chart.min.js"></script>
+	<script src="bower_components/Chart.PieceLabel.js/src/Chart.PieceLabel.js"></script>
 	<script src="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js"></script>
 	<!-- endinject -->
 	<!-- inject:js -->

@@ -31,8 +31,8 @@
 	<link rel="stylesheet" href="components/case-stats/case-stats.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
 	<link rel="stylesheet" href="components/case-table/case-table.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
 	<link rel="stylesheet" href="components/diagram/diagram.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
-	<link rel="stylesheet" href="components/dots/dots.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
 	<link rel="stylesheet" href="components/footer/footer.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
+	<link rel="stylesheet" href="components/dots/dots.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
 	<link rel="stylesheet" href="components/form/form.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
 	<link rel="stylesheet" href="components/header/header.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
 	<link rel="stylesheet" href="components/loader/loader.component.css?hash=da39a3ee5e6b4b0d3255bfef95601890afd80709">
@@ -299,17 +299,25 @@
 								<div class="case-card__diagram">
 									<script>
 										window.$diagramData = {
-											men: [-6.7, -45.3, -32.4, -5.8, -1.4, -0.4, -1.8],
-											women: [0.5, 3.0, 1.8, 0.6, 0.2, 0.1, 0.1]
+											men: [6.7, 45.3, 32.4, 5.8, 3.6],
+											women: [0.5, 3.0, 1.8, 0.6, 0.3]
 										};
 									</script>
 									<div class="diagram" data-diagram>
-										<div class="diagram__item">
+										<div class="diagram__item diagram__item--60">
 											<canvas
-												data-diagram-horizontal-barchart
+												data-diagram-barchart
 												class="diagram__barchart"
 												width="350"
 												height="200">
+											</canvas>
+										</div>
+										<div class="diagram__item diagram__item--40">
+											<canvas
+												data-diagram-piechart
+												class="diagram__piechart"
+												width="200"
+												height="160">
 											</canvas>
 										</div>
 									</div>
@@ -604,6 +612,7 @@
 	<script src="bower_components/spawn-x/lib/spawn-x.umd.min.js"></script>
 	<script src="bower_components/spawn-x-effects/lib/spawn-x-effects.umd.min.js"></script>
 	<script src="bower_components/chart.js/dist/Chart.min.js"></script>
+	<script src="bower_components/Chart.PieceLabel.js/src/Chart.PieceLabel.js"></script>
 	<script src="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js"></script>
 	<!-- endinject -->
 	<!-- inject:js -->

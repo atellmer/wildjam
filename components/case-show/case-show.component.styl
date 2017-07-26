@@ -35,15 +35,19 @@ $base-font = 16
 		width calc(33.3333% - 16px)
 		height auto
 		min-height 189px
-		margin 8px
+		margin 8px 8px 50px 8px
 		text-decoration none
 		background-color #ccc
 		transition all .2s ease-in-out
 		transform-origin 0 0
 		@media (max-width $tablet)
 			width calc(50% - 16px)
+		@media (max-width $container-width)
+			margin 8px
 		@media (max-width 480px)
 			width calc(100% - 16px)
+		&:hover
+			box-shadow 0 5px 30px rgba(39, 39, 87, 0.2)
 
 		&.js-is-hide
 			position absolute
@@ -73,7 +77,7 @@ $base-font = 16
 		bottom 0
 		background-color rgba(0, 0, 0, 0.7)
 		display flex
-		flex-flow column wrap
+		flex-flow column nowrap
 		justify-content center
 		align-items center
 		transition background-color .2s ease-in-out
@@ -81,10 +85,54 @@ $base-font = 16
 		overflow hidden
 		&:hover
 			background-color rgba(255, 255, 255, 0.9)
+			.case-show__item-name,
+			.case-show__item-separator,
 			.case-show__item-title,
 			.case-show__item-count,
 			.case-show__item-sign
 				color $color-text
+
+	&__item-badge
+		position relative
+		width 100%
+		display flex
+		flex-flow row wrap
+		justify-content center
+		align-items center
+		margin-bottom 12px
+
+	&__item-avatar
+		width 25px
+		height 25px
+		object-fit cover
+		border-radius 50%
+		margin-bottom 2px
+
+	&__item-name
+		color #fff
+		transition color .2s ease-in-out
+		font-size 'calc(12 / %s * 1rem)' %($base-font)
+		font-weight 400
+		line-height 1.17
+		text-transform uppercase
+		margin-left 11px
+		text-align center
+		display flex
+		flex-flow row wrap
+		justify-content center
+		align-items center
+
+	&__item-icon
+		width 25px !important
+		height 25px !important
+
+	&__item-separator
+		color #fff
+		font-size 'calc(16 / %s * 1rem)' %($base-font)
+		font-weight 400
+		line-height 1
+		margin 0 8px
+		transition color .2s ease-in-out
 
 	&__item-title
 		color #fff
