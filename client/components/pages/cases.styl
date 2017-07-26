@@ -22,7 +22,7 @@ $base-font = 16
 	height auto
 	min-height 800px
 	background-color #f4f6f8
-	padding 0 0 100px 0
+	padding 0 0 50px 0
 
 	&__container
 		overflow hidden
@@ -34,42 +34,81 @@ $base-font = 16
 		@media (max-width $tablet)
 			padding 30px 0
 
+	&__header
+		display flex
+		flex-flow row nowrap
+		justify-content space-between
+		align-items center
+		@media (max-width $container-width)
+			flex-flow row wrap
+
 	&__title
+		flex-shrink 1
 		text-align left
 		margin-bottom 20px
 		@media (max-width $phone)
 			font-size 'calc(20 / %s * 1rem)' %($base-font)
 			margin-bottom 15px
 
-	&__cards
-		position relative
+	&__controls
+		flex-shrink 0
 		display flex
 		flex-flow row wrap
-		justify-content flex-start
-		align-items stretch
-		margin 0 -25px 80px -25px
-		@media (max-width 1650px)
-			margin 0 -15px 80px -15px
-
-	&__card
-		position relative
-		width calc(50% - 50px)
-		height auto
-		margin 25px
-		transition all .2s ease-in-out
-		@media (max-width 1650px)
-			width calc(50% - 30px)
-			margin 15px
+		justify-content space-between
+		align-items center
+		font-size 'calc(15 / %s * 1rem)' %($base-font)
 		@media (max-width $phone)
-			width calc(100% - 30px)
+			width 100%
+			flex-flow column wrap
+			justify-content center
+			margin-top 20px
+			margin-bottom 0
 
-	.card__cover
-		max-height 310px
-		@media (max-width 1140px)
-			max-height 270px
+	&__controls-sign
+		color #898989
+		font-weight 300
+		line-height 1.1
+		@media (max-width $phone)
+			margin-bottom 6px
 
-	.card__pic
-		max-height 310px
-		filter none
-		@media (max-width 1140px)
-			max-height 270px
+	&__controls-link
+		position relative
+		text-decoration none
+		opacity 0.4
+		color #898989
+		font-weight 500
+		margin-left 15px
+		line-height 1.2
+		border-bottom 1px dotted #898989
+		transition all .2s ease-in-out
+		@media (max-width $phone)
+			margin 6px 0
+		&:hover
+			color $color-text
+			opacity 1
+
+		&.is-active
+			color $color-text
+			opacity 1
+			border none
+
+		&.is-up-to-down
+			&:before
+				content '↓'
+				position relative
+				color $color-text
+				margin-right 3px
+
+		&.is-down-to-up
+			&:before
+				content '↑'
+				position relative
+				color $color-text
+				margin-right 3px
+
+	&__case-show
+		padding 42px 0 0 0
+		@media (max-width $container-width)
+			padding 42px 0
+		@media (max-width $phone)
+			padding 30px 0
